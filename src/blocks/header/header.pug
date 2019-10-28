@@ -1,2 +1,58 @@
+include logo/logo
+
 mixin header()
-  +b.HEADER.header
+  +b.HEADER.header.wrapper
+    +e.UL.contacts
+      +e.LI.contacts-item
+        +e.A.contacts-link._phone(href="tel:8-800-775-9408") 8-800-775-9408 (Бесплатно по РФ)
+      +e.LI.contacts-item
+        +e.A.contacts-link._phone(href="tel:+86-757-8305-4504") +86-757-8305-4504 (в Китае)
+      +e.LI.contacts-item
+        +e.A.contacts-link._phone(href="tel:+86-186-7576-2020") +86-186-7576-2020 (WhatsApp)
+      +e.LI.contacts-item
+        +e.A.contacts-link._whatsapp(href="https://api.whatsapp.com/send?phone=8618675762020") +8618675762020
+      +e.LI.contacts-item
+        +e.A.contacts-link._mail(href="mailto:info@globus.furniture") info@globus.furniture
+
+    +e.bottom
+      +e.A.logo(href='#' aria-label="Home")
+        +logo
+      +menu({
+        links: [
+          { href: '#', text: 'Главная' },
+          { href: '#', text: 'Все о мебельном туре',
+            submenu: [
+              { href: '#', text: 'Что такое мебельный тур',
+                submenu: [
+                  { href: '#', text: 'ссылка',
+                    submenu: [
+                      { href: '#', text: 'ссылка' },
+                      { href: '#', text: 'ссылка' },
+                      { href: '#', text: 'ссылка' },
+                    ]
+                  },
+                  { href: '#', text: 'ссылка' },
+                  { href: '#', text: 'ссылка' },
+                  { href: '#', text: 'ссылка' },
+                ]
+              },
+              { href: '#', text: 'Как проходит мебельный тур' },
+              { href: '#', text: 'Передвижение и транспорт' },
+              { href: '#', text: 'Стоимость и порядок оплаты' },
+              { href: '#', text: 'Доставка из Китая' },
+              { href: '#', text: 'Таможенное оформление' },
+              { href: '#', text: 'Проверка качества' },
+              { href: '#', text: 'Наши гарантии' },
+              { href: '#', text: 'Мебельные центры Фошаня' },
+
+            ]
+          },
+          { href: '#', text: 'Блог' },
+          { href: '#', text: 'Цены' },
+          { href: '#', text: 'О нас' },
+          { href: '#', text: 'Отзывы' }
+        ]
+      })
+      +e.A.btn.btn(href="#") Контакты
+      +burger
+

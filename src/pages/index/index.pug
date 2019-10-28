@@ -1,15 +1,23 @@
 extends ../../layout/page
 
+include main/main
+include globus/globus
+include services/services
+include reviews/reviews
+include request/request
+include blog/blog
+include bloggers/bloggers
+
 //--------------------------------------------------//
 
 block vars
   - var title = 'index'
   - var description = 'index'
-  - var pageId = 'indexPage'
 
 //--------------------------------------------------//
 
 block head
+  +style('swiper')
   +style('index')
 
 block startBody
@@ -18,8 +26,15 @@ block startBody
 block endBody
   +footer()
   +script('main')
-  //- +script('index')
+  +script('swiper')
 
 //--------------------------------------------------//
 
 block content
+  +main
+  +globus
+  +services
+  +reviews
+  +request
+  +blog
+  +bloggers

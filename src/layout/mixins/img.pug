@@ -1,0 +1,6 @@
+mixin img(img)
+  +e.PICTURE.picture(class=attributes.class)
+    source.img(srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+    source.img(srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+    source.img(srcset="img/"+ img +'.webp' type="image/webp")
+    img.img(src="img/"+ img +'.jpg' alt="")

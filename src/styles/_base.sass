@@ -1,21 +1,15 @@
 .wrapper
-  position: relative
-  max-width: $wrapper
-  width: 100%
-  margin: 0 auto
   padding: 0 $padding
-  +mobile
-    padding: 0 $paddingSm
+  +desktop(min)
+    padding: 0 $wrapperLg
+  +desktop
+    padding: 0 $wrapperMd
+  +tablet
+    padding: 0 $wrapperTab
+  +tabMd
+    padding: 0 $wrapperMob
 
 .img
   +size(100%)
   object-fit: cover
   vertical-align: middle
-
-//------------------------------//
-
-.content
-
-.sectionPage
-
-.sectionTitle

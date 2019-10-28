@@ -7,22 +7,17 @@
       @content
 
 //===================_Desktop_====================//
-  
-$desktopMin: 1200px
 
-=desktop($val: min)
-  +media($val, $bp-desktop-min)
-    @content
+$desktoplg: 1201px
+$desktopMax: 1200px
+$desktopMin: 992px
 
-//===================_Desktop-sm_====================//
-
-$desktopSmMax: 1050px
-$desktopSmMid: 1024px
-$desktopSmMin: 992px
-
-=desktopSm($from: $desktopSmMax, $to: $desktopSmMin)
-  @if $from == max or $from == min
-    +media($from, $desktopSmMax)
+=desktop($from: $desktopMax, $to: $desktopMin)
+  @if $from == max
+    +media($from, $desktopMax)
+      @content
+  @elseif $from == min
+    +media($from, $desktoplg)
       @content
   @else
     +media($from, $to)
@@ -34,8 +29,27 @@ $tabletMax: 991px
 $tabletMin: 768px
 
 =tablet($from: $tabletMax, $to: $tabletMin)
-  @if $from == max or $from == min
+  @if $from == max
     +media($from, $tabletMax)
+      @content
+  @elseif $from == min
+    +media($from, $desktopMin)
+      @content
+  @else
+    +media($from, $to)
+      @content
+
+//===================__tabMd__====================//
+
+$tabMdMax: 767px
+$tabMdMin: 576px
+
+=tabMd($from: $tabMdMax, $to: $tabMdMin)
+  @if $from == max
+    +media($from, $tabMdMax)
+      @content
+  @elseif $from == min
+    +media($from, $tabletMin)
       @content
   @else
     +media($from, $to)
@@ -43,15 +57,14 @@ $tabletMin: 768px
 
 //===================__Mobile__====================//
 
-$mobileMax: 767px
-$mobileMin: 374px
+$mobileMax: 575px
 
 =mobile($from: max)
+  @if $from == max
   +media($from, $mobileMax)
     @content
-
-=mobileSm($from: max)
-  +media($from, $mobileMin)
+  @elseif $from == min
+    +media($from, $tabMdMin)
     @content
 
 //===================__Font__====================//
@@ -69,6 +82,10 @@ $mobileMin: 374px
 		height: $b
 	@else
 		height: $a
+
+=width($col)
+  $width: (100% / 12) * $col
+  width: calc(#{$width} - 15px)
 
 //===================__Flexbox__====================//
 
@@ -127,7 +144,7 @@ $mobileMin: 374px
     content: ''
     position: absolute
     +size($a, $b)
-    background-color: $bg 
+    background: $bg 
     @content
 
 =after($a, $b, $bg)
@@ -135,7 +152,7 @@ $mobileMin: 374px
     content: ''
     position: absolute
     +size($a, $b)
-    background-color: $bg 
+    background: $bg 
     @content
 
 =bgImg($img, $size, $position)

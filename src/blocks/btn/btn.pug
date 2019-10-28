@@ -19,3 +19,7 @@ mixin btn(data)
 //-   type: false, // if link: false { button, submit }
 //-   text: 'кнопка'
 //- })
+
+mixin burger
+  +b.BUTTON.burger(aria-label="open menu")
+    +e.icon

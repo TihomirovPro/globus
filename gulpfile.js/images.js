@@ -6,8 +6,8 @@ const flatten = require('gulp-flatten')
 
 function optimizeImages (cb) {
   return src([
-    'images/**/*.+(jpg|png|gif|svg)',
-    'src/pages/**/*.+(jpg|png|gif|svg)'
+    'images/**/*.+(webp|jpg|png|gif|svg)',
+    'src/pages/**/*.+(webp|jpg|png|gif|svg)'
   ])
     .pipe(toaster('Images', cb))
     .pipe(imagemin({

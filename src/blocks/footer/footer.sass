@@ -1,2 +1,147 @@
 .footer
+  color: #fff
+  background-color: #00090c
+  padding-top: 30px
+  padding-bottom: 25px
 
+  &__top
+    padding-bottom: 20px
+    +mobile(min)
+      +flex('between-wrap')
+
+  &__list
+    +width(2)
+    font-size: 13px
+    color: #b0b0b0
+    line-height: 22px
+    text-transform: uppercase
+    margin-bottom: 40px
+    +tablet(min)
+      &:first-child,
+      &:last-child
+        +width(4)
+    +desktop
+      &:last-child
+        +width(3)
+    +tablet(max)
+      +width(6)
+    +tabMd(max)
+      &:first-child,
+      &:last-child
+        width: 100%
+      
+
+  &__list-item
+    position: relative
+    padding-left: 24px
+    &:not(:last-child)
+      margin-bottom: 20px
+    +before(18px,18px,transparent)
+      top: 2px
+      left: 0
+    &_location
+      padding-left: 40px
+      &:before
+        +size(22px)
+        background: url(../img/location-icon.svg)
+    &_mobile
+      padding-left: 40px
+      &:before
+        +size(22px)
+        background: url(../img/mobile-icon.svg)
+    &_email
+      padding-left: 40px
+      &:before
+        +size(22px)
+        background: url(../img/mail-icon.svg)
+    &_whatsapp
+      &:before
+        background: url(../img/whatsapp-icon.svg)
+    &_telegram
+      &:before
+        background: url(../img/telegram-icon.svg)
+    &_viber
+      &:before
+        background: url(../img/viber-icon.svg)
+    &_wechat
+      &:before
+        background: url(../img/wechat-icon.svg)
+    &_facebook
+      &:before
+        background: url(../img/facebook-icon.svg)
+    &_fb
+      &:before
+        background: url(../img/fb-icon.svg)
+    &_instagram
+      &:before
+        background: url(../img/instagram-icon.svg)
+    &_vk
+      &:before
+        background: url(../img/vk-icon.svg)
+    &_ok
+      &:before
+        background: url(../img/ok-icon.svg)
+    &_youtube
+      &:before
+        background: url(../img/youtube-icon.svg)
+
+  &__list-link
+    display: block
+    transition: .3s
+    &:hover
+      color: #fff
+
+  &__list-title
+    font-weight: 700 
+
+  &__title
+    color: #fff
+    text-transform: uppercase
+    margin-bottom: 30px
+    >a
+      color: $colorMain
+
+  &__instagram
+    max-width: 310px
+    margin-bottom: 22px
+    display: flex
+    flex-wrap: wrap
+
+  &__picture
+    display: block
+    margin-right: 4px
+    margin-bottom: 7px
+    +size(68px)
+    object-fit: cover
+
+  &__social-link
+    border-radius: 50%
+    background-size: 50%
+    background-position: center
+    background-repeat: no-repeat
+    margin-right: 6px
+    +size(40px)
+    &_facebook
+      background-color: #4b69a8
+      background-image: url(../img/fb-icon.svg)
+    &_instagram
+      background-color: #aa7a6e
+      background-image: url(../img/instagram-icon.svg)
+    &_vk
+      background-color: #5281b7
+      background-image: url(../img/vk-icon.svg)
+    &_youtube
+      background-color: #ce201f
+      background-image: url(../img/youtube-icon.svg)
+    &_ok
+      background-color: #ff9800
+      background-image: url(../img/ok-icon.svg)
+
+
+    
+      
+
+  &__bottom
+    +flex('between')
+    padding-top: 25px
+    border-top: 1px solid rgba(255,255,255,.05)

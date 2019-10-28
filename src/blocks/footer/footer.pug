@@ -1,2 +1,75 @@
+mixin list(data)
+  +e.list
+    +e.H5.title!=data.title
+    ul
+      each item in data.items
+        +e.LI.list-item(class=item.icon)
+          +e.A.list-link(href!=item.href)!=item.link
+
 mixin footer()
-  +b.FOOTER.footer
+  +b.FOOTER.footer.wrapper
+    +e.top
+      +e.list
+        +e.H5.title Напишите нам
+        ul
+          +e.LI.list-item._location
+            +e.P.list-title АДРЕС ОФИСА
+            +e.A.list-link(href="#" rel="nofollow noopener" target='_blank') CHINA, FOSHAN, JIHUA 5TH ROAD 21, JINHAI SQUARE, 1207
+          +e.LI.list-item._mobile
+            +e.P.list-title НОМЕРА ТЕЛЕФОНОВ
+            +e.A.list-link(href="#") 8-800-775-9408 (БЕСПЛАТНО ПО РФ)
+            +e.A.list-link(href="#") +86-757-8305-4504 (В КИТАЕ)
+            +e.A.list-link(href="#") +86-186-7576-2020 (WHATSAPP)
+          +e.LI.list-item._email
+            +e.P.list-title E-MAIL
+            +e.A.list-link(href="#") INFO@GLOBUS.FURNITURE
+      +list({
+        title: 'Мессенджеры',
+        items: [
+          {href: '#', link: '+8618675762020', icon: 'footer__list-item_whatsapp'},
+          {href: '#', link: 'GLOBUS_FURNITURE', icon: 'footer__list-item_telegram'},
+          {href: '#', link: '+8618675762020', icon: 'footer__list-item_viber'},
+          {href: '#', link: 'GLOBUS_FURNITURE', icon: 'footer__list-item_wechat'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_facebook'}
+        ]
+      })
+      +list({
+        title: 'Соцсети',
+        items: [
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_fb'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_instagram'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_vk'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_ok'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_youtube'}
+        ]
+      })
+      +e.list
+        +e.H5.title Наш
+          a(href="#" rel="nofollow noopener") Инстаграм
+        +e.instagram
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta1.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta2.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta3.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta4.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta5.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta6.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta7.jpg", alt="")
+          a(href="#" rel="nofollow noopener" target='_blank')
+            +e.IMG.picture(src="../img/insta8.jpg", alt="")
+        +e.social-links
+          +e.A.social-link._facebook.btn(href="#" rel="nofollow noopener" target='_blank')
+          +e.A.social-link._instagram.btn(href="#" rel="nofollow noopener" target='_blank')
+          +e.A.social-link._vk.btn(href="#" rel="nofollow noopener" target='_blank')
+          +e.A.social-link._youtube.btn(href="#" rel="nofollow noopener" target='_blank')
+          +e.A.social-link._ok.btn(href="#" rel="nofollow noopener" target='_blank')
+             
+    +e.bottom
+      p COPYRIGHT © 2019 GLOBUS LTD.
+      p ГОРОДА \ СОТРУДНИЧЕСТВО \ КАРТА САЙТА

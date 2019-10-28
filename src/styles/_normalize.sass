@@ -7,9 +7,9 @@
   font-weight: inherit
   line-height: inherit
   color: inherit
-  &:focus
-    outline: 0
-    background: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
 
 html,
 body
@@ -17,20 +17,49 @@ body
   width: 100%
   font-family: $fontMain
   font-size: $fontSize
-  font-weight: normal
+  font-weight: $fontWeight
   color: $colorText
-  line-height: 1.15
+  line-height: $lineHeight
   -webkit-text-size-adjust: 100%
   background-color: $colorTheme
-  text-rendering: optimizeLegibility
 
 header,
 nav,
 main,
 section,
 footer,
-label
+label,
+picture
   display: block
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $fontSecond
+  font-weight: 500
+  color: $colorHeaders
+
+h2
+  font-size: 30px
+  line-height: 36px
+
+h3
+  font-size: 26px
+  line-height: 32px
+
+h4
+  font-size: 22px
+  line-height: 28px
+
+h5
+  font-size: 18px
+
+h6
+  font-size: 16px
+  line-height: 22px
 
 a
   background-color: transparent

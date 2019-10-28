@@ -1,2 +1,83 @@
 .header
+  position: fixed
+  width: 100%
+  z-index: 100
+  background-color: rgba(0,0,0,0)
+  transition: .3s
+  top: 0
+  &_bg
+    background-color: rgba(0,0,0,.9)
+    +tabMd(min)
+      top: -70px
+    +tablet(min)
+      top: -46px
+  
+  &__contacts
+    padding: 11px 0
+    +desktop(min)
+      display: flex
+    +desktop(max)
+      columns: 3
+    +tabMd(max)
+      display: none
 
+  &__contacts-item
+    white-space: nowrap
+    +desktop(min)
+      &:nth-last-child(2)
+        margin-left: auto
+      &:not(:last-child)
+        margin-right: 15px
+    +desktop(max)
+      &:last-child
+        text-align: right
+    +tablet(max)
+      &:nth-last-child(2),
+      &:nth-last-child(3)
+        padding-left: 20px
+
+  &__contacts-item
+
+  &__contacts-link
+    display: inline-block
+    position: relative
+    color: #fff
+    opacity: .7
+    font-size: 13px
+    padding-left: 24px
+    +before(18px,18px,transparent)
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+    &_phone
+      &:before
+        background: url(../img/phone-icon.svg)
+    &_mail
+      &:before
+        background: url(../img/mail-icon.svg)
+    &_whatsapp
+      &:before
+        background: url(../img/whatsapp-icon.svg)
+
+  &__bottom
+    +flex('between-center')
+    +tablet(max)  
+      padding: 11px 0
+
+  &__logo
+    position: relative
+    width: 140px
+    bottom: -3px
+    path
+      fill: #fff
+      transition: .3s
+    &:hover
+      path
+        fill: $colorMain
+      // .logo-path
+      //   fill: url(#a)
+
+  &__btn
+    +tablet(max)
+      margin-right: 20px
+      margin-left: auto

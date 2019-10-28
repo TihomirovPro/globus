@@ -1,0 +1,38 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+  
+.bloggers
+  
+  &__title
+    color: #fff
+    padding: 40px 15px
+    text-align: center
+    background: #00090c
+
+  &__container
+    padding-top: 30px
+    padding-bottom: 20px
+    +tablet(min)
+      +flex('between')
+      
+  &__desc
+    margin-bottom: 30px
+    +tablet(min)
+      max-width: 350px
+      width: 34%
+
+  &__section-title
+    margin-bottom: 10px
+    font-weight: 400
+  &__subtitle
+    margin-bottom: 16px
+
+  &__slider
+    overflow: hidden
+    padding: 15px
+    margin-right: -15px
+    +tablet(min)
+      max-width: 730px
+      width: 66%
+
+  &__slide
