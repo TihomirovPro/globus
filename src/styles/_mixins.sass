@@ -61,11 +61,11 @@ $mobileMax: 575px
 
 =mobile($from: max)
   @if $from == max
-  +media($from, $mobileMax)
-    @content
+    +media($from, $mobileMax)
+      @content
   @elseif $from == min
     +media($from, $tabMdMin)
-    @content
+      @content
 
 //===================__Font__====================//
 
