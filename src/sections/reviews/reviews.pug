@@ -1,0 +1,83 @@
+include ../../layout/bemto/bemto
+include ../../layout/mixins/img
+
+//------------------------------//
+
+include ../../blocks/btn/btn
+include ../../blocks/form/form
+
+include ../../blocks/article-slider/article-slider
+include ../../blocks/accardion/accardion
+include ../../blocks/sidebar/sidebar
+include ../../blocks/post/post
+include ../../blocks/pagination/pagination
+
+//------------------------------//
+
+mixin review(data)
+  +b.review.swiper-slide
+    +e.P.text=data.text
+    +b.person-card
+      +sliderImg(data.img)
+      +e.desc
+        +e.H5.name!=data.name
+        +e.P.info!=data.info
+
+mixin videoReview(data)
+  +b.review.swiper-slide
+    +b.video-review
+      +sliderImg(data.video)
+    +b.person-card
+      +sliderImg(data.img)
+      +e.desc
+        +e.H5.name!=data.name
+        +e.P.info!=data.info
+
+mixin reviews()
+  +b.SECTION.reviews.wrapper
+    +b.section-header
+      +e.H2.title Отзывы наших клиентов
+      +e.P.subtitle Смотрите видео о мебели и отзывы клиентов на нашем 
+        a(href="#") Youtube канале
+    +e.slider
+      +e.container
+        +e.list.swiper-wrapper
+          +review({
+            text: 'Я — дизайнер, работаю с компанией «Globus» уже более 3 лет! Покупка мебели в Китае позволяет не только сэкономить деньги клиентов, но и создать неповторимый дизайн! Такую мебель нельзя купить и заказать в России, Китай для меня открыл источник вдохновения и новых идей для создания неповторимых проектов! Очень всем рекомендую, не пожалеете!',
+            img: 'review1',
+            name: 'Светлана',
+            info: 'Клиент из Новосибирска',
+          })
+          +videoReview({
+            video: 'review2-video',
+            img: 'review2',
+            name: 'Лариса',
+            info: 'Клиент из Якутска',
+          })
+          +review({
+            text: 'В Казахстане очень маленький выбор мебели, мы случайно узнали о возможности покупки мебели в Китае, купили билеты и прилетели в Китай. Масштаб выбора и низкие цены повергли нас в шок! Мы обставили весь наш дом эксклюзивной мебелью, соседи приходят теперь к нам как на выставку)) Плюс еще мы сэкономили по нашим подсчетам не менее 50 тысяч долларов.',
+            img: 'review3',
+            name: 'Тимур',
+            info: 'Клиент из Астаны',
+          })
+          +videoReview({
+            video: 'review4-video',
+            img: 'review4',
+            name: 'Виталий',
+            info: 'Клиент из Москвы',
+          })
+          +review({
+            text: 'Я — строитель коттеджей в Москве, я всегда ищу способы экономии для своих клиентов, поэтому узнав о возможности покупки мебели, освещения, сантехники по более низким ценам, решил попробовать купить всё в Китае и не прогадал. С помощью компании Глобус я укомплектовал уже 7 коттеджей, успешно сотрудничаем уже более 2,5 лет!',
+            img: 'review5',
+            name: 'Роман',
+            info: 'Клиент из Москвы',
+          })
+          +videoReview({
+            video: 'review6-video',
+            img: 'review6',
+            name: 'Гульмира',
+            info: 'Клиент из Бишкека',
+          })
+        .swiper-pagination
+
+//- +reviews

@@ -1,0 +1,55 @@
+include ../../layout/bemto/bemto
+include ../../layout/mixins/img
+
+//------------------------------//
+
+include ../../blocks/btn/btn
+include ../../blocks/form/form
+
+include ../../blocks/article-slider/article-slider
+include ../../blocks/accardion/accardion
+include ../../blocks/sidebar/sidebar
+include ../../blocks/post/post
+include ../../blocks/pagination/pagination
+
+//------------------------------//
+
+mixin slideBlogger(data)
+  +e.slide.swiper-slide
+    +b.video-review
+      +img(data.video)
+    +b.person-card
+      +img(data.img)
+      +e.desc
+        +e.H5.name!=data.name
+        +e.P.info!=data.info
+
+
+mixin bloggers()
+  +b.SECTION.bloggers
+    +e.H2.title Мебельные туры глазами блоггеров
+    +e.container.wrapper
+      +e.desc
+        +e.H2.section-title Блоггеры о мебельных турах
+        +e.P.subtitle За последние годы мебельные туры только набирают популярность. Многие известные блоггеры заинтересовались и сделали о нас видео. Если вы хотите узнать о мебельных турах еще больше — подписывайтесь на наш YouTube канал.
+        a.btn.btn_lg(href="#") Наш YouTube
+      +e.slider
+        .swiper-wrapper
+          +slideBlogger({
+            video: 'blogger1-video',
+            img: 'blogger1',
+            name: 'Илья Варламов',
+            info: 'Известный блоггер',
+          })
+          +slideBlogger({
+            video: 'blogger2-video',
+            img: 'blogger2',
+            name: 'Своим ходом',
+            info: 'Виталий и Лиза',
+          })
+          +slideBlogger({
+            video: 'blogger3-video',
+            img: 'blogger3',
+            name: 'Ольга Качанова',
+            info: 'Как живут другие',
+          })

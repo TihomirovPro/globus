@@ -1,0 +1,57 @@
+.sidebar
+  width: 255px
+  +tablet(max)
+    width: 100%
+  +tablet
+    +flex('between-wrap')
+
+  &__widget
+    &:not(:last-child)
+      margin-bottom: 30px
+    +tablet
+      width: 48%
+    &_action
+      >p
+        margin-bottom: 16px
+      .sidebar
+        &__title
+          background: linear-gradient(90deg, red, #fff, red)
+          background-size: 80%
+          animation: animate 8s infinite
+          -webkit-background-clip: text
+          -webkit-text-fill-color: rgba(255, 255, 255, 0)
+        &__picture
+          margin-bottom: 16px
+  
+  &__title
+    position: relative
+    font-weight: 600
+    border-bottom: 1px solid rgba(0,0,0,.15)
+    padding-bottom: 15px
+    margin-bottom: 20px
+    text-transform: uppercase
+    +before(50px,3px,$colorMain)
+      left: 0
+      bottom: -2px
+
+  &__links-item
+    position: relative
+    &:before
+      position: absolute
+      content: '–'
+      left: 0
+      top: 48%
+      transform: translateY(-50%)
+  &__link
+    display: block
+    border-bottom: 1px solid rgba(102,102,102,.11)
+    padding: 10px 10px 10px 15px
+      
+    
+
+    
++keyframes(animate)
+  0%
+    background-position: -500%
+  100% 
+    background-position: 500%

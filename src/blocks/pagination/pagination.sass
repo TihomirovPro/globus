@@ -1,0 +1,30 @@
+.pagination
+  &__list
+    display: flex
+    font-family: $fontSecond
+    padding: 10px 0
+    +mobile
+      justify-content: center
+
+  &__item
+    list-style-type: none
+    &.active
+      >.pagination__link
+        color: #fff
+        border-color: $colorMain
+        background-color: $colorMain
+  &__link
+    font-size: 14px
+    display: block
+    padding: 8px 14px
+    background: #fff
+    border: 1px solid #efefef
+    color: #767676
+    transition: .3s
+    &.disabled
+      background-color: #c5c5c5
+      border-color: #c5c5c5
+    &:hover
+      background-color: darken($colorMain, 5%)
+      border-color: darken($colorMain, 5%)
+      color: #fff

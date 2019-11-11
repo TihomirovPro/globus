@@ -1,0 +1,18 @@
+mixin article-slider(data)
+  +b.article-slider
+    .swiper-wrapper
+      each slider in data.slider
+        +e.item.swiper-slide
+          if slider.title
+            +e.H3.title!=slider.title
+          +sliderImg(slider.img).article-video
+    .swiper-pagination
+mixin article-slider2(data)
+  +b.article-slider2
+    .swiper-wrapper
+      each slider in data.slider
+        +e.item.swiper-slide
+          if slider.title
+            +e.H3.title!=slider.title
+          +sliderImg(slider.img).article-video
+    .swiper-pagination

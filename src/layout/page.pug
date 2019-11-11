@@ -12,12 +12,25 @@ include mixins/img
 
 include ../blocks/menu/menu
 include ../blocks/btn/btn
-//- include ../blocks/form/form
+include ../blocks/form/form
 
 include ../blocks/header/header
 include ../blocks/footer/footer
 
 include ../blocks/breadcrumbs/breadcrumbs
+
+include ../blocks/article-slider/article-slider
+include ../blocks/accardion/accardion
+include ../blocks/sidebar/sidebar
+include ../blocks/post/post
+include ../blocks/pagination/pagination
+
+//------------------------------//
+
+include ../sections/services/services
+include ../sections/globus/globus
+include ../sections/reviews/reviews
+include ../sections/request/request
 
 //------------------------------//
 
@@ -33,6 +46,10 @@ html(lang=lang)
     block startBody
 
     main.content
+      .page-head.wrapper
+        +img(pageBg)
+        +breadcrumbs(breadcrumbs)
       block content
+
 
     block endBody

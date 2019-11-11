@@ -1,10 +1,18 @@
-export function header (scroll) {
+export function header () {
   const header = document.querySelector('.header')
-  if (scroll > 0 && !header.classList.contains('header_bg')) {
+  const position = window.scrollY
+  if (position > 0) {
     header.classList.add('header_bg')
-  } else if (scroll === 0) {
-    header.classList.remove('header_bg')
-  } else {
-    return false
   }
+
+  window.addEventListener('scroll', () => {
+    const scroll = window.scrollY
+    if (scroll > 0 && !header.classList.contains('header_bg')) {
+      header.classList.add('header_bg')
+    } else if (scroll === 0) {
+      header.classList.remove('header_bg')
+    } else {
+      return false
+    }
+  })
 }

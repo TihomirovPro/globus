@@ -1,0 +1,59 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+
+.contacts
+  position: relative
+  z-index: 1
+  padding-top: 200px
+  padding-bottom: 50px
+  +tablet(min)
+    +flex('between')
+    flex-direction: row-reverse
+
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    +size(100%)
+    +pseudoBackground(.8,#00090c)
+
+  &__container
+    +tablet(min)
+      +width(4)
+
+  &__card
+    border: 1px solid rgba(255,255,255,.1)
+    background-color: rgba(255,255,255,.05)
+    border-radius: 8px
+    color: rgba(255,255,255,.8)
+    padding: 20px
+    margin-bottom: 30px
+    >p
+      margin-bottom: 16px
+    >h5,>h6
+      height: 30px
+      margin-bottom: 10px
+      color: #fff
+      // padding-left: 40px
+
+  .contacts__icon
+    vertical-align: middle
+    margin-right: 10px
+    +size(30px)
+    >path
+      fill: $colorMain
+    &.small
+        +size(15px)
+        margin-right: 4px
+        // height: auto
+        // padding-left: 25px
+        >path
+          fill: #fff
+
+  .form
+    margin-bottom: 30px
+    +tablet(min)
+      +width(8)
+
+@import "./*/*"

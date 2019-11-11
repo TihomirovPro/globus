@@ -1,0 +1,7 @@
+mixin accardion(data)
+  +b.accardion
+    each item in data.item
+      +e.item.accardionJs
+        +e.H6.title!=item.title
+        +e.text.accardionContentJs
+          p!=item.text

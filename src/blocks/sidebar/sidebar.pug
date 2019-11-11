@@ -1,0 +1,200 @@
+mixin sidebar-list(data)
+  +e.UL.links
+    each items in data.items
+      +e.LI.links-item
+        +e.A.link(href="#")!=items.link
+
+mixin sidebar()
+  +b.ASIDE.sidebar
+
+    +e.widget._action
+      +e.H6.title Внимание акция!
+      +img('blog1')
+      p При заказе доставки и таможенного оформления в страны таможенного союза (Россия, Беларусь, Казахстан) все услуги мебельного тура — бесплатно.
+      a.btn(href="#") Узнать больше
+
+    +e.widget
+      +e.H6.title Всё о мебельном туре
+      +sidebar-list({
+        items: [
+          { link: 'Что такое мебельный тур' },
+          { link: 'Как проходит мебельный тур' },
+          { link: 'Передвижение и транспорт' },
+          { link: 'Стоимость и порядок оплаты' },
+          { link: 'Доставка из Китая' },
+          { link: 'Таможенное оформление' },
+          { link: 'Проверка качества' },
+          { link: 'Наши гарантии' },
+          { link: 'Мебельные центры Фошаня' }
+        ]
+      })
+
+    +e.widget
+      +e.H6.title Блоггеры о нас
+      +article-slider({
+         slider: [
+          { img: 'blogger1-video' },
+          { img: 'blogger2-video' },
+          { img: 'blogger3-video' }
+        ]
+      })
+
+    +e.widget
+      +e.H6.title Популярное в блоге
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+
+    +e.widget
+      +e.H6.title Наш инстаграм
+      +b.instagram
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta1')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta2')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta3')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta4')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta5')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta6')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta7')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta8')._small
+
+    +e.widget
+      +e.H6.title НАШ YOUTUBE КАНАЛ
+      +article-slider({
+         slider: [
+          { img: 'blogger1-video' },
+          { img: 'blogger2-video' },
+          { img: 'blogger3-video' }
+        ]
+      })
+
+mixin sidebar-blog()
+  +b.ASIDE.sidebar
+    +e.widget
+      +e.H6.title Новое в блоге
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+    +e.widget
+      +e.H6.title Наш инстаграм
+      +b.instagram
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta1')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta2')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta3')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta4')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta5')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta6')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta7')._small
+        +e.A.link(href="#" rel="nofollow noopener" target='_blank')
+          +img('insta8')._small
+    +e.widget
+      +e.H6.title Блоггеры о нас
+      +article-slider({
+         slider: [
+          { img: 'blogger1-video' },
+          { img: 'blogger2-video' },
+          { img: 'blogger3-video' }
+        ]
+      })
+    +e.widget
+      +e.H6.title Всё о мебельном туре
+      +sidebar-list({
+        items: [
+          { link: 'Что такое мебельный тур' },
+          { link: 'Как проходит мебельный тур' },
+          { link: 'Передвижение и транспорт' },
+          { link: 'Стоимость и порядок оплаты' },
+          { link: 'Доставка из Китая' },
+          { link: 'Таможенное оформление' },
+          { link: 'Проверка качества' },
+          { link: 'Наши гарантии' },
+          { link: 'Мебельные центры Фошаня' }
+        ]
+      })
+    +e.widget
+      +e.H6.title НАШ YOUTUBE КАНАЛ
+      +article-slider({
+         slider: [
+          { img: 'blogger1-video' },
+          { img: 'blogger2-video' },
+          { img: 'blogger3-video' }
+        ]
+      })
+    +e.widget
+      +e.H6.title Популярное в блоге
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+      +postNoSlider({
+        h6: true,
+        img: 'blog1',
+        title: 'Специальное предложение',
+        author: '5 минут',
+        views: '4569'
+      })._small
+    
+    
+
+      
+

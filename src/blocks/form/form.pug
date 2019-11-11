@@ -1,0 +1,119 @@
+mixin form2()
+  +b.form(class=attributes.class)
+    +e.H3.title Давайте воплотим Вашу мечту в жизнь!
+    +e.P.subtitle Пожалуйста, заполните анкету, чтобы мы лучше поняли, что Вам нужно:
+    +e.container
+      +e.input-wrap._2
+        |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#007DF1" d="M48 42.9L38.5 38a2.6 2.6 0 01-1.5-2.4v-3.3l.7-1c1.3-1.7 2.3-3.7 3-5.8A4 4 0 0043 22v-4a4 4 0 00-1-2.6V10a9 9 0 00-2-6.6C37.8 1.2 34.4 0 30 0s-7.9 1.2-10 3.5a9 9 0 00-2 6.6v5.3a4 4 0 00-1 2.6v4a4 4 0 001.5 3.1 21 21 0 003.5 7.2v3.4c0 1-.5 1.8-1.4 2.3l-8.9 4.8a9 9 0 00-4.7 8V54c0 4.7 15 6 23 6s23-1.3 23-6v-3a9 9 0 00-5-8.1zM51 54c0 1.4-7.4 4-21 4S9 55.4 9 54v-3.2a7 7 0 013.7-6.2l8.9-4.9a4.6 4.6 0 002.4-4v-4l-.2-.3s-2.5-3-3.4-7.1l-.1-.4-.4-.2A2 2 0 0119 22v-4c0-.6.2-1 .7-1.5l.3-.3V10s-.4-2.8 1.6-5C23.3 2.8 26.1 2 30 2c3.9 0 6.7 1 8.4 2.8 2 2.2 1.6 5 1.6 5v6.4l.3.3c.5.4.7 1 .7 1.5v4a2 2 0 01-1.4 1.9l-.5.2-.2.4a21 21 0 01-3.7 6.8l-.2.3v4.1c0 1.8 1 3.4 2.6 4.2l9.5 4.8A7 7 0 0151 51v3z"/></svg>
+        +e.INPUT.input._name(type="text" name='name' placeholder='Ваше имя' aria-label='input your name')
+      +e.input-wrap._2
+        |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 485"><path fill="#007DF1" d="M0 82v322h485V82H0zm243 199L44 106h398L243 281zm-80-38L24 365V120l139 123zm18 16l62 53 61-53 138 121H43l138-121zm141-16l140-123v245L322 243z"/></svg>
+        +e.INPUT.input._mail(type="email" name='email' placeholder='Ваша электронная почта' aria-label='input your email')
+      +e.label
+        +e.SPAN.label-text Свяжитесь со мной по:
+        +select({
+          name: 'connect',
+          first: 'Телефону',
+          select: [
+            { value: 'Телефону' },
+            { value: 'Whatsapp' },
+            { value: 'Wechat' },
+            { value: 'Viber' },
+            { value: 'Telegram' }
+          ]
+        })
+      +e.LABEL.label
+        +e.SPAN.label-text Мой номер
+        +e.input-wrap
+          |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490"><path fill="#007DF1" d="M392 451V38c0-21-17-38-38-38H135c-21 0-38 17-38 38v414c0 20 17 38 38 38h219c21-1 38-18 38-39zM122 88h246v278H122V88zm13-63h219c8 0 14 6 14 13v26H122V38c0-7 6-13 13-13zm-13 426v-60h246v60c0 8-6 14-14 14H135c-7 0-13-6-13-14z"/><path fill="#007DF1" d="M270 417h-50a12 12 0 100 24h50a12 12 0 100-24z"/></svg>
+          +e.INPUT.input(type="text" name='phone' placeholder='Ваш аккаунт (номер)')
+      +e.label
+        +e.SPAN.label-text Я хочу купить мебель для:
+        +select({
+          name: 'room',
+          first: 'Дом',
+          select: [
+            { value: 'Дом' },
+            { value: 'Ресторан' },
+            { value: 'Отель' },
+            { value: 'Офис' },
+            { value: 'Квартира' },
+            { value: 'Бар' },
+            { value: 'Салон Красоты' }
+          ]
+        }).select__room
+      +e.LABEL.label
+        +e.SPAN.label-text.room-size Какого размера дом?
+        +e.area-input-container.form__input-wrap
+          |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#007DF1" d="M507 208L264 30c-5-3-11-3-16 0L5 208a13 13 0 1016 22L256 58l235 172a13 13 0 0018-3c5-6 3-15-2-19z"/><path fill="#007DF1" d="M442 233c-7 0-13 5-13 13v212H323V342a67 67 0 00-134 0v116H83V246a13 13 0 00-27 0v225c0 7 6 13 14 13h133a13 13 0 0013-13V342a40 40 0 0180 0v130c0 7 6 12 13 12h133c8 0 14-6 14-13V246c0-8-6-13-14-13z"/></svg>
+          +e.INPUT.input(type="text" name='area' placeholder='Площадь')
+          +e.LABEL.area-metering
+            input(type="radio", name="metering" checked)
+            SPAN м
+              sup 2
+          +e.LABEL.area-metering
+            input(type="radio", name="metering")
+            +e.SPAN.feet фут
+              sup 2
+      +e.label
+        +e.SPAN.label-text Мой бюджет примерно:
+        +select({
+          name: 'budget',
+          first: 'Выберите из списка',
+          select: [
+            { value: 'Выберите из списка' },
+            { value: '10 000$ — 19 999$' },
+            { value: '20 000$ — 29 999$' },
+            { value: '30 000$ — 49 999$' },
+            { value: '50 000$ — 99 999$' },
+            { value: '100 000$ — 199 999$' },
+            { value: '200 000$ — 500 000$' },
+            { value: '500 000$+' }
+          ]
+        })
+
+      +e.LABEL.label
+        +e.SPAN.label-text Я хочу доставить мебель в:
+        +e.input-wrap
+          |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.9 57.9"><path fill="#007BF1" d="M57.5 15L47.4 6H26V2a1 1 0 10-2 0v4H0v20h24v30a1 1 0 102 0V26h21.4l10-9.1a1.2 1.2 0 000-1.9zm-10.9 9H2V8h44.6l8.9 8-8.9 8z"/></svg>
+          +e.INPUT.input(type="text" name='city' placeholder='Страна и город')
+
+      +e.LABEL.input-wrap
+        |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#007BF1" d="M39 43.6h41a1.8 1.8 0 001.8-1.7V24.2a1.8 1.8 0 00-1.7-1.8H39a1.8 1.8 0 00-1.8 1.8v17.7a1.8 1.8 0 001.8 1.7zM40.9 26h37.5v14.2H40.8z"/><path fill="#007BF1" d="M121.5 32a1.8 1.8 0 001.8-1.8v-12a1.8 1.8 0 00-1.8-1.8h-7.1V6.5a1.8 1.8 0 00-1.8-1.8H6.6a1.8 1.8 0 00-1.8 1.8v115a1.8 1.8 0 001.8 1.8h106.2a1.8 1.8 0 001.7-1.8V67.9h7.1a1.8 1.8 0 001.8-1.7v-12a1.8 1.8 0 00-1.8-1.8h-7.1V50h7.1a1.8 1.8 0 001.8-1.7v-12a1.8 1.8 0 00-1.8-1.8h-7.1V32zm-1.8-12v8.4h-5.3V20zm-8.8 99.8H8.2V8.3H111zm8.8-63.9v8.5h-5.3V56zm0-18v8.5h-5.3V38z"/><path fill="#007BF1" d="M88.3 81.6H30.8a1.8 1.8 0 000 3.5h57.5a1.8 1.8 0 000-3.5zM88.3 92.3H30.8a1.8 1.8 0 000 3.5h57.5a1.8 1.8 0 000-3.5zM88.3 103H30.8a1.8 1.8 0 100 3.4h57.5a1.8 1.8 0 000-3.5zM12.5 10.8a1.8 1.8 0 00-1.8 1.7V33a1.8 1.8 0 003.6 0V12.5a1.8 1.8 0 00-1.8-1.8z"/></svg>
+        +e.TEXTAREA.input._textarea(rows='4' name='text' placeholder='Пожалуйста, напишите больше деталей!' aria-label='input your messege')
+
+    button.btn Отправить!
+
+mixin form()
+  +b.form
+    +e.H3.title Давайте воплотим Вашу мечту в жизнь!
+    +e.P.subtitle Пожалуйста, заполните анкету, чтобы мы лучше поняли, что Вам нужно:
+    +e.container
+      +e.input-wrap._2
+        |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#007DF1" d="M48 42.9L38.5 38a2.6 2.6 0 01-1.5-2.4v-3.3l.7-1c1.3-1.7 2.3-3.7 3-5.8A4 4 0 0043 22v-4a4 4 0 00-1-2.6V10a9 9 0 00-2-6.6C37.8 1.2 34.4 0 30 0s-7.9 1.2-10 3.5a9 9 0 00-2 6.6v5.3a4 4 0 00-1 2.6v4a4 4 0 001.5 3.1 21 21 0 003.5 7.2v3.4c0 1-.5 1.8-1.4 2.3l-8.9 4.8a9 9 0 00-4.7 8V54c0 4.7 15 6 23 6s23-1.3 23-6v-3a9 9 0 00-5-8.1zM51 54c0 1.4-7.4 4-21 4S9 55.4 9 54v-3.2a7 7 0 013.7-6.2l8.9-4.9a4.6 4.6 0 002.4-4v-4l-.2-.3s-2.5-3-3.4-7.1l-.1-.4-.4-.2A2 2 0 0119 22v-4c0-.6.2-1 .7-1.5l.3-.3V10s-.4-2.8 1.6-5C23.3 2.8 26.1 2 30 2c3.9 0 6.7 1 8.4 2.8 2 2.2 1.6 5 1.6 5v6.4l.3.3c.5.4.7 1 .7 1.5v4a2 2 0 01-1.4 1.9l-.5.2-.2.4a21 21 0 01-3.7 6.8l-.2.3v4.1c0 1.8 1 3.4 2.6 4.2l9.5 4.8A7 7 0 0151 51v3z"/></svg>
+        +e.INPUT.input._name(type="text" name='name' placeholder='Ваше имя' aria-label='input your name')
+      +e.input-wrap._2
+        |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 485"><path fill="#007DF1" d="M0 82v322h485V82H0zm243 199L44 106h398L243 281zm-80-38L24 365V120l139 123zm18 16l62 53 61-53 138 121H43l138-121zm141-16l140-123v245L322 243z"/></svg>
+        +e.INPUT.input._mail(type="email" name='email' placeholder='Ваша электронная почта' aria-label='input your email')
+      +e.label
+        +e.SPAN.label-text Свяжитесь со мной по:
+        +select({
+          name: 'connect',
+          first: 'Телефону',
+          select: [
+            { value: 'Телефону' },
+            { value: 'Whatsapp' },
+            { value: 'Wechat' },
+            { value: 'Viber' },
+            { value: 'Telegram' }
+          ]
+        })
+      +e.LABEL.label
+        +e.SPAN.label-text Мой номер
+        +e.input-wrap
+          |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490"><path fill="#007DF1" d="M392 451V38c0-21-17-38-38-38H135c-21 0-38 17-38 38v414c0 20 17 38 38 38h219c21-1 38-18 38-39zM122 88h246v278H122V88zm13-63h219c8 0 14 6 14 13v26H122V38c0-7 6-13 13-13zm-13 426v-60h246v60c0 8-6 14-14 14H135c-7 0-13-6-13-14z"/><path fill="#007DF1" d="M270 417h-50a12 12 0 100 24h50a12 12 0 100-24z"/></svg>
+          +e.INPUT.input(type="text" name='phone' placeholder='Ваш аккаунт (номер)')
+      +e.LABEL.input-wrap
+        |<svg class='form__input-icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#007BF1" d="M39 43.6h41a1.8 1.8 0 001.8-1.7V24.2a1.8 1.8 0 00-1.7-1.8H39a1.8 1.8 0 00-1.8 1.8v17.7a1.8 1.8 0 001.8 1.7zM40.9 26h37.5v14.2H40.8z"/><path fill="#007BF1" d="M121.5 32a1.8 1.8 0 001.8-1.8v-12a1.8 1.8 0 00-1.8-1.8h-7.1V6.5a1.8 1.8 0 00-1.8-1.8H6.6a1.8 1.8 0 00-1.8 1.8v115a1.8 1.8 0 001.8 1.8h106.2a1.8 1.8 0 001.7-1.8V67.9h7.1a1.8 1.8 0 001.8-1.7v-12a1.8 1.8 0 00-1.8-1.8h-7.1V50h7.1a1.8 1.8 0 001.8-1.7v-12a1.8 1.8 0 00-1.8-1.8h-7.1V32zm-1.8-12v8.4h-5.3V20zm-8.8 99.8H8.2V8.3H111zm8.8-63.9v8.5h-5.3V56zm0-18v8.5h-5.3V38z"/><path fill="#007BF1" d="M88.3 81.6H30.8a1.8 1.8 0 000 3.5h57.5a1.8 1.8 0 000-3.5zM88.3 92.3H30.8a1.8 1.8 0 000 3.5h57.5a1.8 1.8 0 000-3.5zM88.3 103H30.8a1.8 1.8 0 100 3.4h57.5a1.8 1.8 0 000-3.5zM12.5 10.8a1.8 1.8 0 00-1.8 1.7V33a1.8 1.8 0 003.6 0V12.5a1.8 1.8 0 00-1.8-1.8z"/></svg>
+        +e.TEXTAREA.input._textarea(rows='4' name='text' placeholder='Пожалуйста, напишите больше деталей!' aria-label='input your messege')
+    button.btn Отправить!

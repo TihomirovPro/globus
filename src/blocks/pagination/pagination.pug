@@ -1,0 +1,17 @@
+mixin pagination()
+  +b.pagination
+    +e.UL.list
+      +e.LI.item
+        +e.A.link._prev.disabled(href='#') &#10229;
+      +e.LI.item.active
+        +e.A.link._next(href='#') 1
+      +e.LI.item
+        +e.A.link._next(href='#') 2
+      +e.LI.item
+        +e.A.link._next(href='#') 3
+      +e.LI.item
+        +e.A.link._next(href='#') 4
+      +e.LI.item
+        +e.A.link._next(href='#') 5
+      +e.LI.item
+        +e.A.link._next(href='#') &#10230;

@@ -1,0 +1,182 @@
+.post
+  border-radius: 4px
+  position: relative
+  transition: .3s
+  margin-bottom: 30px
+  +tabMd(min)
+    display: flex
+
+  &__image
+    display: block
+    overflow: hidden
+    border-radius: 6px
+    +tabMd(min)
+      width: 40%
+    +tabMd(max)
+      margin-bottom: 15px
+
+  &__picture
+    width: 100%
+    height: 100%
+    transition: 10s
+    &:hover
+      transform: scale(1.2)
+
+  &__desc
+    +tabMd(min)
+      padding-left: 30px
+      width: 60%
+
+  &__title
+    margin-bottom: 5px
+
+  &__text
+    margin-bottom: 18px
+
+
+  &__buttons
+    display: flex
+    width: 100%
+    .post__btn
+      padding: 9px 23px
+      text-transform: uppercase
+
+  &__more
+    position: relative
+    margin-left: 5px
+    color: #171717
+    text-transform: uppercase
+    +before(16px,16px,(url(../img/arrow-icon.svg)))
+      right: -24px
+      top: 4px
+
+
+  &__icon
+    +size(15px)
+    vertical-align: middle
+    margin-right: 4px
+    >path
+      fill: $colorMain
+
+.post-info
+  font-size: 13px
+  font-weight: 500
+  color: #707070
+  margin-bottom: 10px
+  // &__time
+  //   background: url(../img/message-icon.svg)
+  //   background-repeat: no-repeat
+  //   background-position: left center
+  //   background-size: 15px 15px
+  //   padding-left: 20px
+
+  // &__author
+  //   background: url(../img/clock-icon.svg)
+  //   background-repeat: no-repeat
+  //   background-position: left center
+  //   background-size: 15px 15px
+  //   padding-left: 20px
+
+  // &__views
+  //   background: url(../img/views-icon.svg)
+  //   background-repeat: no-repeat
+  //   background-position: left center
+  //   background-size: 15px 15px
+  //   padding-left: 20px
+
+.post_small
+  margin-bottom: 10px
+  display: flex
+  .post
+    &__image
+      padding-right: 15px
+      +tablet(max)
+        width: 20%
+    &__picture
+      &:hover
+        transform: none
+    &__desc
+      padding: 0
+      +tablet(max)
+        width: 80%
+    &__title
+      margin-bottom: 8px
+      font-size: 15px
+      line-height: 16px
+      color: #404040
+
+.post_slider
+  display: block
+  transition: .3s
+  box-shadow: 0 5px 20px rgba(0,0,0,0)
+  +tabMd(min)
+    display: block
+  &:hover
+    transition: .3s
+    box-shadow: 0 5px 20px rgba(0,0,0,.05)
+  .post
+    &__image
+      width: 100%
+    &__picture
+      &:hover
+        transform: none
+    &__desc
+      width: 100%
+      padding: 20px
+      border-radius: 0 0 4px 4px
+      border: 1px solid #eee
+      border-top: none
+
+.share-container
+  position: relative
+  margin-left: auto
+  display: flex
+  overflow: hidden
+  +size(40px,44px)
+  transition: .3s
+  &:hover
+    width: 180px
+    .share-button
+      background-color: #a0a0a0
+
+.share-button
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  cursor: pointer
+  +size(40px,44px)
+  background: #e6e6e6
+  +before(100%,100%,(url(../img/share-icon.svg)))
+    top: 0
+    left: 0
+    background-size: 40%
+    background-position: center
+    background-repeat: no-repeat
+    background-blend-mode: exclusion
+
+.share-link
+  display: block
+  position: relative
+  background: #e6e6e6
+  +size(40px,44px)
+  margin-right: 6px
+  background-size: 40%
+  background-position: center
+  background-repeat: no-repeat
+  &:before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    +size(100%)
+  &.facebook
+    background-image: url(../img/fb-icon.svg)
+    background-blend-mode: exclusion
+  &.in
+    background-image: url(../img/in-icon.svg)
+  &.twitter
+    background-image: url(../img/twitter-icon.svg)
+      
+      
+

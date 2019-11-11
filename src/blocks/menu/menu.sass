@@ -21,6 +21,7 @@
       visibility: visible
   +mobile
     top: 64px
+    height: calc(100vh - 64px)
 
   &__list
     +tablet(min)
@@ -42,13 +43,20 @@
       border-top: 1px solid #e9e9e9
     &:hover
       color: $colorMain
+  &__arrow
+    font-size: 8px
+    margin-left: 6px
+    vertical-align: middle
 
 .dropdown
   position: relative
+  transition: .3s
   +tablet(min)
     &:hover
-      .menu__link
+      >.menu__link
           color: $colorMain
+          >.dropdown-icon>svg>path
+            fill: $colorMain
       >.sub-menu
         opacity: 1
         visibility: visible
@@ -56,14 +64,25 @@
         &__link
           color: $colorMain
           background: #f2f2f2
+          // >.dropdown-icon>svg>path
+          //   fill: $colorMain
   +tablet(max)
+    overflow: hidden
+    min-height: 40px
+    max-height: 40px
     &.open
-      .menu__link
+      >.menu__link
         color: $colorMain
+        >.dropdown-icon>svg>path
+          fill: $colorMain
       >.sub-menu
-        height: auto
-        padding-top: 10px
-        padding-bottom: 10px
+        // height: auto
+        // padding-top: 10px
+        // padding-bottom: 10px
+        &__link
+          color: $colorMain
+          // >.dropdown-icon>svg>path
+          //   fill: $colorMain
 
 .sub-menu
   background: #fff
@@ -79,10 +98,9 @@
     width: 220px
   +tablet(max)
     overflow: hidden
-    height: 0
+    // height: 0
     opacity: 1
     background: #f6f6f6
-    
 
   &_sub
     +tablet(min)
@@ -107,4 +125,10 @@
     font-family: $fontSecond
     &:hover
       color: $colorMain
-      background: #f2f2f2
+      +tablet(min)
+        background: #f2f2f2
+
+  &__arrow
+    font-size: 8px
+    margin-left: 6px
+    vertical-align: middle

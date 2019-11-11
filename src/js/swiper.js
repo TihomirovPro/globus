@@ -4,10 +4,11 @@ import {
   Swiper,
   Navigation,
   Pagination,
-  Autoplay
+  Autoplay,
+  Lazy
 } from 'swiper/js/swiper.esm.js'
 
-Swiper.use([Navigation, Pagination, Autoplay])
+Swiper.use([Navigation, Pagination, Autoplay, Lazy])
 
 document.addEventListener('DOMContentLoaded', () => {
   const mainSlider = new Swiper('.main__container', {
@@ -15,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     longSwipesRatio: 0.01,
     longSwipesMs: 100,
+    lazy: {
+      loadPrevNext: true
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -50,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
+    lazy: {
+      loadPrevNext: true
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -67,6 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
+    lazy: {
+      loadPrevNext: true
+    },
+    navigation: {
+      nextEl: '.next-button',
+      prevEl: '.prev-button'
+    },
     breakpoints: {
       1200: {
         slidesPerView: 4
@@ -84,9 +98,59 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
+    lazy: {
+      loadPrevNext: true
+    },
     speed: 800,
     autoplay: {
       delay: 5000
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      }
+    }
+  })
+
+  const articleSlider = new Swiper('.article-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    watchSlidesVisibility: true,
+    speed: 800,
+    // preloadImages: false,
+    // lazy: true,
+    lazy: {
+      loadPrevNext: true
+    },
+    autoplay: {
+      delay: 5000
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  })
+
+  const articleSlider2 = new Swiper('.article-slider2', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    watchSlidesVisibility: true,
+    speed: 800,
+    preloadImages: false,
+    // lazy: true,
+    lazy: {
+      loadPrevNext: true
+    },
+    autoplay: {
+      delay: 5000
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
     },
     breakpoints: {
       768: {

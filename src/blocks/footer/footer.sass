@@ -1,13 +1,12 @@
 .footer
+  position: relative
   color: #fff
-  background-color: #00090c
+  background-color: $colorFooter
   padding-top: 30px
   padding-bottom: 25px
-
   &__top
     padding-bottom: 20px
-    +mobile(min)
-      +flex('between-wrap')
+    +flex('between-wrap')
 
   &__list
     +width(2)
@@ -15,7 +14,8 @@
     color: #b0b0b0
     line-height: 22px
     text-transform: uppercase
-    margin-bottom: 40px
+    &:not(:last-child)
+      margin-bottom: 40px
     +tablet(min)
       &:first-child,
       &:last-child
@@ -29,7 +29,8 @@
       &:first-child,
       &:last-child
         width: 100%
-      
+    +media(max,374px)
+      width: 100%
 
   &__list-item
     position: relative
@@ -101,25 +102,20 @@
     >a
       color: $colorMain
 
-  &__instagram
-    max-width: 310px
-    margin-bottom: 22px
+  &__social-links
     display: flex
-    flex-wrap: wrap
-
-  &__picture
-    display: block
-    margin-right: 4px
-    margin-bottom: 7px
-    +size(68px)
-    object-fit: cover
+    width: 224px
+    margin-left: auto
+    +mobile
+      margin: 0 auto
 
   &__social-link
     border-radius: 50%
     background-size: 50%
     background-position: center
     background-repeat: no-repeat
-    margin-right: 6px
+    &:not(:last-child)
+      margin-right: 6px
     +size(40px)
     &_facebook
       background-color: #4b69a8
@@ -142,6 +138,22 @@
       
 
   &__bottom
-    +flex('between')
+    color: #b0b0b0
+    font-size: 14px
+    text-transform: uppercase
     padding-top: 25px
     border-top: 1px solid rgba(255,255,255,.05)
+    +tabMd(min)
+      +flex('between')
+    +mobile
+      text-align: center
+      font-size: 13px
+      
+
+  &__link
+    transition: .3s
+    &:hover
+      color: #fff
+    +tabMd(max)
+      display: inline-block
+      margin-top: 12px

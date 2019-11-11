@@ -15,11 +15,11 @@ mixin header()
         +e.A.contacts-link._mail(href="mailto:info@globus.furniture") info@globus.furniture
 
     +e.bottom
-      +e.A.logo(href='#' aria-label="Home")
+      +e.A.logo(href='/' aria-label="Home")
         +logo
       +menu({
         links: [
-          { href: '#', text: 'Главная' },
+          { href: '/', text: 'Главная' },
           { href: '#', text: 'Все о мебельном туре',
             submenu: [
               { href: '#', text: 'Что такое мебельный тур',
@@ -47,10 +47,10 @@ mixin header()
 
             ]
           },
-          { href: '#', text: 'Блог' },
-          { href: '#', text: 'Цены' },
-          { href: '#', text: 'О нас' },
-          { href: '#', text: 'Отзывы' }
+          { href: 'blog.html', text: 'Блог' },
+          { href: 'prices.html', text: 'Цены' },
+          { href: 'about.html', text: 'О нас' },
+          { href: 'reviews.html', text: 'Отзывы' }
         ]
       })
       +e.A.btn.btn(href="#") Контакты

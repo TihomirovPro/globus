@@ -1,0 +1,92 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+  
+.price
+  position: relative
+  background: #fff
+  padding-top: 60px
+  padding-bottom: 30px
+
+  &__container
+    max-width: 1000px
+    margin: 0 auto
+    padding-top: 40px
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    +tablet(min)
+      align-items: flex-start
+  &__card
+    width: calc(100% / 3)
+    border: 2px solid #d3d3d3
+    padding: 30px 10px 40px
+    font-family: $fontSecond
+    +tablet(min)
+      &:nth-child(2)
+        transform: translateY(-25px)
+        position: relative
+        background: #fff
+        width: calc(100% / 3 + 10px)
+        margin: 0 -5px
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.3)
+        border: none
+        padding: 60px 20px
+    +tablet(max)
+      margin-bottom: 20px
+      width: 48%
+    +tabMd(max)
+      width: 100%
+      
+
+  &__card-icon
+    +size(48px)
+    margin: 0 auto 10px
+    >svg
+      +size(100%)
+      
+
+  &__card-title
+    text-align: center
+
+  &__card-desc
+    text-align: center
+    padding-bottom: 20px
+    span
+      font-size: 35px
+      font-weight: 700
+      color: $colorMain
+    >p
+      &:last-child
+        font-size: 14px
+    
+  &__card-list
+    width: 80%
+    margin: 0 auto 20px
+
+  &__card-item
+    padding: 8px 0
+    position: relative
+    padding-right: 30px
+
+    color: #000
+    font-weight: 500
+    &::after
+      top: 8px
+      right: 0
+      +flex('center')
+      position: absolute
+
+      content: '✓'
+      font-size: 11px
+      font-weight: 700
+      color: $colorMain
+
+      +size(20px)
+      border-radius: 50%
+      border: 2px solid $colorMain
+
+  &__btn
+    display: block
+    margin: 0 auto
+    max-width: 160px
+    font-weight: 500

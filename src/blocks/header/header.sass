@@ -9,9 +9,9 @@
     background-color: rgba(0,0,0,.9)
     +tabMd(min)
       top: -70px
-    +tablet(min)
+    +desktop(min)
       top: -46px
-  
+
   &__contacts
     padding: 11px 0
     +desktop(min)
@@ -68,16 +68,37 @@
     position: relative
     width: 140px
     bottom: -3px
+    transition: .3s
+    // .st0,
+    // .st1,
+    // .st2,
+    // .st3,
+    // .st4,
+    // .st5,
+    // .st6
     path
-      fill: #fff
       transition: .3s
+      fill: #fff
     &:hover
       path
         fill: $colorMain
-      // .logo-path
-      //   fill: url(#a)
-
+      // .st0
+      //   fill: url(#path160_1_)
+      // .st1
+      //   fill: url(#SVGID_1_)
+      // .st2
+      //   fill: url(#SVGID_2_)
+      // .st3
+      //   fill: url(#SVGID_3_)
+      // .st4
+      //   fill: url(#SVGID_4_)
+      // .st5
+      //   fill: url(#SVGID_5_)
+      // .st6
+      //   fill: url(#SVGID_6_)
+      
   &__btn
     +tablet(max)
       margin-right: 20px
       margin-left: auto
+                        

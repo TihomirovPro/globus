@@ -2,7 +2,10 @@ const { series, parallel, watch } = require('gulp')
 const { runServer, reloadServer } = require('./server')
 const { cleanDistFolder } = require('./clean')
 const { copyStaticFiles } = require('./static')
-const { buildMarkup } = require('./markup')
+const {
+  buildMarkup,
+  buildSections
+} = require('./markup')
 const { buildStyles } = require('./styles')
 const { optimizeImages } = require('./images')
 const { upload, uploadMin } = require('./upload')
@@ -14,14 +17,16 @@ function runWatchers (cb) {
     'src/siteConfig.pug',
     'src/pages/**/*.pug',
     'src/layout/**/*.pug',
-    'src/blocks/**/*.pug'
+    'src/blocks/**/*.pug',
+    'src/sections/**/*.pug'
   ], series(buildMarkup, reloadServer))
 
   // styles
   watch([
     'src/blocks/**/*.sass',
     'src/styles/**/*.sass',
-    'src/pages/**/*.sass'
+    'src/pages/**/*.sass',
+    'src/sections/**/*.sass'
   ], series(buildStyles, reloadServer))
 
   // static
@@ -41,7 +46,7 @@ function runWatchers (cb) {
 exports.default = series(
   cleanDistFolder,
   parallel(copyStaticFiles),
-  parallel(buildStyles, buildMarkup, runServer, optimizeImages),
+  parallel(buildStyles, buildMarkup, buildSections, runServer, optimizeImages),
   runWatchers
 )
 
@@ -49,7 +54,7 @@ exports.default = series(
 exports.build = series(
   cleanDistFolder,
   parallel(copyStaticFiles),
-  parallel(buildStyles, buildMarkup, optimizeImages)
+  parallel(buildStyles, buildMarkup, buildSections, optimizeImages)
 )
 
 // upload task

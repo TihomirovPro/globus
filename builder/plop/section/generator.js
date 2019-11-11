@@ -6,12 +6,6 @@ module.exports = function () {
     prompts: [
       {
         type: 'input',
-        name: 'page',
-        message: 'page\'s name',
-        validate: isntEmptyName
-      },
-      {
-        type: 'input',
         name: 'name',
         message: 'Section\'s name',
         validate: isntEmptyName
@@ -24,14 +18,14 @@ module.exports = function () {
       // pug
       actions.push({
         type: 'add',
-        path: '../../src/pages/{{dashCase page}}/{{dashCase name}}/{{dashCase name}}.pug',
+        path: '../../src/sections/{{dashCase page}}/{{dashCase name}}/{{dashCase name}}.pug',
         templateFile: './section/section.pug'
       })
 
       // sass
       actions.push({
         type: 'add',
-        path: '../../src/pages/{{dashCase page}}/{{dashCase name}}/{{dashCase name}}.sass',
+        path: '../../src/sections/{{dashCase page}}/{{dashCase name}}/{{dashCase name}}.sass',
         templateFile: './section/section.sass'
       })
 

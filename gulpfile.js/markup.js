@@ -11,5 +11,15 @@ function buildMarkup (cb) {
     .pipe(flatten())
     .pipe(dest('dist'))
 }
+function buildSections (cb) {
+  return src('src/sections/*/*.pug')
+    .pipe(toaster('Pug', cb))
+    .pipe(pug({ pretty: true }))
+    .pipe(flatten())
+    .pipe(dest('dist/sections'))
+}
 
-module.exports = { buildMarkup }
+module.exports = {
+  buildMarkup,
+  buildSections
+}

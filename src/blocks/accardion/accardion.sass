@@ -1,0 +1,60 @@
+.accardion
+
+  &__item
+    position: relative
+    transition: .3s
+    // height: 64px
+    overflow: hidden
+    cursor: pointer
+    position: relative
+    background: #FFFFFF
+    box-shadow: 0px 4px 25px rgba(0,0,0,0)
+    border-radius: 6px
+    margin-bottom: 20px
+    +mobile
+      // height: 86px
+    &:hover
+      box-shadow: 0 0 15px 1px rgba(0,0,0,.1)
+      .accardion
+        &__title
+          text-decoration: underline
+          color: $colorMain
+    &:after,
+    &:before
+      position: absolute
+      content: ''
+      width: 12px
+      height: 1px
+      background: #000
+      right: 30px
+      top: 30px
+      // transition: .3s
+      transform: rotate(0)
+    &.open
+      &:after
+        transform: rotate(90deg)
+
+  &__title
+    position: relative
+    transition: .3s
+    font-family: $fontSecond
+    padding: 20px
+    border-radius: 6px
+    border: 1px solid #ddd
+
+  &__text
+    padding: 20px
+    position: absolute
+    transition: .3s
+    color: #6f6f6f
+    border: 1px solid #ddd
+    border-top: 0
+    border-radius: 0 0 6px 6px
+    p,
+    ul
+      margin-bottom: 16px
+    li
+      list-style-type: disc
+      margin-left: 16px
+      &:not(:last-child)
+        margin-bottom: 10px

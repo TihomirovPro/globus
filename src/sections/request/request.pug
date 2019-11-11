@@ -1,0 +1,58 @@
+include ../../layout/bemto/bemto
+include ../../layout/mixins/img
+
+//------------------------------//
+
+include ../../blocks/btn/btn
+include ../../blocks/form/form
+
+include ../../blocks/article-slider/article-slider
+include ../../blocks/accardion/accardion
+include ../../blocks/sidebar/sidebar
+include ../../blocks/post/post
+include ../../blocks/pagination/pagination
+
+//------------------------------//
+
+mixin select(data)
+  - let i = 0
+  +b.DIV.select
+    +e.P.checked!=data.first
+    +e.options
+      each option in data.select
+        if i == 0
+          - i++
+          +e.LABEL.option(data-value!=option.value class=attributes.class)
+            input(type="radio" checked value!=option.value name!=data.name)
+            +e.P.text!=option.value
+        else
+          +e.LABEL.option(data-value!=option.value class=attributes.class)
+            input(type="radio" value!=option.value name!=data.name)
+            +e.P.text!=option.value
+
+mixin request()
+  +b.SECTION.request.wrapper(class=attributes.class)
+    +e.PICTURE.bg
+      source.img(srcset="img/request-bg-mob.webp" media="(max-width: 576px)" type="image/webp")
+      source.img(srcset="img/request-bg-mob.jpg" media="(max-width: 576px)" type="image/webp")
+      source.img(srcset="img/request-bg.webp" type="image/webp")
+      img.img(src="img/request-bg.jpg" alt="")
+    +e.desc
+      +e.H2.title Оставьте заявку
+      +e.P.subtitle Вы можете в любое время оставить нам сообщение, в рабочие дни мы ответим вам в течение 24 часов. Внимание! В связи с большим потоком клиентов для ускорения работы просим Вас как можно подробнее заполнить форму на сайте! Спасибо!
+      +e.H3.title2 Мы надежная компания с большим опытом работы.
+      +e.H4.title3 &amp; Наши преимущества:
+      +b.UL.check-list
+        +e.LI.item
+          |<svg class="check-list__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395 395"><path fill="#007bf1" d="M344 192c-6 0-12 6-12 12v147H25V44h247a13 13 0 000-25H13C6 19 0 25 0 31v332c0 7 6 13 13 13h331c7 0 13-6 13-13V204c0-6-6-12-13-12z"/><path fill="#007bf1" d="M391 27c-5-5-13-5-17 0L170 231l-51-51a13 13 0 00-17 18l59 59a12 12 0 0018 0L391 45c5-5 5-13 0-18z"/></svg>
+          |Офис и склад в городе Фошань
+        +e.LI.item
+          |<svg class="check-list__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395 395"><path fill="#007bf1" d="M344 192c-6 0-12 6-12 12v147H25V44h247a13 13 0 000-25H13C6 19 0 25 0 31v332c0 7 6 13 13 13h331c7 0 13-6 13-13V204c0-6-6-12-13-12z"/><path fill="#007bf1" d="M391 27c-5-5-13-5-17 0L170 231l-51-51a13 13 0 00-17 18l59 59a12 12 0 0018 0L391 45c5-5 5-13 0-18z"/></svg>
+          |Юр. лицо в Китае и РФ
+        +e.LI.item
+          |<svg class="check-list__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395 395"><path fill="#007bf1" d="M344 192c-6 0-12 6-12 12v147H25V44h247a13 13 0 000-25H13C6 19 0 25 0 31v332c0 7 6 13 13 13h331c7 0 13-6 13-13V204c0-6-6-12-13-12z"/><path fill="#007bf1" d="M391 27c-5-5-13-5-17 0L170 231l-51-51a13 13 0 00-17 18l59 59a12 12 0 0018 0L391 45c5-5 5-13 0-18z"/></svg>
+          |Несем материальную ответственность за товар
+    +form
+
+
+//- +request

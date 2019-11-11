@@ -1,0 +1,81 @@
+include ../../layout/bemto/bemto
+include ../../layout/mixins/img
+
+//------------------------------//
+
+include ../../blocks/btn/btn
+include ../../blocks/form/form
+
+include ../../blocks/article-slider/article-slider
+include ../../blocks/accardion/accardion
+include ../../blocks/sidebar/sidebar
+include ../../blocks/post/post
+include ../../blocks/pagination/pagination
+
+//------------------------------//
+
+mixin blog()
+  +b.SECTION.blog.wrapper
+    +b.section-header
+      +e.H6.subtitle Больше о мебели и товарах из Китая читайте
+      +e.H2.title
+        a В нашем блоге
+    +e.slider
+      +e.container
+        .swiper-wrapper
+          +post({
+            h5: true,
+            img: 'blog1',
+            title: 'Специальное предложение',
+            time: '23 сентября',
+            author: '5 минут',
+            text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+            more: true
+          })._slider.swiper-slide
+          +post({
+            h5: true,
+            img: 'blog1',
+            title: 'Специальное предложение',
+            time: '23 сентября',
+            author: '5 минут',
+            text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+            more: true
+          })._slider.swiper-slide
+          +post({
+            h5: true,
+            img: 'blog1',
+            title: 'Специальное предложение',
+            time: '23 сентября',
+            author: '5 минут',
+            text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+            more: true
+          })._slider.swiper-slide
+          +post({
+            h5: true,
+            img: 'blog1',
+            title: 'Специальное предложение',
+            time: '23 сентября',
+            author: '5 минут',
+            text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+            more: true
+          })._slider.swiper-slide
+          +post({
+            h5: true,
+            img: 'blog1',
+            title: 'Специальное предложение',
+            time: '23 сентября',
+            author: '5 минут',
+            text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+            more: true
+          })._slider.swiper-slide
+          +post({
+            h5: true,
+            img: 'blog1',
+            title: 'Специальное предложение',
+            time: '23 сентября',
+            author: '5 минут',
+            text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+            more: true
+          })._slider.swiper-slide
+        .prev-button
+        .next-button

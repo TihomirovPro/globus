@@ -8,86 +8,12 @@
   // backface-visibility: hidden
   // perspective: 1000px
   
-.person-card
-  display: flex
-  align-items: center
-  padding: 25px 0 20px 20px
-
-  &__picture
-    overflow: hidden
-    position: relative
-    z-index: 1
-    +size(80px)
-    border-radius: 50%
-    padding: 5px
-    background: #fff
-    margin-right: 15px
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
-    >img
-      border-radius: 50%
-
-      
-
-.video-review
-  cursor: pointer
-  display: block
-  position: relative
-  transition: .3s
-  padding: 12px
-  border-radius: 6px
-  box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
-  &:after
-    position: absolute
-    content: ''
-    bottom: -15px;
-    left: 50px
-    width: 0
-    height: 0
-    border-right: 15px solid transparent
-    border-top: 15px solid #fff 
-
-  &__picture
-    display: block
-    border-radius: 4px
-    overflow: hidden
-    position: relative
-    +before(100%,100%,rgba(0,0,0,.5))
-    +after(35px,35px,(url(../img/play-icon.svg)))
-      top: 50%
-      left: 50%
-      transform: translate(-50%,-50%)
-
-.check-list
-
-  &__item
-    font-size: 15px
-    font-family: $fontSecond
-    color: rgba(255,255,255,.7)
-    padding-left: 30px
-    background: url(../img/checkbox.svg)
-    background-repeat: no-repeat
-    background-position: left -4px
-    background-size: 18px 27px
-    &:not(:last-child)
-      margin-bottom: 18px
-
-.section-header
-  position: relative
-  margin-bottom: 30px
-  &_white
-    .section-header__title,
-    .section-header__subtitle,
-      color: #fff
-  &__title
-    text-align: center
-    padding: 0 15px 6px
-  &__subtitle
-    text-align: center
-    max-width: 730px
-    padding: 0 15px
-    margin: 0 auto
-    >a
-      color: $colorMain
-
-  
 @import "./*/*"
+
+// @import "../../sections/main/main"
+// @import "../../sections/globus/globus"
+// @import "../../sections/services/services"
+// @import "../../sections/reviews/reviews"
+// @import "../../sections/request/request"
+// @import "../../sections/blog/blog"
+// @import "../../sections/bloggers/bloggers"

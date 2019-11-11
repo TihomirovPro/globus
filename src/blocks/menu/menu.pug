@@ -8,14 +8,16 @@ mixin menu(menu)
         else
           +e.LI.item.dropdown
             +e.SPAN.link!= link1.text
+              +e.SPAN.arrow &#9660;
             +b.UL.sub-menu
               each link2 in link1.submenu
                 if !link2.submenu
                   +e.LI.item
                     +e.A.link(href=link2.href)!= link2.text
                 else
-                  +e.LI.ite.dropdown
+                  +e.LI.item.dropdown
                     +e.SPAN.link!= link2.text
+                      +e.SPAN.arrow  &#9660;
                     +b.UL.sub-menu._sub
                       each link3 in link2.submenu
                         if !link3.submenu
@@ -24,6 +26,7 @@ mixin menu(menu)
                         else
                           +e.LI.item.dropdown
                             +e.SPAN.link!= link3.text
+                              +e.SPAN.arrow  &#9660;
                             +b.UL.sub-menu._sub
                               each link4 in link3.submenu
                                 if !link4.submenu

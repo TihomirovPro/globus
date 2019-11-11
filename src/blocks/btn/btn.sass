@@ -21,7 +21,6 @@
 		top: 0
 		transition: .3s
 		width: 0
-    z-index: -1
 		transform: skewX(0)
 		z-index: -1
 	&:hover
@@ -53,6 +52,17 @@
 		&:hover
 			background-color: $colorMain
 			border-color: transparent
+	
+	&.btn_outline-color
+		padding: 13px 23px
+		background-color: transparent
+		color: $colorMain
+		border: 2px solid $colorMain
+		+mobile
+			padding: 8px 13px
+		&:hover
+			background-color: $colorMain
+			color: #fff
 
 
 

@@ -1,0 +1,33 @@
+include ../../layout/bemto/bemto
+include ../../layout/mixins/img
+
+//------------------------------//
+
+include ../../blocks/btn/btn
+include ../../blocks/form/form
+
+include ../../blocks/article-slider/article-slider
+include ../../blocks/accardion/accardion
+include ../../blocks/sidebar/sidebar
+include ../../blocks/post/post
+include ../../blocks/pagination/pagination
+
+//------------------------------//
+
+mixin globus(data)
+  +b.SECTION.globus.wrapper
+    if data.head
+      +e.H4.head О нас
+    if data.header
+      +b.section-header
+        +e.H2.title Мы организуем мебельные туры уже более 10 лет
+        +e.P.subtitle Услуга мебельный тур в Китай год от года набирает все большую популярность, многие люди стали понимать, что практически все товары производятся в Китае. А стереотип о том, что «все китайские товары плохого качества» уходит в прошлое.
+    +e.container
+      +e.IMG.logo(src='img/'+data.logo alt='')
+      +e.desc
+        +e.header
+          +e.H2.title GLOBUS
+          +e.H4.subtitle Ваш надежный партнер в Китае
+        +e.text
+          each text in data.text
+            p!=text.p
