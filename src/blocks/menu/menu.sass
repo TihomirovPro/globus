@@ -27,8 +27,6 @@
     +tablet(min)
       display: flex
 
-  &__item
-
   &__link
     display: block
     cursor: pointer
@@ -63,9 +61,8 @@
         z-index: 10
         &__link
           color: $colorMain
-          background: #f2f2f2
-          // >.dropdown-icon>svg>path
-          //   fill: $colorMain
+          background: #f2f2f
+
   +tablet(max)
     overflow: hidden
     min-height: 40px
@@ -75,14 +72,8 @@
         color: $colorMain
         >.dropdown-icon>svg>path
           fill: $colorMain
-      >.sub-menu
-        // height: auto
-        // padding-top: 10px
-        // padding-bottom: 10px
         &__link
           color: $colorMain
-          // >.dropdown-icon>svg>path
-          //   fill: $colorMain
 
 .sub-menu
   background: #fff
@@ -111,8 +102,6 @@
       border-left: 2px solid $colorMain
     +tablet(max)
       padding-left: 30px
-
-  &__item
 
   &__link
     cursor: pointer

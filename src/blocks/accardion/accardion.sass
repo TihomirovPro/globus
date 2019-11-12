@@ -3,16 +3,12 @@
   &__item
     position: relative
     transition: .3s
-    // height: 64px
     overflow: hidden
     cursor: pointer
-    position: relative
     background: #FFFFFF
     box-shadow: 0px 4px 25px rgba(0,0,0,0)
     border-radius: 6px
     margin-bottom: 20px
-    +mobile
-      // height: 86px
     &:hover
       box-shadow: 0 0 15px 1px rgba(0,0,0,.1)
       .accardion
@@ -28,7 +24,6 @@
       background: #000
       right: 30px
       top: 30px
-      // transition: .3s
       transform: rotate(0)
     &.open
       &:after

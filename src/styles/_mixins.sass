@@ -6,7 +6,7 @@
     @media only screen and (max-width: $from) and (min-width: $to)
       @content
 
-//===================_Desktop_====================//
+// ===================_Desktop_====================//
 
 $desktoplg: 1201px
 $desktopMax: 1200px
@@ -16,7 +16,7 @@ $desktopMin: 992px
   @if $from == max
     +media($from, $desktopMax)
       @content
-  @elseif $from == min
+  @else if $from == min
     +media($from, $desktoplg)
       @content
   @else
@@ -32,7 +32,7 @@ $tabletMin: 768px
   @if $from == max
     +media($from, $tabletMax)
       @content
-  @elseif $from == min
+  @else if $from == min
     +media($from, $desktopMin)
       @content
   @else
@@ -48,7 +48,7 @@ $tabMdMin: 576px
   @if $from == max
     +media($from, $tabMdMax)
       @content
-  @elseif $from == min
+  @else if $from == min
     +media($from, $tabletMin)
       @content
   @else
@@ -59,11 +59,11 @@ $tabMdMin: 576px
 
 $mobileMax: 575px
 
-=mobile($from: max)
+=mobile($from: max) 
   @if $from == max
     +media($from, $mobileMax)
       @content
-  @elseif $from == min
+  @else if $from == min
     +media($from, $tabMdMin)
       @content
 
@@ -77,11 +77,11 @@ $mobileMax: 575px
 //===================__Width & Height__====================//
 
 =size($a, $b: false )
-	width: $a
-	@if $b
-		height: $b
-	@else
-		height: $a
+  width: $a
+  @if $b
+    height: $b
+  @else
+    height: $a
 
 =width($col)
   $width: (100% / 12) * $col
@@ -96,29 +96,29 @@ $mobileMax: 575px
     justify-content: center
     align-items: center
 
-  @elseif $flex == 'between'
+  @else if $flex == 'between'
     justify-content: space-between
 
-  @elseif $flex == 'between-center'
+  @else if $flex == 'between-center'
     justify-content: space-between
     align-items: center
 
-  @elseif $flex == 'between-wrap'
+  @else if $flex == 'between-wrap'
     justify-content: space-between
     flex-wrap: wrap
 
-  @elseif $flex == 'between-center-wrap'
+  @else if $flex == 'between-center-wrap'
     justify-content: space-between
     align-items: center
     flex-wrap: wrap
 
-  @elseif $flex == 'around'
+  @else if $flex == 'around'
     justify-content: space-around
 
 //===================__Pseudo background__====================//
 
 =pseudoBackground($opacity, $background)
-	&::before
+  &::before
     content: ''
     display: block
     position: absolute
@@ -180,11 +180,11 @@ $mobileMax: 575px
 //===================__Keyframes__====================//
 
 =keyframes($name)
-	@-webkit-keyframes #{$name}
-		@content
-	@-moz-keyframes #{$name}
-		@content
-	@-ms-keyframes #{$name}
-		@content
-	@keyframes #{$name}
-		@content
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
