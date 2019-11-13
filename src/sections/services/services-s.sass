@@ -58,7 +58,7 @@
     display: block
 
   &__pluses
-    +tabMd(min)
+    +tablet(min)
       +flex('between')
       
 
@@ -68,11 +68,11 @@
     width: fit-content
     overflow: hidden
     border-radius: 8px
-    +tabMd(min)
+    +tablet(min)
       width: calc(50% - 30px)
-    +tablet
-      width: 33%
-    +tabMd(max)
+    +tablet(max)
+      max-width: 510px
+      width: 100%
       margin-bottom: 36px
 
   &__text
@@ -81,7 +81,7 @@
       width: 540px
     +desktop(max)
       width: 450px
-    +tabMd(max)
+    +tablet(max)
       padding-left: 0
       width: 100%
 
@@ -111,7 +111,7 @@
     +desktop
       margin-top: 20px
     +tablet
-      width: 80%
+      width: 100%
       margin-top: 50px
     +tabMd(max)
       width: 100%
