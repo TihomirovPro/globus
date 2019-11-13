@@ -1,0 +1,44 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+
+.p-404
+  padding-top: 60px
+  padding-bottom: 60px
+  +tablet(min)
+    +flex('between')
+    align-items: center
+    
+  &__title
+    color: #afafaf
+    font-size: 200px
+    font-weight: 700
+    line-height: 100%
+    text-align: center
+    +tablet(min)
+      width: calc(40% - 15px)
+    +tablet(max)
+      margin-bottom: 30px
+    +tabMd(max)
+      font-size: 25vw
+      
+
+  &__desc
+    +tablet(min)
+      width: calc(60% - 15px)
+    +tablet(max)
+      text-align: center
+
+  &__subtitle
+    color: #232323
+    font-size: 50px
+    font-weight: 700
+    line-height: 100%
+    font-family: $fontSecond
+    margin-bottom: 30px
+    +tabMd(max)
+      font-size: 8vw
+
+  &__text
+    font-size: 20px
+    font-weight: 500
+    margin-bottom: 24px

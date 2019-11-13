@@ -28,6 +28,25 @@
   background-repeat: no-repeat
   +mobile
     height: 250px
+  &__title
+    z-index: 1
+    padding-top: 150px
+    color: #fff
+    position: relative
+    font-weight: 600
+    font-size: 40px
+    margin-bottom: 0
+    +tabMd(max)
+      text-align: center
+      padding-top: 120px
+      font-size: 6vw
+  &__picture
+    position: absolute
+    left: 0
+    top: 0
+    +size(100%)
+    object-fit: cover
+    +pseudoBackground(.8,#00090c)
 
 .picture
   position: absolute

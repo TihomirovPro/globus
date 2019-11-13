@@ -1,0 +1,40 @@
+extends ../../layout/page
+
+//--------------------------------------------------//
+
+block vars
+  - const title = '404'
+  - const description = '404'
+  - const pageBg = 'about-bg'
+  - const pageTitle = 'Страницы не существует!'
+  -
+    const breadcrumbs = {
+      link: false,
+      page: '404'
+    }
+
+//--------------------------------------------------//
+
+block head
+  +style('404')
+
+block startBody
+  +header()
+ 
+block endBody
+  +footer()
+  +script('main')
+  //- +script('404')
+
+//--------------------------------------------------//
+
+block content
+  +b.p-404.wrapper
+    +e.P.title 404
+    +e.desc
+      +e.P.subtitle Страницы не
+        br
+        |существует!
+      +e.P.text Нажмите кнопку ниже чтобы вернуться на главную
+      a.btn(href='/') Главная
+

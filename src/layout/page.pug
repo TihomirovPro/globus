@@ -46,7 +46,9 @@ html(lang=lang)
     block startBody
 
     main.content
-      .page-head.wrapper
+      +b.page-head.wrapper
+        if pageTitle
+          +e.H1.title!=pageTitle
         +img(pageBg)
         +breadcrumbs(breadcrumbs)
       block content

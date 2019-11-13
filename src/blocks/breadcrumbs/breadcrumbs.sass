@@ -1,19 +1,20 @@
 .breadcrumbs
-	position: relative
+	position: absolute
+	bottom: 60px
 	z-index: 1
 	color: #fff
 	font-size: 15px
-	padding-top: 220px
+	padding-top: 15px
 	font-family: $fontSecond
-	+mobile
-		padding-top: 180px
+	+tabMd(max)
+		bottom: 40px
+		left: 50%
+		transform: translateX(-50%)
 
 	&__list
 		display: flex
 		flex-wrap: wrap
 		align-items: center
-		+mobile
-			justify-content: center
 
 	&__item
 		position: relative
