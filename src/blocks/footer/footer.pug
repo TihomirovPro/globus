@@ -12,35 +12,37 @@ mixin footer()
       +e.list
         +e.H5.title Напишите нам
         +e.UL.list-wrap
-          +e.LI.list-item._location
+          +e.LI.list-item.location
             +e.P.list-title АДРЕС ОФИСА
             +e.A.list-link(href="#" rel="nofollow noopener" target='_blank') CHINA, FOSHAN, JIHUA 5TH ROAD 21, JINHAI SQUARE, 1207
-          +e.LI.list-item._mobile
+          +e.LI.list-item.mobile
             +e.P.list-title НОМЕРА ТЕЛЕФОНОВ
             +e.A.list-link(href="#") 8-800-775-9408 (БЕСПЛАТНО ПО РФ)
             +e.A.list-link(href="#") +86-757-8305-4504 (В КИТАЕ)
             +e.A.list-link(href="#") +86-186-7576-2020 (WHATSAPP)
-          +e.LI.list-item._email
+          +e.LI.list-item.email
             +e.P.list-title E-MAIL
             +e.A.list-link(href="#") INFO@GLOBUS.FURNITURE
       +list({
         title: 'Мессенджеры',
         items: [
-          {href: '#', link: '+8618675762020', icon: 'footer__list-item_whatsapp'},
-          {href: '#', link: 'GLOBUS_FURNITURE', icon: 'footer__list-item_telegram'},
-          {href: '#', link: '+8618675762020', icon: 'footer__list-item_viber'},
-          {href: '#', link: 'GLOBUS_FURNITURE', icon: 'footer__list-item_wechat'},
-          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_facebook'}
+          {href: '#', link: '+8618675762020', icon: 'whatsapp'},
+          {href: '#', link: 'GLOBUS_FURNITURE', icon: 'telegram'},
+          {href: '#', link: '+8618675762020', icon: 'viber'},
+          {href: '#', link: 'GLOBUS_FURNITURE', icon: 'wechat'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'facebook'}
         ]
       })
       +list({
         title: 'Соцсети',
         items: [
-          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_fb'},
-          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_instagram'},
-          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_vk'},
-          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_ok'},
-          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'footer__list-item_youtube'}
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'fb'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'instagram-icon'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'vk'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'ok'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'youtube'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'pinterest'},
+          {href: '#', link: 'GLOBUS.GUANGZHOU', icon: 'houzz'}
         ]
       })
       +e.list
@@ -64,11 +66,13 @@ mixin footer()
           +e.A.link(href="#" rel="nofollow noopener" target='_blank')
             +img('insta8')
         +e.social-links
-          +e.A.social-link._facebook.btn(href="#" aria-label='facebook' rel="nofollow noopener" target='_blank')
-          +e.A.social-link._instagram.btn(href="#" aria-label='instagram' rel="nofollow noopener" target='_blank')
-          +e.A.social-link._vk.btn(href="//vk.com" aria-label='vkontakte' rel="nofollow noopener" target='_blank')
-          +e.A.social-link._youtube.btn(href="#" aria-label='youtube' rel="nofollow noopener" target='_blank')
-          +e.A.social-link._ok.btn(href="#" aria-label='odnoklassniki' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.facebook.btn(href="#" aria-label='facebook' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.instagram-icon.btn(href="#" aria-label='instagram' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.vk.btn(href="//vk.com" aria-label='vkontakte' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.youtube.btn(href="#" aria-label='youtube' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.ok.btn(href="#" aria-label='odnoklassniki' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.pinterest.btn(href="#" aria-label='pinterest' rel="nofollow noopener" target='_blank')
+          +e.A.social-link.houzz.btn(href="#" aria-label='houzz' rel="nofollow noopener" target='_blank')
              
     +e.bottom
       p COPYRIGHT &copy; 2019 GLOBUS LTD.

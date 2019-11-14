@@ -40,51 +40,57 @@
     +before(18px,18px,transparent)
       top: 2px
       left: 0
-    &_location
+    &.location
       padding-left: 40px
       &:before
         +size(22px)
         background: url(../img/location-icon.svg)
-    &_mobile
+    &.mobile
       padding-left: 40px
       &:before
         +size(22px)
         background: url(../img/mobile-icon.svg)
-    &_email
+    &.email
       padding-left: 40px
       &:before
         +size(22px)
         background: url(../img/mail-icon.svg)
-    &_whatsapp
+    &.whatsapp
       &:before
         background: url(../img/whatsapp-icon.svg)
-    &_telegram
+    &.telegram
       &:before
         background: url(../img/telegram-icon.svg)
-    &_viber
+    &.viber
       &:before
         background: url(../img/viber-icon.svg)
-    &_wechat
+    &.wechat
       &:before
         background: url(../img/wechat-icon.svg)
-    &_facebook
+    &.facebook
       &:before
         background: url(../img/facebook-icon.svg)
-    &_fb
+    &.fb
       &:before
         background: url(../img/fb-icon.svg)
-    &_instagram
+    &.instagram-icon
       &:before
         background: url(../img/instagram-icon.svg)
-    &_vk
+    &.vk
       &:before
         background: url(../img/vk-icon.svg)
-    &_ok
+    &.ok
       &:before
         background: url(../img/ok-icon.svg)
-    &_youtube
+    &.youtube
       &:before
         background: url(../img/youtube-icon.svg)
+    &.pinterest
+      &:before
+        background: url(../img/pinterest-icon.svg)
+    &.houzz
+      &:before
+        background: url(../img/houzz-icon.svg)
 
   &__list-link
     display: block
@@ -105,32 +111,41 @@
   &__social-links
     display: flex
     justify-content: flex-end
+    flex-wrap: wrap
+    margin-right: -6px    
     +mobile
-      margin: 0 auto
+      justify-content: center
 
   &__social-link
     border-radius: 50%
     background-size: 50%
     background-position: center
     background-repeat: no-repeat
-    &:not(:last-child)
-      margin-right: 6px
+    margin-right: 6px
     +size(40px)
-    &_facebook
+    +tablet
+      margin-bottom: 10px
+    &.facebook
       background-color: #4b69a8
       background-image: url(../img/fb-icon.svg)
-    &_instagram
+    &.instagram-icon
       background-color: #aa7a6e
       background-image: url(../img/instagram-icon.svg)
-    &_vk
+    &.vk
       background-color: #5281b7
       background-image: url(../img/vk-icon.svg)
-    &_youtube
+    &.youtube
       background-color: #ce201f
       background-image: url(../img/youtube-icon.svg)
-    &_ok
+    &.ok
       background-color: #ff9800
       background-image: url(../img/ok-icon.svg)
+    &.pinterest
+      background-color: #CB2027
+      background-image: url(../img/pinterest-icon.svg)
+    &.houzz
+      background-color: #4CAF50
+      background-image: url(../img/houzz-icon.svg)
 
   &__bottom
     color: #b0b0b0
