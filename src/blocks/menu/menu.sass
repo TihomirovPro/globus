@@ -58,7 +58,10 @@
   transition: .3s
   cursor: pointer
   >.menu__link
-    color: #fff
+    +tablet(min)
+      color: #fff
+    +tablet(max)
+      color: #343a40
   >.menu__link,
   >.sub-menu__link
     &:after

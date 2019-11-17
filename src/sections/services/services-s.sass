@@ -1,6 +1,6 @@
 @import "../../styles/vars"
 @import "../../styles/mixins"
-  
+
 .services
   padding-top: 60px
 
@@ -145,13 +145,18 @@
     +flex('center')
     color: #fff
     font-size: 45px
-    margin-bottom: 10px
+    margin: 0 auto 10px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center left
+    width: max-content
+    padding-left: 55px
     +tablet(max)
       font-size: 28px
-    >svg
-      width: 45px
-      height: 45px
-      margin-right: 10px
+    // >svg
+    //   width: 45px
+    //   height: 45px
+    //   margin-right: 10px
 
   &__subtitle
     text-align: center
