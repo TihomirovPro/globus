@@ -1,5 +1,21 @@
+mixin select(data)
+  - let i = 0
+  +b.DIV.select
+    +e.P.checked!=data.first
+    +e.options
+      each option in data.select
+        if i == 0
+          - i++
+          +e.LABEL.option(data-value!=option.value class=attributes.class)
+            input(type="radio" checked value!=option.value name!=data.name)
+            +e.P.text!=option.value
+        else
+          +e.LABEL.option(data-value!=option.value class=attributes.class)
+            input(type="radio" value!=option.value name!=data.name)
+            +e.P.text!=option.value
+
 mixin form()
-  +b.form(class=attributes.class)
+  +b.FORM.form(class=attributes.class)
     +e.H3.title Давайте воплотим Вашу мечту в жизнь!
     +e.P.subtitle Пожалуйста, заполните анкету, чтобы мы лучше поняли, что Вам нужно:
     +e.container
@@ -84,8 +100,10 @@ mixin form()
 
     button.btn Отправить!
 
+
+
 mixin form2()
-  +b.form
+  +b.FORM.form
     +e.H3.title Давайте воплотим Вашу мечту в жизнь!
     +e.P.subtitle Пожалуйста, заполните анкету, чтобы мы лучше поняли, что Вам нужно:
     +e.container
