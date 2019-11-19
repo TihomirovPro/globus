@@ -85,6 +85,8 @@
     +flex('between')
   &__content
     padding-bottom: 60px
+    >.article-slider
+      margin-bottom: 20px
     >h1
       margin-bottom: 22px
       +mobile
@@ -114,14 +116,19 @@
         list-style-type: decimal
         padding-left: 8px
         margin-bottom: 6px
-
-    >picture
-      max-width: 100%
-      width: max-content
+    >picture,
+    >p>picture
+      width: 100%
       height: max-content
       margin-bottom: 20px
     >.post-info
       margin-bottom: 20px
+
+    >img
+      width: 100%
+      height: auto
+      object-fit: cover
+
   &__picture
     overflow: hidden
     border-radius: 6px
@@ -182,10 +189,12 @@
 
 .article-video
   width: 100%
-  border-radius: 6px
-  overflow: hidden
   height: max-content
+  border-radius: 6px
   position: relative
+  margin-bottom: 20px
+  cursor: pointer
+  overflow: hidden
   +before(65px,65px,(url(../img/play-button.svg)))
     cursor: pointer
     left: 50%

@@ -7,7 +7,7 @@ mixin select(data)
         if i == 0
           - i++
           +e.LABEL.option(data-value!=option.value class=attributes.class)
-            input(type="radio" checked value!=option.value name!=data.name)
+            input(type="radio" value!=option.value name!=data.name checked)
             +e.P.text!=option.value
         else
           +e.LABEL.option(data-value!=option.value class=attributes.class)

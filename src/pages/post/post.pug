@@ -54,5 +54,27 @@ block content
         li Загрузка контейнера
         li Передвижение по Фошаню (кроме поездок на фабрики)
         li Трансфер из аэропорта и обратно
+      +article-slider2({
+        slider: [
+          { img: 'blogger1-video' },
+          { img: 'blogger2-video' },
+          { img: 'blogger3-video' }
+        ]
+      })
+      +article-slider({
+        slider: [
+          { img: 'blogger1-video' },
+          { img: 'blogger2-video' },
+          { img: 'blogger3-video' }
+        ]
+      })
+      +picture('blogger1-video').article-video
+      img(
+        src='img/blogger1-video.jpg'
+        srcset='img/blogger2-video.jpg 1200w, img/about-bg.jpg 991w, img/blogger3-video.jpg 767w'
+        sizes='(max-width: 991px) and (min-width: 767px) 767px,(max-width: 1200px) and (min-width: 991px) 991px, (min-width: 1200px) 1200px'
+        
+        alt=""
+      )
 
     +sidebar-blog

@@ -18,8 +18,11 @@ export function iframe (selector) {
       modalContainer.classList.add('modal__iframeWrap')
       modalContainer.appendChild(iframe)
 
-      const link = opener.getAttribute('data-modal')
-      iframe.setAttribute('src', `https://www.youtube.com/embed/${link}`)
+      const item = opener.querySelector('[data-modal]')
+      console.log(item);
+      
+      const dataModal = item.getAttribute('data-modal')
+      iframe.setAttribute('src', `https://www.youtube.com/embed/${dataModal}`)
 
       openModal()
       iframe.style.height = `${iframe.offsetWidth * 0.5625}px`
