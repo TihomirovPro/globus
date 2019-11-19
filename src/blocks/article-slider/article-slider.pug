@@ -5,8 +5,9 @@ mixin article-slider(data)
         +e.item.swiper-slide
           if slider.title
             +e.H3.title!=slider.title
-          +sliderImg(slider.img).article-video
+          +sliderImg(slider.img).article-video.iframe-popup
     .swiper-pagination
+    
 mixin article-slider2(data)
   +b.article-slider2
     .swiper-wrapper
@@ -14,5 +15,5 @@ mixin article-slider2(data)
         +e.item.swiper-slide
           if slider.title
             +e.H3.title!=slider.title
-          +sliderImg(slider.img).article-video
+          +sliderImg(slider.img).article-video.iframe-popup
     .swiper-pagination
