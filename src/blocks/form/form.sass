@@ -30,8 +30,6 @@
     border-bottom: 1px solid #e1e6eb
     padding: 9px 12px
     padding-left: 30px
-    &.invalid
-      border-color: red
     +tablet(max)
       width: 100%
     &_textarea
@@ -60,6 +58,11 @@
     .form__input
       width: 100%
       margin-bottom: 0
+    &.invalid
+      border-color: red
+      input,
+      .select
+        border-color: red
     +tablet(max)
       width: 100%
       
@@ -70,9 +73,13 @@
 
   &__area-input-container
     display: flex
-
-  &__area-metering
     position: relative
+
+  &__area-metering-wrap
+    position: absolute
+    right: 0
+    bottom: 0
+  &__area-metering
     display: inline-block
     >input
       position: absolute
@@ -95,6 +102,9 @@
         background: #0274d9
   &__feet
     border-radius: 0 6px 6px 0
+
+.form__input-wrap
+  position: relative
 
 
 .request_top
