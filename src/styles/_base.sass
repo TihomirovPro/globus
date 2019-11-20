@@ -59,10 +59,6 @@
 .section-header
   position: relative
   margin-bottom: 30px
-  &_white
-    .section-header__title,
-    .section-header__subtitle
-      color: #fff
   &__title
     text-align: center
     font-weight: 400
@@ -77,6 +73,11 @@
     font-size: 14px
     >a
       color: $colorMain
+
+.section-header_white
+  >.section-header__title,
+  >.section-header__subtitle
+    color: #fff
 
 .article
   padding-top: 60px
