@@ -1,14 +1,11 @@
-// import Swiper from 'swiper/dist/js/swiper'
-// import Swiper from 'swiper'
 import {
   Swiper,
   Navigation,
   Pagination,
-  Autoplay,
-  Lazy
+  Autoplay
 } from 'swiper/js/swiper.esm.js'
 
-Swiper.use([Navigation, Pagination, Autoplay, Lazy])
+Swiper.use([Navigation, Pagination, Autoplay])
 
 document.addEventListener('DOMContentLoaded', () => {
   const mainSlider = new Swiper('.main__container', {
@@ -16,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     longSwipesRatio: 0.01,
     longSwipesMs: 100,
-    lazy: {
-      loadPrevNext: true
-    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -54,9 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
-    lazy: {
-      loadPrevNext: true
-    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -74,9 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    lazy: {
-      loadPrevNext: true
-    },
     navigation: {
       nextEl: '.next-button',
       prevEl: '.prev-button'
@@ -118,11 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 30,
     watchSlidesVisibility: true,
     speed: 800,
-    // preloadImages: false,
-    // lazy: true,
-    lazy: {
-      loadPrevNext: true
-    },
     autoplay: {
       delay: 5000
     },
@@ -140,10 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     watchSlidesVisibility: true,
     speed: 800,
     preloadImages: false,
-    // lazy: true,
-    lazy: {
-      loadPrevNext: true
-    },
     autoplay: {
       delay: 5000
     },

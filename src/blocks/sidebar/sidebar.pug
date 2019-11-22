@@ -2,7 +2,7 @@ mixin sidebar-list(data)
   +e.UL.links
     each items in data.items
       +e.LI.links-item
-        +e.A.link(href="#")!=items.link
+        +e.SPAN.link!=items.link
 
 mixin sidebar()
   +b.ASIDE.sidebar

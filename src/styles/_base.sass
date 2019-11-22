@@ -142,14 +142,27 @@
     +tablet(min)
       width: calc(100% - 285px)
  
-.images
+.col2,
+.col3
   +flex('between-wrap')
   margin-bottom: 20px
   >div
-    width: 48%
+    width: calc(50% - 15px)
     margin-bottom: 12px
     +tabMd(max)
       width: 100%
+
+.col3
+  >div
+    +tablet(min)
+      width: calc(100% / 3 - 15px)
+      >h3
+        font-size: 18px
+    +tablet
+      width: calc(50% - 15px)
+    +tabMd(max)
+      width: 100%
+
 
 .table-wrap
   position: relative
