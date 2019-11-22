@@ -14,12 +14,13 @@ export function accardion () {
   cards.forEach(item => {
     const content = item.querySelector('.accardionContentJs')
     const title = item.querySelector('.accardion__title')
-    const contentHeight = content.offsetHeight + 24
 
     itemHeight = title.offsetHeight
     item.style.height = `${itemHeight}px`
 
     item.addEventListener('click', () => {
+      const contentHeight = content.offsetHeight
+
       if (item.classList.contains('open')) {
         item.style.height = `${itemHeight}px`
       } else {
