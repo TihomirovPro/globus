@@ -45,11 +45,22 @@
     border: 1px solid #ddd
     border-top: 0
     border-radius: 0 0 6px 6px
-    p,
-    ul
-      padding-bottom: 16px
-    li
-      list-style-type: disc
-      margin-left: 16px
+    >p
       &:not(:last-child)
-        padding-bottom: 10px
+        padding-bottom: 16px
+    >ul
+      &:not(:last-child)
+        padding-bottom: 16px
+      >li
+        list-style-type: disc
+        margin-left: 16px
+        &:not(:last-child)
+          padding-bottom: 10px
+    >ol
+      &:not(:last-child)
+        padding-bottom: 16px
+      >li
+        margin-left: 16px
+        list-style-type: decimal
+        &:not(:last-child)
+          padding-bottom: 10px
