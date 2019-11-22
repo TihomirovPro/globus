@@ -129,6 +129,8 @@ table
   width: 825px
   border-collapse: collapse
   color: #212529
+  &.center
+    text-align: center
   picture
     max-width: 50%
 
@@ -144,4 +146,26 @@ th
 td,th
   padding: 10px
   max-width: 412px
+
+blockquote
+  position: relative
+  border-left: 4px solid $colorMain
+  color: #555
+  padding: 16px 20px 16px 80px
+  font-size: 18px
+  font-style: italic
+  background: #f6f6f6
+  margin-bottom: 16px
+  +mobile
+    font-size: 16px
+    padding-left: 60px
+  &::before
+    position: absolute
+    content: '!'
+    left: 30px
+    top: -6px
+    color: $colorMain
+    font-size: 50pt
+    +mobile
+      left: 20px
 
