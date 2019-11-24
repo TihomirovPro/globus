@@ -1,2 +1,20 @@
 @import "../../styles/vars"
 @import "../../styles/mixins"
+
+.tabs
+  &__nav
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__link
+    margin: 10px
+    &:not(.active)
+      background-color: #282A3C
+    &::after
+      background-color: #fff
+  &__container
+    >.article__content
+      width: 100%
+      padding-bottom: 20px
+      &.active
+        display: block

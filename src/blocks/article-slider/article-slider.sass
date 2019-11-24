@@ -32,9 +32,34 @@
     border-radius: 6px
     overflow: hidden
     cursor: pointer
+    +tabMd
+      height: 286px
+    +mobile
+      max-height: 240px
+
+.article-slider
+  &__title
+    +mobile
+      font-size: 18px
+      line-height: 20px
+  &__picture
+    +desktop(min)
+      height: 464px
+    +desktop
+      height: 364px
+    +tablet
+      height: 380px
+      
 
 .article-slider2
   margin-bottom: 20px
   &__title
     font-size: 18px
     line-height: 20px
+  &__picture
+    +desktop(min)
+      height: 224px
+    +desktop
+      height: 174px
+    +tablet
+      height: 185px
