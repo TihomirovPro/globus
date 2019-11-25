@@ -32,10 +32,13 @@
     border-radius: 6px
     overflow: hidden
     cursor: pointer
-    +tabMd
-      height: 286px
-    +mobile
-      max-height: 240px
+    >img:not([src]),
+    >img[loading=lazy]:not([data-was-processed=true])
+      +size(0)
+    // +tabMd
+    //   height: 286px
+    // +mobile
+    //   max-height: 240px
 
 .article-slider
   &__title
@@ -43,12 +46,12 @@
       font-size: 18px
       line-height: 20px
   &__picture
-    +desktop(min)
-      height: 464px
-    +desktop
-      height: 364px
-    +tablet
-      height: 380px
+    // +desktop(min)
+    //   height: 464px
+    // +desktop
+    //   height: 364px
+    // +tablet
+    //   height: 380px
       
 
 .article-slider2
@@ -57,9 +60,9 @@
     font-size: 18px
     line-height: 20px
   &__picture
-    +desktop(min)
-      height: 224px
-    +desktop
-      height: 174px
-    +tablet
-      height: 185px
+    // +desktop(min)
+    //   height: 224px
+    // +desktop
+    //   height: 174px
+    // +tablet
+    //   height: 185px

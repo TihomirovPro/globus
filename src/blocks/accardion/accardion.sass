@@ -15,20 +15,12 @@
         &__title
           text-decoration: underline
           color: $colorMain
-    &:after,
-    &:before
-      position: absolute
-      content: ''
-      width: 12px
-      height: 1px
-      background: #000
-      right: 30px
-      top: 30px
-    &:after
-      transform: rotate(90deg)
     &.open
-      &:after
-        transform: rotate(0)
+      .accardion
+        &__title
+          &:after
+            transform: rotate(0)
+   
 
   &__title
     position: relative
@@ -37,6 +29,19 @@
     padding: 20px
     border-radius: 6px
     border: 1px solid #ddd
+    padding-right: 36px
+    &:after,
+    &:before
+      position: absolute
+      content: ''
+      width: 12px
+      height: 1px
+      background: #000
+      right: 16px
+      top: 50%
+      transform: translateY(-50%)
+    &:after
+      transform: rotate(90deg)
 
   &__text
     padding: 20px

@@ -1,25 +1,17 @@
 export function accardion () {
   const cards = document.querySelectorAll('.accardionJs')
-  let itemHeight = 0
 
-  function close (opening) {
-    cards.forEach(item => {
-      if (opening !== item) {
-        item.classList.remove('open')
-        item.style.height = `${itemHeight}px`
-      }
-    })
+  for (let i = 0; i < cards.length; i++) {
+    const title = cards[i].querySelector('.accardion__title')
+    const itemHeight = title.offsetHeight
+    cards[i].style.height = `${itemHeight}px`
   }
 
   cards.forEach(item => {
-    const content = item.querySelector('.accardionContentJs')
-    const title = item.querySelector('.accardion__title')
-
-    itemHeight = title.offsetHeight
-    item.style.height = `${itemHeight}px`
-
     item.addEventListener('click', () => {
+      const content = item.querySelector('.accardionContentJs')
       const contentHeight = content.offsetHeight
+      const itemHeight = heightTitle(item)
 
       if (item.classList.contains('open')) {
         item.style.height = `${itemHeight}px`
@@ -31,4 +23,19 @@ export function accardion () {
       item.classList.toggle('open')
     })
   })
+
+  function close (opening) {
+    cards.forEach(item => {
+      if (opening !== item) {
+        const itemHeight = heightTitle(item)
+        item.classList.remove('open')
+        item.style.height = `${itemHeight}px`
+      }
+    })
+  }
+
+  function heightTitle (item) {
+    const title = item.querySelector('.accardion__title')
+    return title.offsetHeight
+  }
 }

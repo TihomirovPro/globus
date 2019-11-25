@@ -10,7 +10,7 @@ mixin sliderImg(img)
     source.img(srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
     source.img(srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
     source.img(srcset="img/"+ img +'.webp' type="image/webp")
-    img.img.swiper-lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
+    img.img(src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
 
 mixin picture(img)
   picture.iframe-popup(class=attributes.class)
