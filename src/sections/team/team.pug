@@ -1,0 +1,34 @@
+include ../../layout/bemto/bemto
+include ../../layout/mixins/img
+
+//------------------------------//
+
+include ../../blocks/btn/btn
+include ../../blocks/form/form
+
+include ../../blocks/article-slider/article-slider
+include ../../blocks/accardion/accardion
+include ../../blocks/sidebar/sidebar
+include ../../blocks/post/post
+include ../../blocks/pagination/pagination
+
+//------------------------------//
+
+mixin member()
+  +b.member
+    +image('service-tour')
+    +e.desc
+      +e.H6.name JOHN DEO
+      +e.P.position Manager
+
+
+mixin team()
+  +b.SECTION.team.wrapper
+    +b.section-header
+      +e.H2.title Our Team
+      +e.H6.subtitle Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+    +e.container
+      +member
+      +member
+      +member
+      +member

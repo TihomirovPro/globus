@@ -1,0 +1,55 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+  
+.team
+  position: relative
+  z-index: 1
+  padding-top: 80px
+  padding-bottom: 50px
+  background-color: #fff
+
+  &__container
+    +flex('between-wrap')
+
+.member
+  position: relative
+  width: calc(25% - 15px)
+  height: 315px
+  overflow: hidden
+  +desktop
+    height: 252px
+  +tablet(max)
+    width: calc(50% - 15px)
+    height: 396px
+    margin-bottom: 30px
+  +tabMd
+    height: 288px
+  +mobile
+    width: 100%
+    height: max-content
+    
+  &:hover
+    .member__desc
+      bottom: 0
+
+  &__picture
+    +size(100%)
+
+  &__desc
+    position: absolute
+    left: 0
+    bottom: -42px
+    background-color: rgba(15, 23, 6, 0.7)
+    padding: 10px 25px
+    width: 100%
+    color: #fff
+    transition: .3s
+
+  &__name
+    color: #fff
+    text-transform: uppercase
+    padding-bottom: 6px
+    border-bottom: 1px solid #fff
+
+  &__position
+    padding-top: 6px

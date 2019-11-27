@@ -18,6 +18,8 @@
   +size(100%)
   object-fit: cover
   vertical-align: middle
+  &.loading
+    +size(0)
 
 .page-head
   position: relative
@@ -84,6 +86,9 @@
   padding-bottom: 80px
   +tablet(min)
     +flex('between')
+  +mobile
+    padding-top: 30px
+    padding-bottom: 30px
   &__content
     padding-bottom: 60px
     >.article-slider
@@ -279,7 +284,6 @@
     border-top: 15px solid #fff 
 
   &__picture
-    display: block
     border-radius: 4px
     overflow: hidden
     position: relative

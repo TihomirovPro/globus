@@ -50,6 +50,9 @@
       &:before
         +size(22px)
         background: url(../img/mobile-icon.svg)
+      +mobile
+        >.footer__list-link
+          margin-bottom: 8px
     &.email
       padding-left: 40px
       &:before
@@ -99,7 +102,9 @@
       color: #fff
 
   &__list-title
-    font-weight: 700 
+    font-weight: 700
+    +mobile
+      margin-bottom: 6px
 
   &__title
     color: #fff
