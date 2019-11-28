@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "swiper": "^5.2.0"
+    "swiper": "^5.2.0",
+    "vanilla-lazyload": "^12.4.0"
   }
 }

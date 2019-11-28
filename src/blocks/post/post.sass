@@ -72,6 +72,7 @@
   .post
     &-info
       margin-bottom: 0
+      white-space: nowrap
     &__image
       margin-right: 15px
       min-width: 95px
@@ -122,6 +123,9 @@
   overflow: hidden
   +size(40px,44px)
   transition: .3s
+  +mobile
+    position: absolute
+    right: 0
   &:hover
     width: 180px
     .share-button

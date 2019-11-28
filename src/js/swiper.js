@@ -86,9 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    lazy: {
-      loadPrevNext: true
-    },
     speed: 800,
     autoplay: {
       delay: 5000
@@ -104,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    watchSlidesVisibility: true,
     speed: 800,
     autoplay: {
       delay: 5000
@@ -120,9 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    watchSlidesVisibility: true,
     speed: 800,
-    preloadImages: false,
     autoplay: {
       delay: 5000
     },

@@ -7,15 +7,19 @@
   padding-bottom: 60px
   background: #fff
   overflow: hidden
+  +mobile
+    padding-bottom: 30px
 
   &__slider
     position: relative
 
 
   &__container
-    margin: 0 -20px
-    padding: 20px
-    overflow: hidden
+    +mobile(min)
+      overflow: hidden
+      padding: 20px
+      margin: 0 -20px
+      
 
 .next-button,
 .prev-button

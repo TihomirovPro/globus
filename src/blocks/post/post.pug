@@ -1,7 +1,7 @@
 mixin post(data)
  +b.ARTICLE.post(class=attributes.class)
     +e.A.image(href="#")
-      +sliderImg(data.img)
+      +image(data.img)
     +e.desc
       if data.h5
         +e.H5.title
@@ -40,7 +40,7 @@ mixin post(data)
 mixin postNoSlider(data)
  +b.ARTICLE.post(class=attributes.class)
     +e.A.image(href="#")
-      +img(data.img)
+      +image(data.img)
     +e.desc
       if data.h5
         +e.H5.title

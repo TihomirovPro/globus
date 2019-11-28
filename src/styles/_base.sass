@@ -74,7 +74,7 @@
     margin: 0 auto
     font-size: 14px
     >a
-      color: $colorMain
+      color: $colorMain 
 
 .section-header_white
   >.section-header__title,
@@ -206,7 +206,12 @@
     width: 4px
 
 .posts-nav
-  +flex('between')
+  +mobile(min)
+    +flex('between')
+  &__btn
+    +mobile
+      width: 100%
+      margin-bottom: 10px
 
 .article-video
   width: 100%

@@ -10,12 +10,14 @@
   background-image: url(../img/reviews-bg.jpg)
   background-repeat: no-repeat
   background-position: center
+  +mobile
+    padding-bottom: 20px
+    padding-top: 0
 
   &__slider
     overflow: hidden
     margin: 0 -15px
     padding-bottom: 40px
-
 
   &__container
     padding: 0 15px
@@ -27,7 +29,6 @@
       justify-content: center
       height: 18px
       z-index: 10
-      padding-top: 30px
       &-bullet
         cursor: pointer
         display: block
@@ -42,14 +43,13 @@
           opacity: 1
           width: 25px
 
-
-
-  
   &__list
     align-items: center
 
 .review
   padding: 20px 0
+  +mobile
+    padding: 0
   &.swiper-slide-active
     .video-review,
     .review__text
@@ -79,4 +79,4 @@
       width: 0
       height: 0
       border-right: 15px solid transparent
-      border-top: 15px solid #fff  
+      border-top: 15px solid #fff
