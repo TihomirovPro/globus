@@ -19,8 +19,6 @@ export function iframe (selector) {
       modalContainer.appendChild(iframe)
 
       const item = opener.querySelector('[data-modal]')
-      console.log(item);
-      
       const dataModal = item.getAttribute('data-modal')
       iframe.setAttribute('src', `https://www.youtube.com/embed/${dataModal}`)
 
