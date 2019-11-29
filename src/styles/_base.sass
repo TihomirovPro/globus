@@ -90,7 +90,8 @@
     padding-top: 30px
     padding-bottom: 30px
   &__content
-    padding-bottom: 60px
+    +tablet(max)
+      padding-bottom: 60px
     >.article-slider
       margin-bottom: 20px
     >h1
@@ -115,6 +116,8 @@
         list-style-type: disc
         padding-left: 8px
         margin-bottom: 6px
+        >a
+        color: $colorMain
     >ol
       margin-bottom: 24px
       padding-left: 14px
@@ -122,6 +125,8 @@
         list-style-type: decimal
         padding-left: 8px
         margin-bottom: 6px
+        >a
+        color: $colorMain
     >picture,
     >p>picture
       width: 100%
