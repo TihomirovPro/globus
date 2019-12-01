@@ -8,9 +8,10 @@ export function accardion () {
   }
 
   cards.forEach(item => {
-    item.addEventListener('click', () => {
+    const title = item.querySelector('.accardion__title')
+    title.addEventListener('click', () => {
       const content = item.querySelector('.accardionContentJs')
-      const contentHeight = content.offsetHeight
+      const contentHeight = content.offsetHeight - 4
       const itemHeight = heightTitle(item)
 
       if (item.classList.contains('open')) {
