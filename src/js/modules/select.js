@@ -24,7 +24,6 @@ export function select () {
         const value = option.getAttribute('data-value')
         checkedOption.innerText = value
         if (option.classList.contains('select__room')) {
-          console.log(value)
           roomSize.innerText = `Какого размера ${value}?`
         }
         closeSelect(optionsWrap, select)

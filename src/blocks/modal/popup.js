@@ -1,6 +1,6 @@
 import { createModal, openModal, closeModal } from './metods'
 
-export function popupMessageForm () {
+export function popupMessageForm (text) {
   createModal()
 
   const modalWrap = document.querySelector('.modal')
@@ -8,10 +8,12 @@ export function popupMessageForm () {
   const closeUp = document.querySelectorAll('.modal__close, .form-messages__close')
 
   const popup = document.querySelector('.form-messages')
+  const popupText = document.querySelector('.form-messages__text')
 
   modalContainer.appendChild(popup)
 
   popup.style.display = 'block'
+  popupText.textContent = text
   openModal()
 
   function closePopup () {

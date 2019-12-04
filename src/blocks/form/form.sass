@@ -105,6 +105,10 @@
   &__feet
     border-radius: 0 6px 6px 0
 
+  >.btn
+    width: 124px
+    height: 40px
+
 .form__input-wrap
   position: relative
 
@@ -182,8 +186,36 @@
   background: #fff
   border-radius: 6px
   padding: 20px
-  &__success,
-  &__error
-    display: none
+  &__text
     margin-bottom: 16px
 
+.spinner
+  display: none
+  animation: rotate 2s linear infinite
+  z-index: 2
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: -20px 0 0 -20px
+  width: 40px
+  height: 40px
+  
+  .path
+    stroke: hsl(210, 70, 75)
+    stroke-linecap: round
+    animation: dash 1.5s ease-in-out infinite
+
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes dash
+  0%
+    stroke-dasharray: 1, 150
+    stroke-dashoffset: 0
+  50%
+    stroke-dasharray: 90, 150
+    stroke-dashoffset: -35
+  100%
+    stroke-dasharray: 90, 150
+    stroke-dashoffset: -124
