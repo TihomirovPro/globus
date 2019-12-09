@@ -1,0 +1,32 @@
+extends ../../layout/page
+
+//--------------------------------------------------//
+
+block vars
+  - var title = 'booking'
+  - var description = 'booking'
+  - const pageBg = 'about-bg'
+  -
+    const breadcrumbs = {
+      link: false,
+      page: 'Booking'
+    }
+
+//--------------------------------------------------//
+
+block head
+  +style('booking')
+
+block startBody 
+  +header()
+ 
+block endBody
+  +footer()
+  +script('main')
+  //- +script('booking')
+
+//--------------------------------------------------//
+
+block content
+  +b.SECTION.booking.wrapper
+    +booking-form()

@@ -1,0 +1,40 @@
+.formConsent
+  display: flex
+  align-items: center
+  margin-bottom: 24px
+  
+  &__container
+    position: relative
+    min-width: 22px
+    margin-right: 8px
+
+  &__input
+    position: absolute
+    opacity: 0
+    z-index: -1
+    // appearance: none
+    &:checked + .formConsent__checkbox
+      .formConsent__icon
+        opacity: 1
+  
+  &__checkbox
+    +size(22px)
+    +flex('center')
+    cursor: pointer
+    border-radius: 2px
+    border: 2px solid #C4C4C4
+
+  &__icon
+    +size(15px)
+    opacity: 0
+    transition: .2s
+    >path
+      fill: $colorMain
+
+  &__text
+    text-align: left
+    font-weight: 600
+    line-height: 18px
+    a
+      color: $colorMain
+      border-bottom: 1px solid $colorMain
