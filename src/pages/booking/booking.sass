@@ -4,5 +4,30 @@
 .booking
   padding-top: 60px
   padding-bottom: 80px
+  +tablet(min)
+    +flex('between')
+
+  &__form,
+  &__desc
+    +tablet(min)
+      width: calc(50% - 15px)
+
+  &__form
+    +tabMd(min)
+      position: relative
+      top: -100px
+      z-index: 10
+
+  &__desc
+    margin-bottom: 0
+    padding-bottom: 0
+    img
+      vertical-align: middle
+    +tablet
+      position: relative
+      top: -60px
+    +tablet(min)
+      margin-top: -16px
+
 
 @import "./*/*"

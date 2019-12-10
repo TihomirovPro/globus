@@ -2,15 +2,16 @@
   position: fixed
   width: 100%
   z-index: 100
-  background-color: rgba(0,0,0,0)
+  background-color: rgba(0,0,0,.9)
   transition: .3s
-  top: 0
+  +tabMd(min)
+    top: -70px
+  +desktop(min)
+    top: -46px
   &_bg
-    background-color: rgba(0,0,0,.9)
-    +tabMd(min)
-      top: -70px
-    +desktop(min)
-      top: -46px
+    top: 0
+    +mobile(min)
+      background-color: rgba(0,0,0,0)
 
   &__contacts
     padding: 11px 0
@@ -74,9 +75,21 @@
     &:hover
       path
         fill: $colorMain
+    +media(max,360px)
+      width: 60px
+      svg
+        height: 40px
       
   &__btn
     +tablet(max)
       margin-right: 20px
       margin-left: auto
                         
++media(max,360px)
+  .st1,
+  .st2,
+  .st3,
+  .st4,
+  .st5,
+  .st6
+    display: none
