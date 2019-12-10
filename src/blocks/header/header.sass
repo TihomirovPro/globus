@@ -8,9 +8,13 @@
     top: -70px
   +desktop(min)
     top: -46px
-  &_bg
+  +mobile
+    top: 0
+
+  &.header_bg
     top: 0
     +mobile(min)
+      top: 0
       background-color: rgba(0,0,0,0)
 
   &__contacts
