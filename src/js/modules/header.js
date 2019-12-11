@@ -7,7 +7,7 @@ export function header () {
 
   window.addEventListener('scroll', () => {
     const scroll = window.scrollY
-    if (scroll === 0 && !header.classList.contains('header_bg')) {
+    if (scroll === 0) {
       header.classList.add('header_bg')
     } else if (scroll > 0) {
       header.classList.remove('header_bg')
