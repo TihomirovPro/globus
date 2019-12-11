@@ -1,21 +1,20 @@
 .header
-  position: fixed
+  position: absolute
   width: 100%
   z-index: 110
-  background-color: rgba(0,0,0,.9)
+  background-color: rgba(0,0,0,0)
   transition: .3s
+  +tabMd(max)
+    position: fixed
+    background-color: rgba(0,0,0,.9)
   +tabMd(min)
-    top: -70px
+    &.header_fixed
+      position: fixed
+      top: -70px
+      background-color: rgba(0,0,0,.9)
   +desktop(min)
-    top: -46px
-  +mobile
-    top: 0
-
-  &.header_bg
-    top: 0
-    +mobile(min)
-      top: 0
-      background-color: rgba(0,0,0,0)
+    &.header_fixed
+      top: -46px
 
   &__contacts
     padding: 11px 0
