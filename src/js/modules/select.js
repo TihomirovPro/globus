@@ -1,5 +1,5 @@
-export function select () {
-  const selects = document.querySelectorAll('.select')
+export function select (selector) {
+  const selects = document.querySelectorAll(selector)
   const roomSize = document.querySelector('.room-size')
 
   selects.forEach(select => {

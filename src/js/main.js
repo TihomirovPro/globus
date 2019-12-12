@@ -8,6 +8,7 @@ import { select } from './modules/select'
 import { accardion } from './modules/accardion'
 import { iframe } from '../blocks/modal/iframe'
 import { messagesForm } from './modules/messagesForm'
+import { calculator } from './modules/calculator'
 
 document.addEventListener('DOMContentLoaded', () => {
   const lazyLoadInstance = new LazyLoad({
@@ -18,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   openMenu()
   dropdown()
   tabs()
-  select()
   accardion()
   iframe('.iframe-popup')
   messagesForm()
+
+  calculator()
+  // select('.select')
 })

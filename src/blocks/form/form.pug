@@ -2,7 +2,7 @@ include consent/consent
 
 mixin select(data)
   - let i = 0
-  +b.DIV.select
+  +b.DIV.select(class=attributes.class)
     +e.P.checked!=data.first
     +e.options
       each option in data.select
@@ -180,3 +180,23 @@ mixin booking-form()
     +e.P.message.error error
     +e.P.message.loading loading
 
+
+mixin calculator()
+  +b.FORM.form(class=attributes.class)
+    +e.H3.title Shipping cost calculator
+    +e.P.subtitle Here you can calculate the delivery cost of your furniture to the nearest port.
+    +e.container
+      +e.label
+        +e.SPAN.label-text Choose your region:
+        +select({
+          name: 'region',
+          first: 'Please select your region',
+          select: false
+        }).regions
+      +e.label
+        +e.SPAN.label-text The closest port:
+        +select({
+          name: 'port',
+          first: 'Please select the nearest port',
+          select: false
+        }).ports
