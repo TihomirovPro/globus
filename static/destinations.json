@@ -5,8 +5,8 @@
         "name": "Port of Sydney",
         "city": "Sydney",
         "price": {
-            "20": 600,
-            "40HQ": 1200
+            "ft20": 600,
+            "hq40": 1200
         }
     },
     {
@@ -15,8 +15,8 @@
         "name": "Port of Melbourne",
         "city": "Melbourne",
         "price": {
-            "20": 600,
-            "40HQ": 1200
+            "ft20": 600,
+            "hq40": 1200
         }
     },
     {
@@ -25,8 +25,8 @@
         "name": "Port of Brisbane",
         "city": "Brisbane",
         "price": {
-            "20": 600,
-            "40HQ": 1200
+            "ft20": 600,
+            "hq40": 1200
         }
     },
     {
@@ -35,8 +35,8 @@
         "name": "Santos",
         "city": "San Paulu",
         "price": {
-            "20": 1200,
-            "40HQ": 1400
+            "ft20": 1200,
+            "hq40": 1400
         }
     },
     {
@@ -45,8 +45,8 @@
         "name": "Salvador",
         "city": "Salvador",
         "price": {
-            "20": 2100,
-            "40HQ": 2500
+            "ft20": 2100,
+            "hq40": 2500
         }
     },
     {
@@ -55,8 +55,8 @@
         "name": "Rio Grande",
         "city": "Rio Grande",
         "price": {
-            "20": 1200,
-            "40HQ": 1400
+            "ft20": 1200,
+            "hq40": 1400
         }
     },
     {
@@ -65,8 +65,8 @@
         "name": "Callao",
         "city": "Callao",
         "price": {
-            "20": 2200,
-            "40HQ": 2400
+            "ft20": 2200,
+            "hq40": 2400
         }
     },
     {
@@ -75,8 +75,8 @@
         "name": "Cartagena",
         "city": "Cartagena",
         "price": {
-            "20": 2700,
-            "40HQ": 2950
+            "ft20": 2700,
+            "hq40": 2950
         }
     },
     {
@@ -85,8 +85,8 @@
         "name": "Buenos Aires",
         "city": "Buenos Aires",
         "price": {
-            "20": 1200,
-            "40HQ": 1400
+            "ft20": 1200,
+            "hq40": 1400
         }
     },
     {
@@ -95,8 +95,8 @@
         "name": "Valparaiso",
         "city": "Valparaiso",
         "price": {
-            "20": 2200,
-            "40HQ": 2400
+            "ft20": 2200,
+            "hq40": 2400
         }
     },
     {
@@ -105,8 +105,8 @@
         "name": "Iquique",
         "city": "CIquique",
         "price": {
-            "20": 2200,
-            "40HQ": 2400
+            "ft20": 2200,
+            "hq40": 2400
         }
     },
     {
@@ -115,8 +115,8 @@
         "name": "Arica",
         "city": "Arica",
         "price": {
-            "20": 2400,
-            "40HQ": 2600
+            "ft20": 2400,
+            "hq40": 2600
         }
     },
     {
@@ -125,8 +125,8 @@
         "name": "Colon",
         "city": "Colon",
         "price": {
-            "20": 2100,
-            "40HQ": 2300
+            "ft20": 2100,
+            "hq40": 2300
         }
     },
     {
@@ -135,8 +135,8 @@
         "name": "Balboa",
         "city": "Panama",
         "price": {
-            "20": 2100,
-            "40HQ": 2300
+            "ft20": 2100,
+            "hq40": 2300
         }
     },
     {
@@ -145,8 +145,8 @@
         "name": "Kingston",
         "city": "Kingston",
         "price": {
-            "20": 2900,
-            "40HQ": 3200
+            "ft20": 2900,
+            "hq40": 3200
         }
     },
     {
@@ -155,8 +155,8 @@
         "name": "Freeport",
         "city": "Freeport",
         "price": {
-            "20": 4500,
-            "40HQ": 5500
+            "ft20": 4500,
+            "hq40": 5500
         }
     },
     {
@@ -165,8 +165,8 @@
         "name": "Puerto Limon-Moin",
         "city": "Limon",
         "price": {
-            "20": 2900,
-            "40HQ": 3200
+            "ft20": 2900,
+            "hq40": 3200
         }
     },
     {
@@ -175,8 +175,8 @@
         "name": "Metro Vancouver",
         "city": "Vancouver",
         "price": {
-            "20": 2000,
-            "40HQ": 2500
+            "ft20": 2000,
+            "hq40": 2500
         }
     },
     {
@@ -185,8 +185,8 @@
         "name": "Port of Monteral",
         "city": "Monteral",
         "price": {
-            "20": 3000,
-            "40HQ": 3750
+            "ft20": 3000,
+            "hq40": 3750
         }
     },
     {
@@ -195,8 +195,8 @@
         "name": "Halifax",
         "city": "Halifax",
         "price": {
-            "20": 3000,
-            "40HQ": 3750
+            "ft20": 3000,
+            "hq40": 3750
         }
     },
     {
@@ -205,8 +205,8 @@
         "name": "New orleans",
         "city": "New orleans",
         "price": {
-            "20": 3200,
-            "40HQ": 3900
+            "ft20": 3200,
+            "hq40": 3900
         }
     },
     {
@@ -215,8 +215,8 @@
         "name": "Los Angeles",
         "city": "Los Angeles",
         "price": {
-            "20": 2100,
-            "40HQ": 2600
+            "ft20": 2100,
+            "hq40": 2600
         }
     },
     {
@@ -225,8 +225,8 @@
         "name": "New York",
         "city": "New York",
         "price": {
-            "20": 2800,
-            "40HQ": 3600
+            "ft20": 2800,
+            "hq40": 3600
         }
     },
     {
@@ -235,8 +235,8 @@
         "name": "Seattle",
         "city": "Seattle",
         "price": {
-            "20": 2100,
-            "40HQ": 2600
+            "ft20": 2100,
+            "hq40": 2600
         }
     },
     {
@@ -245,8 +245,8 @@
         "name": "Port of Manzanillo",
         "city": "Manzanillo",
         "price": {
-            "20": 2000,
-            "40HQ": 2200
+            "ft20": 2000,
+            "hq40": 2200
         }
     },
     {
@@ -255,8 +255,8 @@
         "name": "Veracruz",
         "city": "Veracruz",
         "price": {
-            "20": 2000,
-            "40HQ": 2200
+            "ft20": 2000,
+            "hq40": 2200
         }
     },
     {
@@ -265,8 +265,8 @@
         "name": "Lazaro Cardenas",
         "city": "Lazaro Cardenas",
         "price": {
-            "20": 2000,
-            "40HQ": 2200
+            "ft20": 2000,
+            "hq40": 2200
         }
     },
     {
@@ -275,8 +275,8 @@
         "name": "Rotterdam",
         "city": "Rotterdam",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -285,8 +285,8 @@
         "name": "Antwerp",
         "city": "Antwerp",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -295,8 +295,8 @@
         "name": "Hamburg",
         "city": "Hamburg",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -305,8 +305,8 @@
         "name": "Bremerhaven",
         "city": "Bremerhaven",
         "price": {
-            "20": 850,
-            "40HQ": 1300
+            "ft20": 850,
+            "hq40": 1300
         }
     },
     {
@@ -315,8 +315,8 @@
         "name": "Bremen",
         "city": "Bremen",
         "price": {
-            "20": 950,
-            "40HQ": 1500
+            "ft20": 950,
+            "hq40": 1500
         }
     },
     {
@@ -325,8 +325,8 @@
         "name": "Marseille-Fos Port",
         "city": "Marseille",
         "price": {
-            "20": 800,
-            "40HQ": 1350
+            "ft20": 800,
+            "hq40": 1350
         }
     },
     {
@@ -335,8 +335,8 @@
         "name": "Le Havre",
         "city": "Le Havre",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -345,8 +345,8 @@
         "name": "Mersin",
         "city": "Mersin",
         "price": {
-            "20": 1000,
-            "40HQ": 1200
+            "ft20": 1000,
+            "hq40": 1200
         }
     },
     {
@@ -355,8 +355,8 @@
         "name": "Istanbul",
         "city": "Istanbul",
         "price": {
-            "20": 1000,
-            "40HQ": 1200
+            "ft20": 1000,
+            "hq40": 1200
         }
     },
     {
@@ -365,8 +365,8 @@
         "name": "Novorossisk",
         "city": "Novorossisk",
         "price": {
-            "20": 1300,
-            "40HQ": 1800
+            "ft20": 1300,
+            "hq40": 1800
         }
     },
     {
@@ -375,8 +375,8 @@
         "name": "St. Petersburg",
         "city": "St. Petersburg",
         "price": {
-            "20": 1100,
-            "40HQ": 1800
+            "ft20": 1100,
+            "hq40": 1800
         }
     },
     {
@@ -385,8 +385,8 @@
         "name": "Valencia",
         "city": "Valencia",
         "price": {
-            "20": 750,
-            "40HQ": 1400
+            "ft20": 750,
+            "hq40": 1400
         }
     },
     {
@@ -395,8 +395,8 @@
         "name": "Trieste",
         "city": "Trieste",
         "price": {
-            "20": 900,
-            "40HQ": 1600
+            "ft20": 900,
+            "hq40": 1600
         }
     },
     {
@@ -405,8 +405,8 @@
         "name": "Genova",
         "city": "Genova",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -415,8 +415,8 @@
         "name": "Constantza",
         "city": "Constantza",
         "price": {
-            "20": 900,
-            "40HQ": 1600
+            "ft20": 900,
+            "hq40": 1600
         }
     },
     {
@@ -425,8 +425,8 @@
         "name": "Southampton",
         "city": "Southampton",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -435,8 +435,8 @@
         "name": "Felixstowe",
         "city": "Felixstowe",
         "price": {
-            "20": 750,
-            "40HQ": 1200
+            "ft20": 750,
+            "hq40": 1200
         }
     },
     {
@@ -445,8 +445,8 @@
         "name": "Durban",
         "city": "Durban",
         "price": {
-            "20": 850,
-            "40HQ": 1600
+            "ft20": 850,
+            "hq40": 1600
         }
     },
     {
@@ -455,8 +455,8 @@
         "name": "Cape Town",
         "city": "Cape Town",
         "price": {
-            "20": 850,
-            "40HQ": 1600
+            "ft20": 850,
+            "hq40": 1600
         }
     },
     {
@@ -465,8 +465,8 @@
         "name": "Alexandria",
         "city": "Alexandria",
         "price": {
-            "20": 1200,
-            "40HQ": 1600
+            "ft20": 1200,
+            "hq40": 1600
         }
     },
     {
@@ -475,8 +475,8 @@
         "name": "Said",
         "city": "Said",
         "price": {
-            "20": 1200,
-            "40HQ": 1600
+            "ft20": 1200,
+            "hq40": 1600
         }
     },
     {
@@ -485,8 +485,8 @@
         "name": "Apapa",
         "city": "Lagos",
         "price": {
-            "20": 1900,
-            "40HQ": 2500
+            "ft20": 1900,
+            "hq40": 2500
         }
     },
     {
@@ -495,8 +495,8 @@
         "name": "Casablanca",
         "city": "Casablanca",
         "price": {
-            "20": 1300,
-            "40HQ": 2300
+            "ft20": 1300,
+            "hq40": 2300
         }
     },
     {
@@ -505,8 +505,8 @@
         "name": "Algiers",
         "city": "Algiers",
         "price": {
-            "20": 1800,
-            "40HQ": 2800
+            "ft20": 1800,
+            "hq40": 2800
         }
     },
     {
@@ -515,8 +515,8 @@
         "name": "Skikda",
         "city": "Skikda",
         "price": {
-            "20": 1800,
-            "40HQ": 3000
+            "ft20": 1800,
+            "hq40": 3000
         }
     },
     {
@@ -525,8 +525,8 @@
         "name": "Pointe Noire",
         "city": "Pointe Noire",
         "price": {
-            "20": 1600,
-            "40HQ": 2600
+            "ft20": 1600,
+            "hq40": 2600
         }
     },
     {
@@ -535,8 +535,8 @@
         "name": "Mombasa",
         "city": "Mombasa",
         "price": {
-            "20": 1000,
-            "40HQ": 1600
+            "ft20": 1000,
+            "hq40": 1600
         }
     },
     {
@@ -545,8 +545,8 @@
         "name": "Abidjan",
         "city": "Abidjan",
         "price": {
-            "20": 1600,
-            "40HQ": 2300
+            "ft20": 1600,
+            "hq40": 2300
         }
     },
     {
@@ -555,8 +555,8 @@
         "name": "Singapore",
         "city": "Singapore",
         "price": {
-            "20": 50,
-            "40HQ": 100
+            "ft20": 50,
+            "hq40": 100
         }
     },
     {
@@ -565,8 +565,8 @@
         "name": "Laem Chabang",
         "city": "Pattaya",
         "price": {
-            "20": 50,
-            "40HQ": 100
+            "ft20": 50,
+            "hq40": 100
         }
     },
     {
@@ -575,8 +575,8 @@
         "name": "Nhava Sheva",
         "city": "Mumbai",
         "price": {
-            "20": 200,
-            "40HQ": 300
+            "ft20": 200,
+            "hq40": 300
         }
     },
     {
@@ -585,8 +585,8 @@
         "name": "Cochin",
         "city": "Cochin",
         "price": {
-            "20": 450,
-            "40HQ": 550
+            "ft20": 450,
+            "hq40": 550
         }
     },
     {
@@ -595,8 +595,8 @@
         "name": "Chennai",
         "city": "Chennai",
         "price": {
-            "20": 450,
-            "40HQ": 550
+            "ft20": 450,
+            "hq40": 550
         }
     },
     {
@@ -605,8 +605,8 @@
         "name": "Tuticorin",
         "city": "Tuticorin",
         "price": {
-            "20": 750,
-            "40HQ": 1100
+            "ft20": 750,
+            "hq40": 1100
         }
     },
     {
@@ -615,8 +615,8 @@
         "name": "Tauranga",
         "city": "Tauranga",
         "price": {
-            "20": 1000,
-            "40HQ": 1600
+            "ft20": 1000,
+            "hq40": 1600
         }
     },
     {
@@ -625,8 +625,8 @@
         "name": "Auckland",
         "city": "Auckland",
         "price": {
-            "20": 1000,
-            "40HQ": 1600
+            "ft20": 1000,
+            "hq40": 1600
         }
     },
     {
@@ -635,8 +635,8 @@
         "name": "Lyttelton",
         "city": "Lyttelton",
         "price": {
-            "20": 1000,
-            "40HQ": 1600
+            "ft20": 1000,
+            "hq40": 1600
         }
     },
     {
@@ -645,8 +645,8 @@
         "name": "Jeddah",
         "city": "Jeddah",
         "price": {
-            "20": 650,
-            "40HQ": 850
+            "ft20": 650,
+            "hq40": 850
         }
     },
     {
@@ -655,8 +655,8 @@
         "name": "Salalah",
         "city": "Salalah",
         "price": {
-            "20": 650,
-            "40HQ": 950
+            "ft20": 650,
+            "hq40": 950
         }
     },
     {
@@ -665,8 +665,8 @@
         "name": "Dubai",
         "city": "Dubai",
         "price": {
-            "20": 400,
-            "40HQ": 800
+            "ft20": 400,
+            "hq40": 800
         }
     },
     {
@@ -675,8 +675,8 @@
         "name": "Khor Fakkan",
         "city": "Khor Fakkan",
         "price": {
-            "20": 400,
-            "40HQ": 800
+            "ft20": 400,
+            "hq40": 800
         }
     },
     {
@@ -685,8 +685,8 @@
         "name": "Haifa",
         "city": "Haifa",
         "price": {
-            "20": 1000,
-            "40HQ": 1500
+            "ft20": 1000,
+            "hq40": 1500
         }
     },
     {
@@ -695,8 +695,8 @@
         "name": "Ashdod",
         "city": "Ashdod",
         "price": {
-            "20": 1000,
-            "40HQ": 1500
+            "ft20": 1000,
+            "hq40": 1500
         }
     },
     {
@@ -705,8 +705,8 @@
         "name": "Cebu",
         "city": "Cebu",
         "price": {
-            "20": 100,
-            "40HQ": 200
+            "ft20": 100,
+            "hq40": 200
         }
     }
 ]

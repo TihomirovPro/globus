@@ -200,3 +200,25 @@ mixin calculator()
           first: 'Please select the nearest port',
           select: false
         }).ports
+    +e.results
+      +e.H3.title Results:
+      +e.P.subtitle Approximate shipping (freight) costs 
+        strong from Foshan (China) to 
+        strong.port New orleans (USA) 
+        | are 
+        strong.ft20 3200$ 
+        | for a 20ft container and 
+        strong.ft40 3900$ 
+        | for a 40ft container.
+        br
+        |Customs clearance in Foshan (Guangzhou) costs 
+        strong 1000$ 
+        |for a 20ft container and 
+        strong 1150$ 
+        |for a 40ft container.
+        br
+        |Cost of customs clearance in the country of destination is 
+        strong individual 
+        |and depends on the type and amount of goods. Please 
+        a(href='/contacts') contact us 
+        | for further information.

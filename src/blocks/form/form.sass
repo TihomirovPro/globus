@@ -161,8 +161,13 @@
     border-top: 0
     border-bottom: 0
 
+  
+  &__group-title
+    font-size: 14px
+    color: #6c757d
+    padding: 10px 12px 5px
     
-  .select__text
+  &__text
     display: flex
     align-items: center
     height: 100%     
@@ -217,6 +222,21 @@
     stroke: hsl(210, 70, 75)
     stroke-linecap: round
     animation: dash 1.5s ease-in-out infinite
+
+
+.calculator
+  .form
+    &__title
+      color: $colorMain
+    &__subtitle
+      >strong
+        color: $colorMain
+      >a
+        color: $colorMain
+        &:hover
+          text-decoration: underline
+      
+
 
 @keyframes rotate
   100%
