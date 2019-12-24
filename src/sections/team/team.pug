@@ -14,9 +14,10 @@ include ../../blocks/pagination/pagination
 
 //------------------------------//
 
-mixin member()
+mixin member(image, imageHover)
   +b.member
-    +image('service-tour')
+    +image(image)
+    +image(imageHover).hover
     +e.desc
       +e.H6.name JOHN DEO
       +e.P.position Manager
@@ -28,7 +29,11 @@ mixin team()
       +e.H2.title Our Team
       +e.H6.subtitle Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
     +e.container
-      +member
-      +member
-      +member
-      +member
+      +member('1', '1h')
+      +member('2', '2h')
+      +member('3', '3h')
+      +member('4', '4h')
+      +member('5', '5h')
+      +member('6', '6h')
+      +member('7', '7h')
+      +member('8', '8h')

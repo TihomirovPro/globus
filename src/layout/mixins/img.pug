@@ -20,8 +20,8 @@ mixin picture(img)
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
 
 mixin image(img)
-  +e.PICTURE.picture
-    source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+  +e.PICTURE.picture(class=attributes.class)
+    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
     source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img")

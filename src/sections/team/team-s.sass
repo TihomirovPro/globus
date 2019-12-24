@@ -13,6 +13,7 @@
 
 .member
   position: relative
+  margin-bottom: 30px
   width: calc(25% - 15px)
   height: 315px
   overflow: hidden
@@ -25,15 +26,27 @@
   +tabMd
     height: 288px
   +mobile
-    width: 100%
-    height: max-content
+    width: 280px
+    height: 340px
+    margin: 0 auto 20px
     
   &:hover
     .member__desc
       bottom: 0
 
   &__picture
-    +size(100%)
+    position: absolute
+    top: 0
+    left: 0
+    +size(100%, auto)
+    z-index: 2
+    &.hover
+      z-index: 1
+    .member:hover &
+      z-index: 1
+      &.hover
+        z-index: 2
+    
 
   &__desc
     position: absolute
@@ -43,6 +56,7 @@
     padding: 10px 25px
     width: 100%
     color: #fff
+    z-index: 3
     transition: .3s
 
   &__name
