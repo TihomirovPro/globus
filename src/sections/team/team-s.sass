@@ -47,22 +47,16 @@
 
   &__desc
     position: absolute
-    bottom: -62px
     background-color: rgba(15, 23, 6, 0.7)
     padding: 10px 25px
     width: 100%
     color: #fff
-    height: 100px
     z-index: 3
     transition: .3s
+    bottom: -41px
     +desktop
-      bottom: calc(-100% + 187px)
-    +tablet
-      bottom: calc(-100% + 355px)
-    +tabMd
-      bottom: calc(-100% + 223px)
-    +mobile
-      bottom: calc(-100% + 275px)
+      bottom: -65px
+
     .member:hover &
       bottom: 0
 
@@ -76,4 +70,5 @@
     display: flex
     align-items: center
     padding-top: 6px
-    height: 50px
+    +desktop
+      height: 54px
