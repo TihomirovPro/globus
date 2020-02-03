@@ -1,0 +1,12 @@
+.picture-bg
+  position: absolute
+  display: block
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  +size(100%)
+  z-index: -1
+  +pseudoBackground(.8,$colorOverlay)
+  &.fixed
+    position: fixed

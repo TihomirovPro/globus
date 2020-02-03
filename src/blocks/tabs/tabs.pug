@@ -1,0 +1,9 @@
+mixin b-tabs(data)
+  +b.b-tabs.tabs-js(class=attributes.class)
+    +e.UL.nav
+      each link in data.links
+        +e.LI.nav-item
+          +e.A.link(href!=link.href class!=link.class)!=link.text
+    +e.content.wrapper
+      //- +e.item#id
+      block

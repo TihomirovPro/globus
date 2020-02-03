@@ -22,4 +22,14 @@ function optimizeImages (cb) {
     .pipe(dest('dist/img'))
 }
 
-module.exports = { optimizeImages }
+function copyImages (cb) {
+  return src([
+    'images/**/*.+(webp|jpg|png|gif|svg)',
+    'src/pages/**/*.+(webp|jpg|png|gif|svg)'
+  ])
+    .pipe(toaster('Images', cb))
+    .pipe(flatten())
+    .pipe(dest('dist/img'))
+}
+
+module.exports = { optimizeImages, copyImages }

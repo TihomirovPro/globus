@@ -1,0 +1,57 @@
+mixin new-reviews()
+  +b.SECTION.new-reviews.section
+    +b.section-header._white
+      +e.H2.title Отзывы
+      +e.P.subtitle Смотрите видео о мебели и отзывы клиентов на нашем 
+        a(href="#") Youtube канале
+
+    +b-tabs({
+      links: [
+        { href: '#clients', text: 'Наши клиенты', class: 'active' },
+        { href: '#bloggers', text: 'Блоггеры о нас' }
+      ]
+    })
+      +e.item.show#clients
+        .reviews-slider
+            .swiper-wrapper
+              +b-review({
+                video: 'blogger1-video',
+                img: 'blogger1',
+                name: '123',
+                info: '123',
+              })
+              +b-review({
+                video: 'blogger2-video',
+                img: 'blogger2',
+                name: '123',
+                info: '123',
+              })
+              +b-review({
+                video: 'blogger3-video',
+                img: 'blogger3',
+                name: '123',
+                info: '123',
+              })
+        
+      +e.item#bloggers
+        .reviews-slider
+          .swiper-wrapper
+            +b-review({
+              video: 'blogger1-video',
+              img: 'blogger1',
+              name: 'Илья Варламов',
+              info: 'Известный блоггер',
+            })
+            +b-review({
+              video: 'blogger2-video',
+              img: 'blogger2',
+              name: 'Своим ходом',
+              info: 'Виталий и Лиза',
+            })
+            +b-review({
+              video: 'blogger3-video',
+              img: 'blogger3',
+              name: 'Ольга Качанова',
+              info: 'Как живут другие',
+            })
+    +picture-bg('servicesBg.jpg')

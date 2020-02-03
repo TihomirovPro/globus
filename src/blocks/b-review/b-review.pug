@@ -1,0 +1,10 @@
+mixin b-review(data)
+  +b.b-review.swiper-slide
+    +b.video-review
+      +img(data.video)
+    +b.person-card
+      +img(data.img)
+      +e.desc
+        +e.H5.name!=data.name
+        +e.P.info!=data.info
+      

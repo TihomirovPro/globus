@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     longSwipesRatio: 0.01,
     longSwipesMs: 100,
+    observer: true,
+    observeParents: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -27,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
+    observer: true,
+    observeParents: true,
     breakpoints: {
       576: {
         slidesPerView: 2
@@ -48,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
+    observer: true,
+    observeParents: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -65,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: '.next-button',
       prevEl: '.prev-button'
@@ -87,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    observer: true,
+    observeParents: true,
     autoplay: {
       delay: 5000
     },
@@ -97,11 +107,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  const sliderReviews = new Swiper('.reviews-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 800,
+    observer: true,
+    observeParents: true,
+    // autoplay: {
+    //   // delay: 5000
+    // },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  })
+
   const articleSlider = new Swiper('.article-slider', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    observer: true,
+    observeParents: true,
     autoplay: {
       delay: 5000
     },
@@ -117,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
+    observer: true,
+    observeParents: true,
     autoplay: {
       delay: 5000
     },

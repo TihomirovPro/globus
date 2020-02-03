@@ -2,23 +2,19 @@ const { series, parallel, watch } = require('gulp')
 const { runServer, reloadServer } = require('./server')
 const { cleanDistFolder } = require('./clean')
 const { copyStaticFiles } = require('./static')
-const {
-  buildMarkup,
-  buildSections
-} = require('./markup')
+const { buildMarkup, buildSections } = require('./markup')
 const { buildStyles } = require('./styles')
-const { optimizeImages } = require('./images')
+const { optimizeImages, copyImages } = require('./images')
 const { upload, uploadMin } = require('./upload')
 
 // watchers
 function runWatchers (cb) {
   // pug
   watch([
-    'src/siteConfig.pug',
     'src/pages/**/*.pug',
-    'src/layout/**/*.pug',
     'src/blocks/**/*.pug',
-    'src/sections/**/*.pug'
+    'src/sections/**/*.pug',
+    'src/layout/**/*.pug'
   ], series(buildMarkup, reloadServer))
 
   // styles
@@ -46,7 +42,7 @@ function runWatchers (cb) {
 exports.default = series(
   cleanDistFolder,
   parallel(copyStaticFiles),
-  parallel(buildStyles, buildMarkup, buildSections, runServer, optimizeImages),
+  parallel(buildStyles, buildMarkup, runServer, copyImages),
   runWatchers
 )
 

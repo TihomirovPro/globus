@@ -59,7 +59,7 @@ $tabMdMin: 576px
 
 $mobileMax: 575px
 
-=mobile($from: max) 
+=mobile($from: max)
   @if $from == max
     +media($from, $mobileMax)
       @content
@@ -85,7 +85,7 @@ $mobileMax: 575px
 
 =width($col)
   $width: (100% / 12) * $col
-  width: calc(#{$width} - 15px)
+  width: calc(#{$width} - 30px)
 
 //===================__Flexbox__====================//
 

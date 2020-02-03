@@ -42,35 +42,44 @@
       text-align: center
       padding-top: 120px
       font-size: 6vw
-  &__picture
-    position: absolute
-    left: 0
-    top: 0
-    +size(100%)
-    object-fit: cover
-    +pseudoBackground(.8,#00090c)
+  // &__picture
+  //   position: absolute
+  //   left: 0
+  //   top: 0
+  //   +size(100%)
+  //   object-fit: cover
+  //   +pseudoBackground(.8,#00090c)
 
-.picture
-  position: absolute
-  left: 0
-  top: 0
-  +size(100%)
-  object-fit: cover
-  +pseudoBackground(.8,#00090c)
+// .picture
+//   position: absolute
+//   left: 0
+//   top: 0
+//   +size(100%)
+//   object-fit: cover
+//   +pseudoBackground(.8,#00090c)
+
+.section
+  position: relative
+  padding-top: 60px
+  padding-bottom: 60px
+  background: #fff
+  z-index: 1
+  &.fixed-bg
+    z-index: 0
 
 .section-header
   position: relative
   margin-bottom: 30px
   &__title
     text-align: center
-    font-weight: 400
-    padding: 0 15px 6px
+    font-weight: 800
+    font-size: 40px
+    padding-bottom: 20px
     +mobile
       font-size: 22px
   &__subtitle
     text-align: center
     max-width: 730px
-    padding: 0 15px
     margin: 0 auto
     font-size: 14px
     >a
@@ -157,6 +166,25 @@
   &__content
     +tablet(min)
       width: calc(100% - 285px)
+  
+  .tabs
+    &__nav
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      margin-bottom: 20px
+    &__link
+      margin: 10px
+      &:not(.active)
+        background-color: #282A3C
+      &::after
+        background-color: #fff
+    &__container
+      >.article__content
+        width: 100%
+        padding-bottom: 20px
+        &.active
+          display: block
  
 .col2,
 .col3
@@ -189,32 +217,25 @@
   +mobile
     left: -15px
     width: calc(100% + 30px)
-
-
   // &::-webkit-scrollbar-button
     // background-image: url('')
     // background-repeat: no-repeat
     // width: 5px
     // height: 5px
-
   &::-webkit-scrollbar-track 
     background-color: #ecedee
-
   &::-webkit-scrollbar-thumb
     // border-radius: 0px
     background-color: $colorMain
-
   &::-webkit-scrollbar-thumb:hover
     background-color: $colorMain
-
+  &::-webkit-scrollbar
+    width: 4px
   // &::-webkit-resizer
     // background-image: url('')
     // background-repeat: no-repeat
     // width: 4px
     // height: 0px
-
-  &::-webkit-scrollbar
-    width: 4px
 
 .posts-nav
   +mobile(min)
@@ -239,7 +260,6 @@
     transform: translate(-50%,-50%)
     z-index: 10
 
-
 .instagram
   width: 100%
   margin-bottom: 22px
@@ -253,7 +273,6 @@
     margin-bottom: 6px
     +mobile
       margin-bottom: 4px
-
 
   &__picture
     +size(100%)
@@ -281,33 +300,33 @@
 
 //---------------__video-review__-----------------//
 
-.video-review
-  cursor: pointer
-  display: block
-  position: relative
-  transition: .3s
-  padding: 12px
-  border-radius: 6px
-  box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
-  &:after
-    position: absolute
-    content: ''
-    bottom: -15px
-    left: 50px
-    width: 0
-    height: 0
-    border-right: 15px solid transparent
-    border-top: 15px solid #fff 
+// .video-review
+//   cursor: pointer
+//   display: block
+//   position: relative
+//   transition: .3s
+//   padding: 12px
+//   border-radius: 6px
+//   box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
+//   &:after
+//     position: absolute
+//     content: ''
+//     bottom: -15px
+//     left: 50px
+//     width: 0
+//     height: 0
+//     border-right: 15px solid transparent
+//     border-top: 15px solid #fff 
 
-  &__picture
-    border-radius: 4px
-    overflow: hidden
-    position: relative
-    +before(100%,100%,rgba(0,0,0,.5))
-    +after(35px,35px,(url(../img/play-icon.svg)))
-      top: 50%
-      left: 50%
-      transform: translate(-50%,-50%)
+//   &__picture
+//     border-radius: 4px
+//     overflow: hidden
+//     position: relative
+//     +before(100%,100%,rgba(0,0,0,.5))
+//     +after(35px,35px,(url(../img/play-icon.svg)))
+//       top: 50%
+//       left: 50%
+//       transform: translate(-50%,-50%)
 
 //---------------__check-list__-----------------//
 
@@ -328,24 +347,3 @@
     top: -4px
     >path
       fill: $colorMain
-
-//---------------__article-tabs__-----------------//
-  
-.tabs
-  &__nav
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    margin-bottom: 20px
-  &__link
-    margin: 10px
-    &:not(.active)
-      background-color: #282A3C
-    &::after
-      background-color: #fff
-  &__container
-    >.article__content
-      width: 100%
-      padding-bottom: 20px
-      &.active
-        display: block

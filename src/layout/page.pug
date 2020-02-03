@@ -1,39 +1,11 @@
-include ../siteConfig.pug
+include mixins/mixins
+include ../blocks/blocks
+include ../sections/sections
 
 //------------------------------//
 
-include bemto/bemto
-include mixins/head
-include mixins/style
-include mixins/script
-include mixins/img
-
-//------------------------------//
-
-include ../blocks/menu/menu
-include ../blocks/btn/btn
-include ../blocks/form/form
-
-include ../blocks/header/header
-include ../blocks/footer/footer
-
-include ../blocks/breadcrumbs/breadcrumbs
-
-include ../blocks/article-slider/article-slider
-include ../blocks/accardion/accardion
-include ../blocks/sidebar/sidebar
-include ../blocks/post/post
-include ../blocks/pagination/pagination
-
-//------------------------------//
-
-include ../sections/services/services
-include ../sections/globus/globus
-include ../sections/reviews/reviews
-include ../sections/request/request
-include ../sections/team/team
-
-//------------------------------//
+-
+  const lang = 'ru'
 
 block vars
 
@@ -50,7 +22,7 @@ html(lang=lang)
       +b.page-head.wrapper
         if pageTitle
           +e.H1.title!=pageTitle
-        +img(pageBg)
+        +picture-bg(pageBg)
         +breadcrumbs(breadcrumbs)
       block content
 

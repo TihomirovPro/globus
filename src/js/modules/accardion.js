@@ -6,7 +6,6 @@ export function accardion () {
     const itemHeight = title.offsetHeight
     cards[i].style.height = `${itemHeight}px`
   }
-
   cards.forEach(item => {
     const title = item.querySelector('.accardion__title')
     title.addEventListener('click', () => {

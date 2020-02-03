@@ -1,21 +1,12 @@
-include ../../layout/bemto/bemto
-include ../../layout/mixins/img
+include ../../layout/mixins/mixins
 
-//------------------------------//
+include ../../blocks/blocks
 
-include ../../blocks/btn/btn
-include ../../blocks/form/form
-
-include ../../blocks/article-slider/article-slider
-include ../../blocks/accardion/accardion
-include ../../blocks/sidebar/sidebar
-include ../../blocks/post/post
-include ../../blocks/pagination/pagination
 
 //------------------------------//
 
 mixin request()
-  +b.SECTION.request.wrapper(class=attributes.class)
+  +b.SECTION.request.section.wrapper(class=attributes.class)
     +e.PICTURE.bg
       source.img(srcset="img/request-bg-mob.webp" media="(max-width: 576px)" type="image/webp")
       source.img(srcset="img/request-bg-mob.jpg" media="(max-width: 576px)" type="image/webp")

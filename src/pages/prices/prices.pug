@@ -3,10 +3,10 @@ extends ../../layout/page
 //--------------------------------------------------//
 
 block vars
-  - var title = 'prices'
-  - var description = 'prices'
-  - const pageBg = 'about-bg'
   -
+    const title = 'prices'
+    const description = 'prices'
+    const pageBg = 'about-bg'
     const breadcrumbs = {
       page: 'Цены'
     }
@@ -19,10 +19,10 @@ block head
   +style('request-s')
 
 block startBody
-  +header()
+  +header
  
 block endBody
-  +footer()
+  +footer
   +script('swiper')
   +script('main')
 
@@ -33,40 +33,35 @@ block content
     +e.ARTICLE.content
       h1 Цены на мебель, освещение, отделочные материалы в Китае
       p Фошань представляет собой гигантское скопление мебели, декоративных и строительных материалов и аксессуаров. Количество товаров настолько велико, что сами фабрики не успевают обновлять свои собственные каталоги. Иногда всё что вы найдёте — фотографии на ipad в шоурумах. Здесь можно найти товары для любого кошелька и любого качества, что конечно в какой-то степени делает процесс выбора поставщиков очень сложным. Мы делаем еженедельные обзоры цен товаров на рынках Фошаня на нашем YouTube канале. Мы стараемся делать выборку именно по самым ходовым позициям, не разделяя на дорогие и дешевые, чтобы каждый мог найти себе что-то по вкусу.
-      +b.tabs
-        +e.nav
-          +e.A.link.btn.tab-link-js.active(href='#m') Мебель
-          +e.A.link.btn.tab-link-js(href='#o') Освещение
-          +e.A.link.btn.tab-link-js(href='#s') Сантехника
-          +e.A.link.btn.tab-link-js(href='#r') Для ремонта
-        +e.container
-          .article__content.tab-js.active#m
-            h2 Видео обзор цен на мебель в Китае, город Фошань.
-            +article-slider2({
-              slider: [
-                { title: 'Клиент из Москвы советует Фошань для покупки мебели для дома.', img: 'reviews-p-1' },
-                { title: 'Отзыв блогера Ольги Качановой. Стоит ли покупать мебель из Китая?', img: 'reviews-p-2' },
-                { title: 'В мебельном туре купила все и даже больше!', img: 'reviews-p-1' },
-                { title: 'Отзыв о мебельном туре в Китай, клиенты', img: 'reviews-p-2' }
-              ]
-            })
+      +b-tabs({
+        links: [
+          { href: '#m', text: 'Мебель', class: 'active' },
+          { href: '#o', text: 'Освещение' },
+          { href: '#s', text: 'Сантехника' },
+          { href: '#r', text: 'Для ремонта' },
+        ]
+      })
+        +e.item.show#m
+          +b-tabs({
+            links: [
+              { href: '#k', text: 'Классика', class: 'active' },
+              { href: '#modern', text: 'Модерн' },
+              { href: '#modern1', text: 'Модерн' },
+              { href: '#modern2', text: 'Модерн' },
+              { href: '#modern3', text: 'Модерн' },
+              { href: '#modern4', text: 'Модерн' },
+            ]
+          }).nested
+            +e.item.show#k 1
+            +e.item#modern 2
+            +e.item#modern1 3
+            +e.item#modern2 4
+            +e.item#modern3 5
+            +e.item#modern4 6
+        +e.item#o 2
+        +e.item#s 3
+        +e.item#r 4
 
-          .article__content.tab-js#o
-            h2 Видеообзор цен на обвещение в Гучжэне, Китай
-            +article-slider({
-              slider: [
-                { title: 'Клиент из Москвы советует Фошань для покупки мебели для дома.', img: 'reviews-p-1' },
-                { title: 'Отзыв блогера Ольги Качановой. Стоит ли покупать мебель из Китая?', img: 'reviews-p-2' },
-                { title: 'В мебельном туре купила все и даже больше!', img: 'reviews-p-1' },
-                { title: 'Отзыв о мебельном туре в Китай, клиенты', img: 'reviews-p-2' }
-              ]
-            })
-          .article__content.tab-js#s
-            h2 Цены на сантехнику в Китае, Фошань.
-            +picture('reviews-p-2').article-video
-          .article__content.tab-js#r
-            h2 Цены на шторы и обои
-            +picture('reviews-p-2').article-video
       h2 Вопросы & Ответы
       +accardion({
         item: [
