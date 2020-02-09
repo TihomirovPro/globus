@@ -76,16 +76,16 @@ $mobileMax: 575px
 
 //===================__Width & Height__====================//
 
-=size($a, $b: false )
-  width: $a
-  @if $b
-    height: $b
+=size($width, $height: false )
+  width: $width
+  @if $height
+    height: $height
   @else
-    height: $a
+    height: $width
 
 =width($col)
-  $width: (100% / 12) * $col
-  width: calc(#{$width} - 30px)
+  $width: (100% / $col)
+  width: calc(#{$width} - 15px)
 
 //===================__Flexbox__====================//
 
@@ -115,51 +115,66 @@ $mobileMax: 575px
   @else if $flex == 'around'
     justify-content: space-around
 
-//===================__Pseudo background__====================//
+//===================__Pseudo elements__====================//
 
-=pseudoBackground($opacity, $background)
+=before($bg, $width, $height: false)
   &::before
     content: ''
     display: block
     position: absolute
-    background: $background
-    opacity: $opacity
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    z-index: 0
+    +size($width, $height)
+    background: $bg
+    @content
 
-=beforeAfter($a, $b, $bg)
+=after($bg, $width, $height: false)
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    +size($width, $height)
+    background: $bg
+    @content
+
+=beforeAfter($bg, $width, $height: false)
   &::before,
   &::after
     content: ''
+    display: block
     position: absolute
-    +size($a, $b)
+    +size($width, $height)
     background-color: $bg 
     @content
 
-=before($a, $b, $bg)
+=pseudoBg($bg)
   &::before
     content: ''
+    display: block
     position: absolute
-    +size($a, $b)
-    background: $bg 
-    @content
+    background: $bg
+    top: 0
+    left: 0
+    +size(100%)
+    z-index: 0
 
-=after($a, $b, $bg)
-  &::after
-    content: ''
-    position: absolute
-    +size($a, $b)
-    background: $bg 
-    @content
+//===================__position__====================//
 
-=bgImg($img, $size, $position)
-  background-image: url(../img/#{$img})
-  background-size: $size
-  background-position: $position
-  background-repeat: no-repeat
+=centerY
+  top: 50%
+  transform: translateY(-50%)
+
+=centerX
+  left: 50%
+  transform: translateX(-50%)
+
+=center
+  +centerY
+  +centerX
+
+//===================__hover__====================//
+
+=hover
+  &:hover
+    @content
 
 //===================__Placeholder__====================//
 

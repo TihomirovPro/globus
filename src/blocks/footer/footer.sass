@@ -6,38 +6,34 @@
   padding-bottom: 25px
   &__top
     padding-bottom: 20px
-    +flex('between-wrap')
+    +media(min,374px)
+      display: grid
+      grid-column-gap: 30px
+    +tablet(min)
+      grid-template-columns: 2fr 1fr 1fr 2fr
+    +tablet(max)
+      grid-template-columns: 1fr 1fr
 
   &__list
-    +width(2)
     font-size: 13px
     color: #b0b0b0
     line-height: 22px
     text-transform: uppercase
     &:not(:last-child)
-      margin-bottom: 40px
-    +tablet(min)
-      &:first-child,
-      &:last-child
-        +width(4)
-    +desktop
-      &:last-child
-        +width(3)
-    +tablet(max)
-      +width(6)
+      padding-bottom: 40px
     +tabMd(max)
       &:first-child,
       &:last-child
-        width: 100%
-    +media(max,374px)
-      width: 100%
+        grid-column-start: 1 
+        grid-column-end: 3 
+
 
   &__list-item
     position: relative
     padding-left: 24px
     &:not(:last-child)
       margin-bottom: 20px
-    +before(18px,18px,transparent)
+    +before(transparent,18px)
       top: 2px
       left: 0
     &.location
@@ -97,7 +93,7 @@
 
   &__list-link
     display: block
-    transition: .3s
+    transition: $transition
     &:hover
       color: #fff
 
@@ -115,8 +111,8 @@
 
   &__social-links
     display: flex
-    justify-content: flex-end
     flex-wrap: wrap
+    justify-content: flex-end
     margin-right: -6px    
     +mobile
       justify-content: center
@@ -127,6 +123,7 @@
     background-position: center
     background-repeat: no-repeat
     margin-right: 6px
+    margin-bottom: 6px
     +size(40px)
     +desktop
       margin-bottom: 10px
@@ -163,10 +160,9 @@
     +mobile
       text-align: center
       font-size: 13px
-      
 
   &__link
-    transition: .3s
+    transition: $transition
     &:hover
       color: #fff
     +tabMd(max)

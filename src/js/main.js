@@ -7,8 +7,9 @@ import { dropdown } from './modules/dropdown'
 import { select } from './modules/select'
 import { accardion } from './modules/accardion'
 import { iframe } from '../blocks/modal/iframe'
-import { messagesForm } from './modules/messagesForm'
-import { calculator } from './modules/calculator'
+// import { messagesForm } from './modules/messagesForm'
+// import { calculator } from './modules/calculator'
+import { filter } from './modules/filter'
 
 document.addEventListener('DOMContentLoaded', () => {
   const lazyLoadInstance = new LazyLoad({
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   tabs()
   accardion()
   iframe('.iframe-popup')
-  messagesForm()
+  // messagesForm()
   // calculator()
-  // select('.select')
+  select('.select')
+  filter()
 })

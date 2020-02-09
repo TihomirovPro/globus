@@ -10,7 +10,7 @@
 	font-weight: 600
 	text-align: center
 	border-radius: 3px
-	transition: .3s
+	transition: $transition
 	height: 40px
 	width: max-content
 	&::after
@@ -21,7 +21,7 @@
 		height: 100%
 		left: 50%
 		top: 0
-		transition: .3s
+		transition: $transition
 		width: 0
 		transform: skewX(0)
 		z-index: -1
@@ -30,6 +30,10 @@
 			left: 5%
 			width: 90%
 			transform: skewX(25deg)
+
+	&.btn_center
+		display: block
+		margin: 0 auto
 
 	&.btn_white
 		color: #777
@@ -102,7 +106,7 @@
 		border-radius: 1px
 		background: #fff
 		transition: background 0s .2s
-		+beforeAfter(20px, 2px, #fff)
+		+beforeAfter(#fff,20px, 2px)
 			border-radius: 1px
 			left: 0
 			top: 8px

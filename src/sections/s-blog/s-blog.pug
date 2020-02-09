@@ -1,0 +1,32 @@
+include ../../layout/mixins/mixins
+include ../../blocks/blocks
+
+//------------------------------//
+
+mixin postSlide
+  +post({
+    h5: true,
+    img: 'blog1',
+    title: 'Специальное предложение',
+    time: '23 сентября',
+    author: '5 минут',
+    text: 'Если вы только собираетесь купить мебель в Китае и все еще не можете определиться, как выгодней это сделать, то у нас для вас отличные новости!',
+    more: true
+  })._slider.swiper-slide
+
+mixin s-blog()
+  +b.SECTION.s-blog.section.wrapper
+    +b.b-s-header
+      +e.H6.subtitle Больше о мебели и товарах из Китая читайте
+      +e.H2.title
+        a(href='#') В нашем блоге
+    +e.slider
+      +e.container.slider4
+        .swiper-wrapper
+          +postSlide
+          +postSlide
+          +postSlide
+          +postSlide
+          +postSlide
+        .prev-button
+        .next-button

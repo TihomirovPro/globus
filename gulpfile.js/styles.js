@@ -1,7 +1,7 @@
 const { src, dest } = require('gulp')
 const sass = require('gulp-sass')
-const sassGlob = require('gulp-sass-glob')
 sass.compiler = require('sass')
+const sassGlob = require('gulp-sass-glob')
 const autoprefixer = require('gulp-autoprefixer')
 const combineMq = require('gulp-group-css-media-queries')
 const cleanCSS = require('gulp-clean-css')

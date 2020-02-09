@@ -23,12 +23,17 @@ body
   -webkit-text-size-adjust: 100%
   background-color: $colorTheme
 
+body
+  overflow-x: hidden
+  overflow-y: auto 
+
 header,
 nav,
 main,
 section,
 footer,
 label,
+article,
 picture
   display: block
 
@@ -43,10 +48,10 @@ h6
   color: $colorHeaders
 
 h1
-  font-size: 2.8em
-  line-height: 3rem
+  font-size: 40px
+  line-height: 126%
   color: $colorMain
-  margin-bottom: 22px
+  margin-bottom: 24px
 
 h2
   font-size: 30px
@@ -74,6 +79,13 @@ a
   background-color: transparent
   text-decoration: none
   color: inherit
+
+a:not([class])
+  color: $colorMain
+  transition: $transition
+  border-bottom: 1px solid transparent
+  +hover
+    border-color: $colorMain
 
 ul
   list-style-type: none

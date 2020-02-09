@@ -1,27 +1,62 @@
 mixin img(img)
   +e.PICTURE.picture.iframe-popup(class=attributes.class)
-    source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
 
 mixin sliderImg(img)
   +e.PICTURE.picture.iframe-popup(class=attributes.class)
-    source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
 
 mixin picture(img)
   picture.iframe-popup(class=attributes.class)
-    source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
+
+//--------------------__Image__--------------------//
 
 mixin image(img)
   +e.PICTURE.picture(class=attributes.class)
     //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
     //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img")
+
+mixin imageIframe(img)
+  picture.article-video.iframe-popup(class=attributes.class)
+    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+    source.img(data-srcset='//img.youtube.com/vi/1zObaof8eIQ/mqdefault.jpg' type="image/webp")
+    img.img.lazy(data-src='//img.youtube.com/vi/1zObaof8eIQ/mqdefault.jpg' alt="img" data-modal='1zObaof8eIQ')
+//- mixin imageIframe(img)
+//-   picture.article-video.iframe-popup(class=attributes.class)
+//-     //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
+//-     //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
+//-     //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
+//-     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
+
+//--------------------__Image info__--------------------//
+
+mixin imageInfo(data)
+  +b.image-info(class=attributes.class)
+    +image(data.img)
+    +e.desc
+      +e.H4.title!=data.title
+      +e.time.time!=data.time
+      if data.text
+        +e.P.text!=data.text
+
+//--------------------__Video info__--------------------//
+
+mixin videoInfo(data)
+  +b.video-info(class=attributes.class)
+    +imageIframe(data.img)
+    +e.desc
+      +e.H4.title!=data.title
+      +e.time.time!=data.time

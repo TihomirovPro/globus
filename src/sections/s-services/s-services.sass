@@ -1,0 +1,173 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+
+.services
+  // position: relative
+  // z-index: 0
+  // padding-top: 60px
+  padding-bottom: 0
+  +mobile
+    padding-top: 30px
+
+  // &__bg
+  //   position: fixed
+  //   display: block
+  //   top: 0
+  //   left: 0
+  //   bottom: 0
+  //   right: 0
+  //   +size(100%)
+  //   +pseudoBackground(.8,$colorOverlay)
+
+  // &__content
+  //   position: relative
+
+  // &__nav-list
+  //   border-bottom: 1px solid rgba(255,255,255,.1)
+  //   display: flex
+  //   justify-content: center
+  //   +media(max,374px)
+  //     flex-wrap: wrap
+  //     >li
+  //       width: 50%
+  
+  // &__link
+  //   text-align: center
+  //   display: block
+  //   height: 100%
+  //   border-bottom: 2px solid transparent
+  //   margin-bottom: -1px
+  //   padding: 0 10px 15px 15px
+  //   color: #acacac
+  //   transition: $transition
+  //   &.active
+  //     color: #fff
+  //     border-bottom: 2px solid $colorMain
+  //   +tabMd
+  //     font-size: 14px
+  //   +mobile
+  //     padding: 5px
+  //     font-size: 13px
+  //   +media(max,374px)
+  //     width: 100%
+
+  // &__list
+  //   padding-top: 50px
+  //   padding-bottom: 50px
+  //   +mobile
+  //     padding-top: 30px
+  //     padding-bottom: 30px
+
+//---------------__service__-----------------//
+
+.service
+  // display: none
+  // &.active
+  //   display: block
+
+  &__pluses
+    +tablet(min)
+      +flex('between')
+      
+
+  &__picture
+    display: block
+    height: fit-content
+    width: fit-content
+    overflow: hidden
+    border-radius: 8px
+    +tablet(min)
+      width: calc(50% - 30px)
+    +tablet(max)
+      max-width: 510px
+      width: 100%
+      margin-bottom: 36px
+
+  &__text
+    padding-left: 30px
+    +desktop(min)
+      width: 540px
+    +desktop(max)
+      width: 450px
+    +tablet(max)
+      padding-left: 0
+      width: 100%
+
+  &__title
+    color: #fff
+    margin-bottom: 24px
+
+  &__desc
+    position: relative
+    padding: 30px 40px 20px
+    color: #363636
+    font-size: 15px
+    background: #fff
+    border-radius: 4px
+    width: 60%
+    margin-left: auto
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.05)
+    p
+      margin-bottom: 16px
+    a
+      color: $colorMain
+      transition: $transition
+      &:hover
+        text-decoration: underline
+    +desktop(min)
+      margin-top: -40px
+    +desktop
+      margin-top: 20px
+    +tablet
+      width: 100%
+      margin-top: 50px
+    +tabMd(max)
+      width: 100%
+      padding: 20px
+      margin-top: 20px
+      color: #fff
+      font-size: 14px
+      opacity: .8
+      background-color: rgba(255,255,255,.08)
+      
+      
+
+//---------------__info__-----------------//
+
+.info
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  border-top: 1px solid rgba(255,255,255,.1)
+
+  &__item
+    width: 25%
+    padding: 30px
+    &:not(:last-child)
+      border-right: 1px solid rgba(255,255,255,.1)
+    +tabMd(max)
+      border-bottom: 1px solid rgba(255,255,255,.1)
+      width: 50%
+
+  &__title
+    +flex('center')
+    color: #fff
+    font-size: 45px
+    margin: 0 auto 10px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center left
+    width: max-content
+    padding-left: 55px
+    +tablet(max)
+      font-size: 28px
+    // >svg
+    //   width: 45px
+    //   height: 45px
+    //   margin-right: 10px
+
+  &__subtitle
+    text-align: center
+    color: #fff
+    +tablet(max)
+      font-size: 14px

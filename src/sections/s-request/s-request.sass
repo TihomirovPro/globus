@@ -1,0 +1,42 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+  
+.s-request
+  padding-top: 46px
+  padding-bottom: 40px
+  +tablet(min)
+    +flex('between')
+
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    +size(100%)
+    +pseudoBg((transparentize($colorOverlay,.2)))
+    
+  &__desc
+    position: relative
+    z-index: 1
+    margin-bottom: 40px
+    +tablet(min)
+      width: calc(42% - 30px)
+
+  &__title
+    color: #fff
+    margin-bottom: 16px
+  &__subtitle
+    color: #fff
+    margin-bottom: 16px
+  &__title2
+    color: #fff
+    opacity: .6
+    margin-bottom: 50px
+  &__title3
+    color: #fff
+    margin-bottom: 16px
+
+.form
+  +tablet(min)
+    margin-top: -86px
+    width: 58%

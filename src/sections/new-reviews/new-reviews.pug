@@ -1,10 +1,11 @@
 mixin new-reviews()
   +b.SECTION.new-reviews.section
-    +b.section-header._white
-      +e.H2.title Отзывы
-      +e.P.subtitle Смотрите видео о мебели и отзывы клиентов на нашем 
-        a(href="#") Youtube канале
-
+    +b-s-header({
+      title: 'Отзывы',
+      subtitle: [
+        'Смотрите видео о мебели и отзывы клиентов на нашем <a href="#">Youtube канале</a>'
+      ]
+    })._white
     +b-tabs({
       links: [
         { href: '#clients', text: 'Наши клиенты', class: 'active' },
@@ -12,7 +13,7 @@ mixin new-reviews()
       ]
     })
       +e.item.show#clients
-        .reviews-slider
+        .reviews-slider.slider3
             .swiper-wrapper
               +b-review({
                 video: 'blogger1-video',
@@ -34,7 +35,7 @@ mixin new-reviews()
               })
         
       +e.item#bloggers
-        .reviews-slider
+        .reviews-slider.slider3
           .swiper-wrapper
             +b-review({
               video: 'blogger1-video',
@@ -54,4 +55,4 @@ mixin new-reviews()
               name: 'Ольга Качанова',
               info: 'Как живут другие',
             })
-    +picture-bg('servicesBg.jpg')
+    +picture-bg('servicesBg')

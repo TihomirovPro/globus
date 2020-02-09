@@ -8,15 +8,6 @@
     min-width: 22px
     margin-right: 8px
 
-  &__input
-    position: absolute
-    opacity: 0
-    z-index: -1
-    // appearance: none
-    &:checked + .formConsent__checkbox
-      .formConsent__icon
-        opacity: 1
-  
   &__checkbox
     +size(22px)
     +flex('center')
@@ -27,9 +18,18 @@
   &__icon
     +size(15px)
     opacity: 0
-    transition: .2s
+    transition: $transition
     >path
       fill: $colorMain
+
+  &__input
+    position: absolute
+    opacity: 0
+    z-index: -1
+    // appearance: none
+    &:checked + .formConsent__checkbox
+      .formConsent__icon
+        opacity: 1
 
   &__text
     text-align: left

@@ -1,0 +1,45 @@
+include ../../layout/mixins/mixins
+include ../../blocks/blocks
+
+//------------------------------//
+
+mixin slideBlogger(data)
+  +e.slide.swiper-slide
+    +b.video-review
+      +img(data.video)
+    +b.person-card
+      +img(data.img)
+      +e.desc
+        +e.H5.name!=data.name
+        +e.P.info!=data.info
+
+
+mixin s-bloggers()
+  +b.SECTION.s-bloggers.section.wrapper
+    +b-s-header({
+      title: 'Мебельные туры <span>глазами блоггеров</span>',
+      subtitle: [
+        'За последние годы мебельные туры только набирают популярность. Многие известные блоггеры заинтересовались и сделали о нас видео.',
+        'Если вы хотите узнать о мебельных турах еще больше — подписывайтесь на наш <a href="#">YouTube</a> канал.'
+      ]
+    })
+    .slider3
+      .swiper-wrapper
+        +slideBlogger({
+          video: 'blogger1-video',
+          img: 'blogger1',
+          name: 'Илья Варламов',
+          info: 'Известный блоггер',
+        })
+        +slideBlogger({
+          video: 'blogger2-video',
+          img: 'blogger2',
+          name: 'Своим ходом',
+          info: 'Виталий и Лиза',
+        })
+        +slideBlogger({
+          video: 'blogger3-video',
+          img: 'blogger3',
+          name: 'Ольга Качанова',
+          info: 'Как живут другие',
+        })

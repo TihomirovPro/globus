@@ -14,7 +14,7 @@
     border-bottom: 2px solid transparent
     padding: 0 10px 15px 15px
     color: #acacac
-    transition: .3s
+    transition: $transition
     bottom: -1px
     &.active
       color: #fff
@@ -38,5 +38,6 @@
     &:not(.show)
       visibility: hidden
       position: absolute
+      display: none
       z-index: -1
       opacity: 0

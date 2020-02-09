@@ -4,33 +4,43 @@
   cursor: pointer
   display: block
   position: relative
-  transition: .3s
-  padding: 20px 20px 48px
+  transition: $transition
+  padding: 20px
   border-radius: 6px
-  // border: 1px solid #fff
-  // box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
-  background: url(../img/review-border.svg)
-  background-size: 100%
-  // &:after
-  //   position: absolute
-  //   content: ''
-  //   bottom: -15px
-  //   left: 50px
-  //   width: 0
-  //   height: 0
-  //   border-right: 15px solid transparent
-  //   border-top: 15px solid #fff
-  +desktop
-    padding-bottom: 40px
-  +tablet
-    padding-bottom: 46px
+  border: 1px solid #fff
+  background: #fff
+  box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
+  &:after
+    position: absolute
+    content: ''
+    bottom: -15px
+    left: 50px
+    width: 0
+    height: 0
+    border-right: 15px solid transparent
+    border-top: 15px solid #fff
 
   &__picture
     border-radius: 4px
     overflow: hidden
     position: relative
-    +before(100%,100%,rgba(0,0,0,.5))
-    +after(35px,35px,(url(../img/play-icon.svg)))
+    +before(rgba(0,0,0,.5), 100%)
+    +after((url(../img/play-icon.svg)),35px)
       top: 50%
       left: 50%
       transform: translate(-50%,-50%)
+
+.video-review_second
+  cursor: pointer
+  display: block
+  position: relative
+  transition: $transition
+  padding: 20px 20px 48px
+  border-radius: 6px
+  box-shadow: none
+  background: url(../img/review-border.svg)
+  background-size: 100%
+  +desktop
+    padding-bottom: 40px
+  +tablet
+    padding-bottom: 46px

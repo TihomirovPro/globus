@@ -1,0 +1,72 @@
+include ../../layout/mixins/mixins
+
+include ../../blocks/blocks
+
+
+//------------------------------//
+
+mixin price-card(data)
+  +e.card
+    +e.card-icon(style='background: url(img/'+data.icon+'.svg)')
+    +e.H4.card-title!=data.title
+    +e.card-desc
+      p
+        span!=data.price
+        | / 
+        !=data.priceInfo
+      p!=data.text
+    +e.UL.card-list
+      each items in data.items
+        +e.LI.card-item!=items.item
+    +e.A.btn.btn.btn_outline-color(href='#') Apply now
+
+mixin s-price()
+  +b.SECTION.s-price.section.wrapper
+    +b-s-header({
+      title: 'Price of sourcing from China',
+      subtitle: [
+        "We offer comprehensive furniture sourcing services, but at the same time you don't need to pay for services you don't need. Choose the option that suits you best."
+      ]
+    })
+    +e.container
+      +price-card({
+        icon: 'fair-icon',
+        title: 'Fair enough',
+        price: '$500 ',
+        priceInfo: 'Fixed',
+        text: 'From 20000$',
+        items: [
+          { item: 'Translation and Guiding (50$ / day)' },
+          { item: 'Order’s follow up' },
+          { item: 'Goods Consolidation' },
+          { item: 'Container Loading' }
+        ]
+      })
+      +price-card({
+        icon: 'safe-icon',
+        title: 'Safe and sound',
+        price: '3% ',
+        priceInfo: 'Of purchases',
+        text: 'From 30000$',
+        items: [
+          { item: 'Translation and Guiding (Up to 6 days free)' },
+          { item: 'Order’s follow up' },
+          { item: 'Full quality control' },
+          { item: 'Goods Consolidation' },
+          { item: 'Container Loading' }
+        ]
+      })
+      +price-card({
+        icon: 'Logistics-icon',
+        title: 'Logistics only',
+        price: '$2200+ ',
+        priceInfo: 'Fixed',
+        text: 'From 1 container',
+        items: [
+          { item: 'Goods Consolidation' },
+          { item: 'Warehousing' },
+          { item: 'Container Loading' },
+          { item: 'Customs clearance in China' },
+          { item: 'Providing all documents' }
+        ]
+      })

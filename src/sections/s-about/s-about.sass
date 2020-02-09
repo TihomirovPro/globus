@@ -1,0 +1,78 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+  
+.s-about
+  position: relative
+  // background-image: url(../img/logo2.svg)
+  // background-size: 350px
+  // background-position: 60% 35%
+  // background-repeat: no-repeat
+  +before((url(../img/logo2.svg)),590px,360px)
+    top: 320px
+    left: 34%
+    opacity: .2
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    transform: rotate(-9deg)
+  &__picture
+    position: relative
+    top: -100px
+    z-index: 0
+    +tabMd(min)
+      width: 540px
+
+  &__desc
+    position: relative
+    max-width: 730px
+    padding: 30px
+    margin-left: auto
+    background: #fff
+    box-shadow: 0px 4px 10px rgba(165, 177, 188, .3)
+    border-radius: 2px
+    z-index: 1
+    +tabMd(min)
+      display: flex
+      padding: 30px 36px
+
+  &__header
+    min-width: 250px
+    padding-right: 30px
+    +tabMd(max)
+      padding-right: 0
+      margin-bottom: 14px
+
+  &__title
+    font-weight: 700
+    font-size: 40px
+    margin-bottom: 16px
+
+  &__subtitle
+    font-weight: 700
+    font-size: 24px
+    color: #6F6F6F
+
+  .b-tabs
+    &__link
+      &.active
+        color: #000
+    &__item
+      +tabMd(min)
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        flex-wrap: wrap
+
+    &__text
+      +tabMd(min)
+        width: 60%
+
+    &__picture
+      +tabMd(min)
+        width: calc(40% - 30px)
+        margin-right: 30px
+      +tabMd(max)
+        margin-bottom: 30px
+
+    &__btn
+      margin-top: 58px

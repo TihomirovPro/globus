@@ -20,13 +20,42 @@ block head
 
 block startBody
   +header
- 
+
 block endBody
   +footer
   +script('swiper')
   +script('main')
 
 //--------------------------------------------------//
+
+mixin tabItem
+  +e.item&attributes(attributes)
+    +e.item-title Выберите стиль:
+    +b.filter.columns3
+      +e.BUTTON.link(data-filter='classic') Классика
+      +e.BUTTON.link(data-filter='modern') Модерн1
+      +e.BUTTON.link(data-filter='modern2') Модерн2
+      +e.BUTTON.link Модерн3
+      +e.BUTTON.link Модерн4
+      +e.BUTTON.link Модерн5
+    .container
+      .columns3
+        +videoInfo({
+          img: 'about-bg',
+          title: 'Мебельный тур в Китай. Цены на мебель для гостиницы и ресторана в Китае, Фошань.',
+          time: '5 окт. 2019 г.'
+        }).filter-element.classic
+        +videoInfo({
+          img: 'about-bg',
+          title: 'Мебельный тур в Китай. Цены на мебель для гостиницы и ресторана в Китае, Фошань.',
+          time: '5 окт. 2019 г.'
+        }).filter-element.modern
+        +videoInfo({
+          img: 'about-bg',
+          title: 'Мебельный тур в Китай. Цены на мебель для гостиницы и ресторана в Китае, Фошань.',
+          time: '5 окт. 2019 г.'
+        }).filter-element.modern2
+      button.filter-reset Открыть все видео (32)
 
 block content
   +b.article.wrapper
@@ -41,26 +70,10 @@ block content
           { href: '#r', text: 'Для ремонта' },
         ]
       })
-        +e.item.show#m
-          +b-tabs({
-            links: [
-              { href: '#k', text: 'Классика', class: 'active' },
-              { href: '#modern', text: 'Модерн' },
-              { href: '#modern1', text: 'Модерн' },
-              { href: '#modern2', text: 'Модерн' },
-              { href: '#modern3', text: 'Модерн' },
-              { href: '#modern4', text: 'Модерн' },
-            ]
-          }).nested
-            +e.item.show#k 1
-            +e.item#modern 2
-            +e.item#modern1 3
-            +e.item#modern2 4
-            +e.item#modern3 5
-            +e.item#modern4 6
-        +e.item#o 2
-        +e.item#s 3
-        +e.item#r 4
+        +tabItem#m.show
+        //- +tabItem#o
+        //- +tabItem#s
+        //- +tabItem#r
 
       h2 Вопросы & Ответы
       +accardion({
@@ -74,4 +87,4 @@ block content
 
     +sidebar
 
-  +request
+  +s-request

@@ -3,7 +3,7 @@
   width: 100%
   z-index: 110
   background-color: rgba(0,0,0,0)
-  transition: .3s
+  transition: $transition
   top: 0
   +tabMd(max)
     position: fixed
@@ -48,7 +48,7 @@
     opacity: .7
     font-size: 13px
     padding-left: 24px
-    +before(18px,18px,transparent)
+    +before(transparent,18px)
       left: 0
       top: 50%
       transform: translateY(-50%)
@@ -71,10 +71,10 @@
   &__logo
     position: relative
     bottom: -3px
-    transition: .3s
+    transition: $transition
     width: 140px
     path
-      transition: .3s
+      transition: $transition
       fill: #fff
     &:hover
       path

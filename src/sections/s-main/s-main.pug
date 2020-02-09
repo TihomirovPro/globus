@@ -1,0 +1,68 @@
+include ../../layout/mixins/mixins
+
+include ../../blocks/blocks
+
+
+//------------------------------//
+
+mixin slide(data)
+  +e.slide.wrapper.swiper-slide
+    +sliderImg(data.img)
+    +e.desc
+      +e.H2.title=data.title
+      +e.P.text=data.text
+      +e.buttons
+        +e.A.btn.btn.btn_white.btn_lg(href="#") Подробнее
+        +e.A.btn.btn.btn_outline.btn_lg(href="#") Подать заявку
+
+mixin catalog-slide(data)
+  +e.LI.catalog-item.swiper-slide
+    +e.A.catalog-link(href='#')
+      +e.H5.catalog-title(style='background-image: url(img/'+data.icon+'.svg)')=data.title
+      +e.P.catalog-text=data.text
+
+mixin s-main()
+  +b.SECTION.main
+    +e.container.slider1
+      +e.slider.swiper-wrapper
+        +slide({
+          img: 'main1',
+          title: 'Мебельный тур в Китай',
+          text: 'Покупка мебели в Китае – это прекрасная возможность сэкономить и купить эксклюзивную мебель. В городе Фошань более 5000 производителей, он является центром производства мебели в Китае. Здесь вы сможете приобрести любую мебель для: дома, офиса, гостиницы, ресторана, бара, ночного клуба.'
+        })
+        +slide({
+          img: 'main2',
+          title: 'Все стили мебели, тысячи моделей, низкие цены!',
+          text: 'Миллионы квадратных метров выставочных площадей с образцами мебели и аксессуарами для интерьера, тысячи фабрик с десятками тысяч моделей мебели, самые низкие цены на мебель в мире! Все это стало возможно в одном городе Китая – Фошане! Китайцы благодаря своему трудолюбию и упорству, продолжают удивлять мир и реализовывать масштабные проекты мирового уровня!'
+        })
+        +slide({
+          img: 'main3',
+          title: 'Индивидуальные размеры для всех видов мебели!',
+          text: 'Множество производителей в городе Фошань могут сделать мебель по индивидуальным размерам. Понравился стол, но он два метра в длину, а Вам нужно 5? Не беспокойтесь, Китайские поставщики запросто сделают необходимый размер! Ваши дизайн-проекты получат новую жизнь в Китае — это как раз то, о чем вы мечтали!'
+        })
+      .swiper-pagination
+    +e.catalog.wrapper
+      +e.catalog-container.slider4
+        +e.UL.catalog-list.swiper-wrapper
+          +catalog-slide({
+            icon: 'repairs-icon',
+            title: 'Для ремонта',
+            text: 'Мрамор, паркет, обои, мозаика и многое другое!',
+          })
+          +catalog-slide({
+            icon: 'furniture-icon',
+            title: 'Мебель',
+            text: 'Фошань — Мебельная столица мира ждет Вас!',
+          })
+          +catalog-slide({
+            icon: 'lighting-icon',
+            title: 'Освещение',
+            text: 'Гучжень — все виды освещения недорого!',
+          })
+          +catalog-slide({
+            icon: 'plumbing-icon',
+            title: 'Сантехника',
+            text: 'Мечтаете о джакузи, Вам нужно в Фошань!',
+          })
+
+//- +main

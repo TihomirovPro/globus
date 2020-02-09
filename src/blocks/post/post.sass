@@ -1,7 +1,7 @@
 .post
   border-radius: 4px
   position: relative
-  transition: .3s
+  transition: $transition
   margin-bottom: 30px
   +tabMd(min)
     display: flex
@@ -49,7 +49,7 @@
     margin-left: 5px
     color: #171717
     text-transform: uppercase
-    +before(16px,16px,(url(../img/arrow-icon.svg)))
+    +before((url(../img/arrow-icon.svg)),16px)
       right: -24px
       top: 4px
 
@@ -96,12 +96,12 @@
 
 .post_slider
   display: block
-  transition: .3s
+  transition: $transition
   box-shadow: 0 5px 20px rgba(0,0,0,0)
   +tabMd(min)
     display: block
   &:hover
-    transition: .3s
+    transition: $transition
     box-shadow: 0 5px 20px rgba(0,0,0,.05)
 
   .post
@@ -123,7 +123,7 @@
   display: flex
   overflow: hidden
   +size(40px,44px)
-  transition: .3s
+  transition: $transition
   +mobile
     position: absolute
     right: 0
@@ -140,7 +140,7 @@
   cursor: pointer
   +size(40px,44px)
   background: #e6e6e6
-  +before(100%,100%,(url(../img/share-icon.svg)))
+  +before((url(../img/share-icon.svg)),100%)
     top: 0
     left: 0
     background-size: 40%

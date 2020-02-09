@@ -1,0 +1,23 @@
+.b-s-header
+  position: relative
+  margin-bottom: 30px
+  &__title
+    text-align: center
+    font-weight: 700
+    font-size: 40px
+    padding-bottom: 20px
+    >span
+      color: $colorMain
+    +mobile
+      font-size: 30px
+      line-height: 120%
+  &__subtitle
+    text-align: center
+    max-width: 730px
+    margin: 0 auto
+    font-size: 14px
+
+.b-s-header_white
+  >.b-s-header__title,
+  >.b-s-header__subtitle
+    color: #fff

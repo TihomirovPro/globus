@@ -1,2 +1,67 @@
 @import "../../styles/vars"
 @import "../../styles/mixins"
+
+.columns3
+  +tabMd(max)
+    grid-template-columns: 1fr 1fr
+
+.first-video,
+.article__content .video-info:first-child
+  grid-column-start: 1
+  grid-column-end: 4
+  padding-bottom: 35px
+  margin-bottom: 44px
+  border-bottom: 1px solid #CBCBCB
+  +tabMd(max)
+    grid-column-end: 3
+
+.b-tabs
+  overflow: hidden
+  &:not(.nested)
+    margin-top: 75px
+  &__nav
+    justify-content: flex-start
+  &__link
+    font-weight: 700
+    &.active
+      color: #000
+  &__item-title
+    font-weight: 700
+    margin-bottom: 22px
+    color: #000
+
+.filter
+  padding-bottom: 0
+
+  &__link
+    padding: 10px
+    margin-bottom: 26px
+    font-weight: 500
+    color: #A8A8A8
+    text-align: center
+    transition: $transition
+    cursor: pointer
+    border-radius: 2px
+    background: $colorMainLight
+    +hover
+      background: $colorMain
+      color: #fff
+    &.active
+      background: $colorMain
+      color: #fff
+
+.filter-reset
+  display: none
+  width: 100%
+  padding: 10px
+  margin-top: 32px
+  font-weight: 500
+  color: #A8A8A8
+  text-align: center
+  border-radius: 2px
+  transition: $transition
+  background: $colorMainLight
+  +hover
+    background: $colorMain
+    color: #fff
+

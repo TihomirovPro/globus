@@ -35,7 +35,7 @@
     padding-top: 150px
     color: #fff
     position: relative
-    font-weight: 600
+    font-weight: 700
     font-size: 40px
     margin-bottom: 0
     +tabMd(max)
@@ -62,33 +62,10 @@
   position: relative
   padding-top: 60px
   padding-bottom: 60px
-  background: #fff
+  background-color: #fff
   z-index: 1
   &.fixed-bg
     z-index: 0
-
-.section-header
-  position: relative
-  margin-bottom: 30px
-  &__title
-    text-align: center
-    font-weight: 800
-    font-size: 40px
-    padding-bottom: 20px
-    +mobile
-      font-size: 22px
-  &__subtitle
-    text-align: center
-    max-width: 730px
-    margin: 0 auto
-    font-size: 14px
-    >a
-      color: $colorMain 
-
-.section-header_white
-  >.section-header__title,
-  >.section-header__subtitle
-    color: #fff
 
 .article
   padding-top: 60px
@@ -104,7 +81,7 @@
     >.article-slider
       margin-bottom: 20px
     >h1
-      margin-bottom: 22px
+      font-weight: 700
       +mobile
         font-size: 7vw
         line-height: 1.15
@@ -116,10 +93,6 @@
         line-height: 26px
     >p
       margin-bottom: 16px
-      >a
-        color: $colorMain
-        &:hover
-          text-decoration: underline
     >ul
       margin-bottom: 24px
       padding-left: 14px
@@ -127,10 +100,6 @@
         list-style-type: disc
         padding-left: 8px
         margin-bottom: 6px
-        >a
-          color: $colorMain
-          &:hover
-            text-decoration: underline
     >ol
       margin-bottom: 24px
       padding-left: 14px
@@ -186,26 +155,26 @@
         &.active
           display: block
  
-.col2,
-.col3
-  +flex('between-wrap')
-  margin-bottom: 20px
-  >div
-    width: calc(50% - 15px)
-    margin-bottom: 12px
-    +tabMd(max)
-      width: 100%
+// .col2,
+// .col3
+//   +flex('between-wrap')
+//   margin-bottom: 20px
+//   >div
+//     width: calc(50% - 15px)
+//     margin-bottom: 12px
+//     +tabMd(max)
+//       width: 100%
 
-.col3
-  >div
-    +tablet(min)
-      width: calc(100% / 3 - 15px)
-      >h3
-        font-size: 18px
-    +tablet
-      width: calc(50% - 15px)
-    +tabMd(max)
-      width: 100%
+// .col3
+//   >div
+//     +tablet(min)
+//       width: calc(100% / 3 - 15px)
+//       >h3
+//         font-size: 18px
+//     +tablet
+//       width: calc(50% - 15px)
+//     +tabMd(max)
+//       width: 100%
 
 
 .table-wrap
@@ -253,7 +222,7 @@
   margin-bottom: 20px
   cursor: pointer
   overflow: hidden
-  +before(65px,65px,(url(../img/play-button.svg)))
+  +before((url(../img/play-button.svg)),65px)
     cursor: pointer
     left: 50%
     top: 50%
@@ -304,7 +273,7 @@
 //   cursor: pointer
 //   display: block
 //   position: relative
-//   transition: .3s
+//   transition: $transition
 //   padding: 12px
 //   border-radius: 6px
 //   box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
@@ -347,3 +316,29 @@
     top: -4px
     >path
       fill: $colorMain
+
+//====================__video info__====================//
+
+.video-info
+  &__title
+    transition: $transition
+    font-size: 14px
+    line-height: 20px
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+  &.hide
+    display: none
+    // position: absolute
+    // left: 0
+    // visibility: hidden
+
+//====================__separator__====================//
+
+.separator
+  display: block
+  +size(100%,1px)
+  margin: 40px 0
+  border: none
+  background: #CBCBCB

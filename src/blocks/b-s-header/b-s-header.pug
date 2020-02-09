@@ -1,0 +1,6 @@
+mixin b-s-header(data)
+  +b.b-s-header(class=attributes.class)
+    +e.H2.title!=data.title
+    +e.subtitle
+      each text in data.subtitle
+        p!=text

@@ -51,7 +51,6 @@
     "gulp-util": "^3.0.8",
     "imagemin-pngquant": "^8.0.0",
     "node-notifier": "^6.0.0",
-    "node-sass": "^4.13.1",
     "plop": "^2.5.3",
     "sass": "^1.25.0",
     "stylelint-config-recommended": "^3.0.0",

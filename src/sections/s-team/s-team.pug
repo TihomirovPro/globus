@@ -1,0 +1,32 @@
+include ../../layout/mixins/mixins
+
+include ../../blocks/blocks
+
+
+//------------------------------//
+
+mixin member(image, imageHover)
+  +b.member
+    +image(image)
+    +image(imageHover).hover
+    +e.desc
+      +e.H6.name JOHN DEO
+      +e.P.position Менеджер по прадажам
+
+mixin team()
+  +b.SECTION.team.section.wrapper
+    +b-s-header({
+      title: 'Наша команда',
+      subtitle: [
+        'Каждый из наших сотрудников — профессионал своего дела.'
+      ]
+    })
+    +e.container.columns4
+      +member('1', '1h')
+      +member('2', '2h')
+      +member('3', '3h')
+      +member('4', '4h')
+      +member('5', '5h')
+      +member('6', '6h')
+      +member('7', '7h')
+      +member('8', '8h')
