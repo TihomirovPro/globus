@@ -6,27 +6,26 @@
   padding-bottom: 40px
 
   &__container
+    row-gap: 30px
     +tablet(max)
       grid-template-columns: 1fr 1fr
     +mobile
-      display: block
+      grid-template-columns: 1fr
 
 .member
   position: relative
   user-select: none
-  margin-bottom: 30px
   height: 315px
   overflow: hidden
   +desktop
     height: 252px
   +tablet(max)
     height: 396px
-    margin-bottom: 30px
   +tabMd
     height: 288px
   +mobile
     +size(280px,340px)
-    margin: 0 auto 20px
+    margin: 0 auto
 
   &__picture
     position: absolute
