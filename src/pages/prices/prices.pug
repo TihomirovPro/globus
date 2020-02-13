@@ -16,7 +16,7 @@ block vars
 block head
   +style('swiper')
   +style('prices')
-  +style('request-s')
+  +style('s-request')
 
 block startBody
   +header
@@ -57,6 +57,26 @@ mixin tabItem
         }).filter-element.modern2
       button.filter-reset Открыть все видео (32)
 
+mixin tabItem2
+  +e.item&attributes(attributes)
+    .container
+      .columns3
+        +videoInfo({
+          img: 'about-bg',
+          title: 'Мебельный тур в Китай. Цены на мебель для гостиницы и ресторана в Китае, Фошань.',
+          time: '5 окт. 2019 г.'
+        })
+        +videoInfo({
+          img: 'about-bg',
+          title: 'Мебельный тур в Китай. Цены на мебель для гостиницы и ресторана в Китае, Фошань.',
+          time: '5 окт. 2019 г.'
+        })
+        +videoInfo({
+          img: 'about-bg',
+          title: 'Мебельный тур в Китай. Цены на мебель для гостиницы и ресторана в Китае, Фошань.',
+          time: '5 окт. 2019 г.'
+        })
+
 block content
   +b.article.wrapper
     +e.ARTICLE.content
@@ -71,9 +91,9 @@ block content
         ]
       })
         +tabItem#m.show
-        //- +tabItem#o
-        //- +tabItem#s
-        //- +tabItem#r
+        +tabItem2#o
+        +tabItem2#s
+        +tabItem2#r
 
       h2 Вопросы & Ответы
       +accardion({
