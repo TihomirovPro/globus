@@ -31,15 +31,14 @@
       transform: translate(-50%,-50%)
 
 .video-review_second
-  cursor: pointer
-  display: block
-  position: relative
-  transition: $transition
   padding: 20px 20px 48px
-  border-radius: 6px
   box-shadow: none
-  background: url(../img/review-border.svg)
+  border: none
+  background-color: transparent
+  background-image: url(../img/review-border.svg)
   background-size: 100%
+  &:after
+    content: none
   +desktop
     padding-bottom: 40px
   +tablet

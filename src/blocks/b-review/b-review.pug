@@ -7,4 +7,14 @@ mixin b-review(data)
       +e.desc
         +e.H5.name!=data.name
         +e.P.info!=data.info
+
+mixin b-review-second(data)
+  +b.b-review.swiper-slide
+    +b.video-review.video-review_second
+      +img(data.video)
+    +b.person-card
+      +img(data.img)
+      +e.desc
+        +e.H5.name!=data.name
+        +e.P.info!=data.info
       

@@ -53,6 +53,8 @@ exports.build = series(
   parallel(buildStyles, buildMarkup, buildSections, optimizeImages)
 )
 
+exports.sections = buildSections
+
 // upload task
 exports.upload = upload
 exports.uploadMin = uploadMin

@@ -1,0 +1,54 @@
+mixin s-life()
+  +b.SECTION.life.section.wrapper
+    .b-s-header
+      h2.b-s-header__title Жизнь компании
+    +e.container
+      +imageInfoSlider({
+        img: 'about-page-1',
+        title: 'Переезд в новый офис',
+        time: 'Январь 2015',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot.'
+      }).slider-tab
+      +imageInfo({
+        img: 'about-page-1',
+        title: '2',
+        time: 'Январь 2016',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot.'
+      }).slider-tab
+      +imageInfo({
+        img: 'about-page-1',
+        title: '3',
+        time: 'Январь 2017',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot.'
+      }).slider-tab
+      +imageInfo({
+        img: 'about-page-1',
+        title: '4',
+        time: 'Январь 2018',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot.'
+      }).slider-tab
+    +e.slider
+      .slider4.slider-tabs
+        .swiper-wrapper
+          +imageInfo({
+            img: 'about-page-1',
+            title: 'Переезд в новый офис',
+            time: 'Январь 2015'
+          })._slide.swiper-slide
+          +imageInfo({
+            img: 'about-page-1',
+            title: '2',
+            time: 'Январь 2016'
+          })._slide.swiper-slide
+          +imageInfo({
+            img: 'about-page-1',
+            title: '3',
+            time: 'Январь 2017'
+          })._slide.swiper-slide
+          +imageInfo({
+            img: 'about-page-1',
+            title: '4',
+            time: 'Январь 2018'
+          })._slide.swiper-slide
+        button.prev-button
+        button.next-button

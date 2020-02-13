@@ -1,13 +1,13 @@
 export function tabs () {
   const tabs = document.querySelectorAll('.tabs-js')
-
   tabs.forEach(tab => {
     const nav = tab.querySelector('.b-tabs__nav')
-
     nav.addEventListener('click', (e) => {
-      e.preventDefault()
+      // e.preventDefault()
+
       const target = e.target
       if (target.className === 'b-tabs__link') {
+        e.preventDefault()
         const id = target.hash
         const item = tab.querySelector(id)
 

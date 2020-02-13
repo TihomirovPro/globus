@@ -39,19 +39,16 @@
     width: 100%
     z-index: -1
     +tabMd(min)
-      top: 50%
       left: 660px
-      transform: translateY(-50%)
+      +centerY
     +desktop
       left: 480px
     +tablet
       left: 240px
     +tabMd(max)
-      left: 50%
-      transform: translateX(-50%)
       top: calc(100% - 70px)
-      width: 90%
-      height: 310px
+      +centerX
+      +size(90%,310px)
 
   &__icon
     margin-bottom: 24px

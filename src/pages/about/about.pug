@@ -20,8 +20,8 @@ block head
   +style("s-services")
   //- +style('globus-s')
   +style('s-reviews')
-  +style('new-reviews')
-  +style('life')
+  +style('s-about-reviews')
+  +style('s-life')
   +style('s-request')
   +style('s-team')
 
@@ -48,7 +48,8 @@ mixin content-block(data)
 
 block content
   +b.SECTION.about-p.section.wrapper
-    h2.section-header__title Основные направления деятельности
+    .b-s-header
+      h2.b-s-header__title Основные направления деятельности
     +e.container
       +content-block({
         img: 'about-page-1',
@@ -79,6 +80,6 @@ block content
   //-   ]
   //- })
   //- +reviews
-  +new-reviews
-  +life
+  +s-about-reviews
+  +s-life
   +s-request

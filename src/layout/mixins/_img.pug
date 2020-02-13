@@ -52,6 +52,20 @@ mixin imageInfo(data)
       if data.text
         +e.P.text!=data.text
 
+mixin imageInfoSlider(data)
+  +b.image-info(class=attributes.class)
+    +e.slider.slider1
+      .swiper-wrapper
+        +image(data.img).swiper-slide
+        +image(data.img).swiper-slide
+        +image(data.img).swiper-slide
+      .swiper-pagination1
+    +e.desc
+      +e.H4.title!=data.title
+      +e.time.time!=data.time
+      if data.text
+        +e.P.text!=data.text
+
 //--------------------__Video info__--------------------//
 
 mixin videoInfo(data)

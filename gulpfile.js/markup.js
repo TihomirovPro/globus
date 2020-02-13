@@ -12,7 +12,7 @@ function buildMarkup (cb) {
     .pipe(dest('dist'))
 }
 function buildSections (cb) {
-  return src('src/sections/*/*.pug')
+  return src(['src/sections/*/*.pug', '!src/sections/*/s-*.pug'])
     .pipe(toaster('Pug', cb))
     .pipe(pug({ pretty: true }))
     .pipe(flatten())

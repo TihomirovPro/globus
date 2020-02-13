@@ -1,10 +1,3 @@
-include ../../layout/mixins/mixins
-
-include ../../blocks/blocks
-
-
-//------------------------------//
-
 mixin slide(data)
   +e.slide.wrapper.swiper-slide
     +sliderImg(data.img)
@@ -40,7 +33,7 @@ mixin s-main()
           title: 'Индивидуальные размеры для всех видов мебели!',
           text: 'Множество производителей в городе Фошань могут сделать мебель по индивидуальным размерам. Понравился стол, но он два метра в длину, а Вам нужно 5? Не беспокойтесь, Китайские поставщики запросто сделают необходимый размер! Ваши дизайн-проекты получат новую жизнь в Китае — это как раз то, о чем вы мечтали!'
         })
-      .swiper-pagination
+      .swiper-pagination1
     +e.catalog.wrapper
       +e.catalog-container.slider4
         +e.UL.catalog-list.swiper-wrapper

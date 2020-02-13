@@ -1,0 +1,98 @@
+@import "../../styles/vars"
+@import "../../styles/mixins"
+  
+.life
+  &__slider
+    position: relative
+
+.slider4
+  padding: 50px 0
+  overflow: hidden
+
+.image-info
+  &__slider
+    position: relative
+    overflow: hidden
+  &__title
+    font-weight: 700
+  &__time
+    font-weight: 300
+  .swiper-pagination1
+    display: flex
+    justify-content: center
+    padding-top: 28px
+    z-index: 10
+    .swiper-pagination
+      &-bullet
+        cursor: pointer
+        display: block
+        margin: 4px
+        transition: $transition
+        border-radius: 50px
+        +size(10px)
+        background: $colorMainLight
+        &-active
+          background: $colorMain
+
+.image-info:not(.image-info_slide)
+  grid-template-columns: 1fr 1fr
+  column-gap: 30px
+  +desktop(max)
+    grid-template-columns: 3fr 2fr
+  +tabMd(max)
+    grid-template-columns: 1fr
+    row-gap: 30px
+  .image-info
+    &__title
+      font-size: 28px
+      margin-bottom: 12px
+      color: $colorMain
+    &__time
+      margin-bottom: 26px
+
+.image-info.image-info_slide
+  cursor: pointer
+  background: #fff
+  box-shadow: 0px 4px 10px rgba(165, 177, 188, .3)
+  border-radius: 2px
+  .image-info
+    &__desc
+      padding: 12px
+    &__title
+      font-size: 16px
+      margin-bottom: 8px
+      color: #A8A8A8
+    &__time
+      font-size: 12px
+      color: #A8A8A8
+  &.swiper-slide-active
+    .image-info
+      &__title
+        color: $colorMain
+
+.slider-tab
+  display: none
+  &:first-child
+    display: grid
+
+.next-button,
+.prev-button
+  cursor: pointer
+  position: absolute
+  +centerY
+  z-index: 10
+  +size(32px)
+  border-radius: 50%
+  background: #fff
+  box-shadow: 0px 3px 8px
+  +triangle('left',5px,9px,$colorMain)
+    +center
+
+.prev-button
+  left: -16px
+
+.next-button
+  right: -16px
+  &:before
+    border-right: none
+    border-left: 5px solid $colorMain

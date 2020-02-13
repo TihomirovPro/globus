@@ -135,8 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
     longSwipesMs: 100,
     observer: true,
     observeParents: true,
+    navigation: {
+      nextEl: '.next-button',
+      prevEl: '.prev-button'
+    },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination1',
       type: 'bullets',
       clickable: true
     },
@@ -154,9 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 800,
     observer: true,
     observeParents: true,
-    // autoplay: {
-    //   // delay: 5000
-    // },
+    autoplay: {
+      delay: 5000
+    },
+    pagination: {
+      el: '.swiper-pagination3',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.next-button',
+      prevEl: '.prev-button'
+    },
     breakpoints: {
       576: {
         slidesPerView: 2
@@ -174,10 +187,30 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     observer: true,
+    slideToClickedSlide: true,
     observeParents: true,
     navigation: {
       nextEl: '.next-button',
       prevEl: '.prev-button'
+    },
+    pagination: {
+      el: '.swiper-pagination4',
+      type: 'bullets',
+      clickable: true
+    },
+    on: {
+      slideChange: () => {
+        if (slider4View.el.classList.contains('slider-tabs')) {
+          const sliderTabs = document.querySelectorAll('.slider-tab')
+          const nextTab = slider4View.realIndex
+
+          for (let i = 0; i < sliderTabs.length; i++) {
+            sliderTabs[i].style.display = 'none'
+          }
+
+          sliderTabs[nextTab].style.display = 'grid'
+        }
+      }
     },
     breakpoints: {
       1200: {

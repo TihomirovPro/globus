@@ -76,16 +76,39 @@ $mobileMax: 575px
 
 //===================__Width & Height__====================//
 
-=size($width, $height: false )
+=size($width, $height: $width)
   width: $width
-  @if $height
-    height: $height
-  @else
-    height: $width
+  height: $height
 
 =width($col)
   $width: (100% / $col)
   width: calc(#{$width} - 15px)
+
+//====================__triangle__====================//
+
+=triangle($direction, $width, $height: $width, $color)
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    +size(0)
+    @if ($direction == 'up')
+      border-bottom: $width solid $color
+      border-left: 1/2*$height solid transparent
+      border-right: 1/2*$height solid transparent
+    @else if ($direction == 'down')
+      border-top: $width solid $color
+      border-left: 1/2*$height solid transparent
+      border-right: 1/2*$height solid transparent
+    @else if ($direction == 'left')
+      border-right: $width solid $color
+      border-top: 1/2*$height solid transparent
+      border-bottom: 1/2*$height solid transparent
+    @else if ($direction == 'right')
+      border-left: $width solid $color
+      border-top: 1/2*$height solid transparent
+      border-bottom: 1/2*$height solid transparent
+    @content
 
 //===================__Flexbox__====================//
 
@@ -117,7 +140,15 @@ $mobileMax: 575px
 
 //===================__Pseudo elements__====================//
 
-=before($bg, $width, $height: false)
+=pseudo($bg, $width, $height: $width)
+  content: ''
+  display: block
+  position: absolute
+  +size($width, $height)
+  background: $bg
+  @content
+
+=before($bg, $width, $height: $width)
   &::before
     content: ''
     display: block
@@ -125,8 +156,9 @@ $mobileMax: 575px
     +size($width, $height)
     background: $bg
     @content
+    
 
-=after($bg, $width, $height: false)
+=after($bg, $width, $height: $width)
   &::after
     content: ''
     display: block
@@ -135,26 +167,27 @@ $mobileMax: 575px
     background: $bg
     @content
 
-=beforeAfter($bg, $width, $height: false)
+=beforeAfter($bg, $width, $height: $width)
   &::before,
   &::after
     content: ''
     display: block
     position: absolute
     +size($width, $height)
-    background-color: $bg 
+    background: $bg
     @content
 
 =pseudoBg($bg)
   &::before
+    top: 0
+    left: 0
+    z-index: 0
     content: ''
     display: block
     position: absolute
-    background: $bg
-    top: 0
-    left: 0
     +size(100%)
-    z-index: 0
+    background: $bg
+    @content
 
 //===================__position__====================//
 
@@ -167,8 +200,9 @@ $mobileMax: 575px
   transform: translateX(-50%)
 
 =center
-  +centerY
-  +centerX
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
 
 //===================__hover__====================//
 

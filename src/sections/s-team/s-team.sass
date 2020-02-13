@@ -25,8 +25,7 @@
   +tabMd
     height: 288px
   +mobile
-    width: 280px
-    height: 340px
+    +size(280px,340px)
     margin: 0 auto 20px
 
   &__picture
@@ -37,9 +36,9 @@
     z-index: 2
     transition: $transition
     &.hover
-      z-index: 1
-    .member:hover &
       opacity: 0
+      z-index: 2
+    .member:hover &
       &.hover
         opacity: 1
     
