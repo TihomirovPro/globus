@@ -4,10 +4,10 @@
   padding: 48px
   box-shadow: 0 0 30px 0 rgba(0,0,0,.3)
   border-radius: 15px
-  +tabMd(max)
-    // padding: 48px 15px
-    padding: 24px 15px
-  // +mobile
+  +desktop
+    padding: 40px 24px
+  +mobile
+    padding: 24px 20px
 
   &__title
     margin-bottom: 10px
@@ -21,31 +21,32 @@
 
   &__container
     margin-bottom: 20px
-    +flex('between-wrap')
+    display: grid
+    row-gap: 30px
+    column-gap: 30px
+    grid-template-columns: 1fr 1fr
+    +tablet(max)
+      grid-template-columns: 1fr
 
   &__input
     display: block
-    width: calc(50% - 15px)
     height: 40px
-    margin-bottom: 25px
+    width: 100%
     color: #495057
     border-bottom: 1px solid #e1e6eb
     padding: 9px 12px
     padding-left: 30px
-    +tablet(max)
-      width: 100%
     &_textarea
-      width: 100%
-      height: auto
+      max-width: 100%
+      +size(100%,auto)
+
   &__input-wrap
     position: relative
-    width: 100%
-    &_2
-      width: calc(50% - 15px)
-      +tabMd(max)
-        width: 100%
-    >input
-      width: 100%
+    &:last-child
+      +tablet(min)
+        grid-column-start: 1
+        grid-column-end: 3
+
   &__input-icon
     position: absolute
     +size(18px)
@@ -55,18 +56,11 @@
       fill: $colorMain
 
   &__label
-    width: calc(50% - 15px)
-    margin-bottom: 25px
-    .form__input
-      width: 100%
-      margin-bottom: 0
     &.invalid
       border-color: red
       input,
       .select
         border-color: red
-    +tablet(max)
-      width: 100%
       
   &__label-text
     font-weight: 600
@@ -81,6 +75,7 @@
     position: absolute
     right: 0
     bottom: 0
+
   &__area-metering
     display: inline-block
     >input
@@ -102,6 +97,7 @@
         color: #fff
         border-color: #0274d9
         background: #0274d9
+
   &__feet
     border-radius: 0 6px 6px 0
 
@@ -121,10 +117,6 @@
       background-color: #edd4d4
       border: 1px solid #e6c3c3
       color: #571515
-    
-
-.form__input-wrap
-  position: relative
 
 .request_top
   .form
@@ -148,6 +140,7 @@
     color: #212529
     &:before
       transform: rotate(90deg)
+
   &__options
     position: absolute
     z-index: 10
@@ -161,7 +154,6 @@
     border-top: 0
     border-bottom: 0
 
-  
   &__group-title
     font-size: 14px
     color: #6c757d
@@ -197,7 +189,6 @@
     font-size: 13px
     padding: 8px 16px
 
-
 .form-messages
   display: none
   width: 300px
@@ -223,7 +214,6 @@
     stroke-linecap: round
     animation: dash 1.5s ease-in-out infinite
 
-
 .calculator
   .form
     &__title
@@ -235,8 +225,6 @@
         color: $colorMain
         &:hover
           text-decoration: underline
-      
-
 
 @keyframes rotate
   100%
