@@ -46,16 +46,41 @@ block content
       p Ниже Вы можете прочитать отзывы клиентов о покупке мебели в Китае, а также посмотреть видео отзывы наших клиентов.
       .reviews
         b Выберите город:
+        //- +newSelect({
+        //-   name: 'city',
+        //-   first: 'Все города',
+        //-   firstValue: 'filter-element',
+        //-   options: [
+        //-     { text: 'Москва', value: 'moscow' },
+        //-     { text: 'Ярославль', value: 'yaroslavl' },
+        //-     { text: 'Краснодар', value: 'krasnodar' },
+        //-   ]
+        //- }).filter
         +select({
           name: 'city',
-          first: 'Выбрать город',
-          select: [
-            { dataValue: 'Москва', value: 'moscow' },
-            { dataValue: 'Ярославль', value: 'yaroslavl' },
-            { dataValue: 'Ярославль', value: 'krasnodar' },
+          first: 'Все города',
+          firstValue: 'filter-element',
+          optionsGroups: [
+            {
+              title: 'Россия',
+              options: [
+                { text: 'Москва', value: 'moscow' },
+                { text: 'Ярославль', value: 'yaroslavl' },
+                { text: 'Краснодар', value: 'krasnodar' },
+              ]
+            },
+            {
+              title: 'Беларусь',
+              options: [
+                { text: 'Минск', value: 'minsk' },
+                { text: 'Гомель', value: 'gomel' },
+              ]
+            },
           ]
         }).filter
         .map
+        .reviews__title Отзывы: 
+          span Все города
         .columns3
           +videoInfo({
             img: 'about-bg',

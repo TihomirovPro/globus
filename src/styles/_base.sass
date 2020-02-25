@@ -254,14 +254,22 @@
 //====================__video info__====================//
 
 .video-info
+  margin-bottom: 30px
+  .article-video
+    &:before
+      background: url(../img/play-icon.svg)
   &__title
     transition: $transition
-    font-size: 14px
     line-height: 20px
+    font-weight: 600
     display: -webkit-box
     -webkit-box-orient: vertical
     -webkit-line-clamp: 2
     overflow: hidden
+    margin-bottom: 8px
+  &__time
+    font-size: 14px
+    color: #7B7B7B
   &.hide
     display: none
 
@@ -273,3 +281,28 @@
   margin: 40px 0
   border: none
   background: #CBCBCB
+
+
+//====================__slider btns__====================//
+
+.next-button,
+.prev-button
+  cursor: pointer
+  position: absolute
+  +centerY
+  z-index: 10
+  +size(32px)
+  border-radius: 50%
+  background: #fff
+  box-shadow: 0px 3px 8px
+  +triangle('left',5px,9px,$colorMain)
+    +center
+
+.prev-button
+  left: -16px
+
+.next-button
+  right: -16px
+  &:before
+    border-right: none
+    border-left: 5px solid $colorMain

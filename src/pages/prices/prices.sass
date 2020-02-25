@@ -20,8 +20,11 @@
   &:not(.nested)
     margin-top: 75px
   &__nav
-    justify-content: flex-start
+    justify-content: space-between
+    +tabMd(min)
+      padding-right: 130px
   &__link
+    text-transform: uppercase
     font-weight: 700
     &.active
       color: #000
@@ -31,7 +34,7 @@
     color: #000
 
 .filter
-  padding-bottom: 0
+  padding-bottom: 50px
 
   &__link
     padding: 10px
@@ -65,3 +68,28 @@
     background: $colorMain
     color: #fff
 
+
+.video-info
+  &__title
+    font-size: 14px
+    line-height: 18px
+  &__time
+    font-size: 12px
+  .article-video
+    margin-bottom: 16px
+    &:before
+      +size(42px)
+
+  &:first-child,
+  &.first-video
+    .video-info__title
+      font-size: 16px
+      line-height: 20px
+    .video-info__time
+      font-size: 14px
+    .article-video
+      margin-bottom: 20px
+      &:before
+        +size(118px)
+        +tabMd(max)
+          +size(100px)

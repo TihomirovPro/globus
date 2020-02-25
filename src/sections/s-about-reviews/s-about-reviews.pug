@@ -13,7 +13,8 @@ mixin s-about-reviews()
       ]
     })
       +e.item.show#clients
-        .reviews-slider.slider3
+        .slider-wrap
+          .reviews-slider.slider3
             .swiper-wrapper
               +b-review-second({
                 video: 'blogger1-video',
@@ -33,26 +34,31 @@ mixin s-about-reviews()
                 name: '123',
                 info: '123',
               })
+            button.prev-button
+            button.next-button
 
       +e.item#bloggers
-        .reviews-slider.slider3
-          .swiper-wrapper
-            +b-review-second({
-              video: 'blogger1-video',
-              img: 'blogger1',
-              name: 'Илья Варламов',
-              info: 'Известный блоггер',
-            })
-            +b-review-second({
-              video: 'blogger2-video',
-              img: 'blogger2',
-              name: 'Своим ходом',
-              info: 'Виталий и Лиза',
-            })
-            +b-review-second({
-              video: 'blogger3-video',
-              img: 'blogger3',
-              name: 'Ольга Качанова',
-              info: 'Как живут другие',
-            })
+        .slider-wrap
+          .reviews-slider.slider3
+            .swiper-wrapper
+              +b-review-second({
+                video: 'blogger1-video',
+                img: 'blogger1',
+                name: 'Илья Варламов',
+                info: 'Известный блоггер',
+              })
+              +b-review-second({
+                video: 'blogger2-video',
+                img: 'blogger2',
+                name: 'Своим ходом',
+                info: 'Виталий и Лиза',
+              })
+              +b-review-second({
+                video: 'blogger3-video',
+                img: 'blogger3',
+                name: 'Ольга Качанова',
+                info: 'Как живут другие',
+              })
+            button.prev-button
+            button.next-button
     +picture-bg('servicesBg')

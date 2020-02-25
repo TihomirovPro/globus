@@ -15,11 +15,14 @@ export function filter () {
   })
 
   filterReset.addEventListener('click', () => {
+    filters.forEach(element => {
+      element.classList.remove('active')
+    })
     filterElemets.forEach(element => {
       element.classList.remove('first-video')
       element.classList.remove('hide')
-      filterReset.style.display = 'none'
     })
+    filterReset.style.display = 'none'
   })
 }
 
@@ -38,7 +41,7 @@ function showFilters (filterElemets, tags, filterReset) {
   filterElemets.forEach(element => {
     element.classList.remove('first-video')
     element.classList.remove('hide')
-    filterReset.style.display = 'none'
+    filterReset.style.display = 'block'
   })
   if (tags.length > 0) {
     let i = 0

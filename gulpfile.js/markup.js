@@ -7,7 +7,7 @@ const toaster = require('./toaster')
 function buildMarkup (cb) {
   return src('src/pages/*/*.pug')
     .pipe(toaster('Pug', cb))
-    .pipe(pug())
+    .pipe(pug({ pretty: true }))
     .pipe(flatten())
     .pipe(dest('dist'))
 }

@@ -18,23 +18,26 @@ mixin s-bloggers()
         'Если вы хотите узнать о мебельных турах еще больше — подписывайтесь на наш <a href="#">YouTube</a> канал.'
       ]
     })
-    .slider3
-      .swiper-wrapper
-        +slideBlogger({
-          video: 'blogger1-video',
-          img: 'blogger1',
-          name: 'Илья Варламов',
-          info: 'Известный блоггер',
-        })
-        +slideBlogger({
-          video: 'blogger2-video',
-          img: 'blogger2',
-          name: 'Своим ходом',
-          info: 'Виталий и Лиза',
-        })
-        +slideBlogger({
-          video: 'blogger3-video',
-          img: 'blogger3',
-          name: 'Ольга Качанова',
-          info: 'Как живут другие',
-        })
+    +e.slider
+      .slider3
+        .swiper-wrapper
+          +slideBlogger({
+            video: 'blogger1-video',
+            img: 'blogger1',
+            name: 'Илья Варламов',
+            info: 'Известный блоггер',
+          })
+          +slideBlogger({
+            video: 'blogger2-video',
+            img: 'blogger2',
+            name: 'Своим ходом',
+            info: 'Виталий и Лиза',
+          })
+          +slideBlogger({
+            video: 'blogger3-video',
+            img: 'blogger3',
+            name: 'Ольга Качанова',
+            info: 'Как живут другие',
+          })
+        button.prev-button
+        button.next-button

@@ -20,6 +20,8 @@
     margin-bottom: 16px
 
   &__container
+    position: relative
+    z-index: 2
     margin-bottom: 20px
     display: grid
     row-gap: 30px
@@ -141,9 +143,14 @@
     &:before
       transform: rotate(90deg)
 
+  &__checked
+    cursor: pointer
+    font-size: 13px
+    padding: 8px 16px
+
   &__options
     position: absolute
-    z-index: 10
+    z-index: 1
     left: -1px
     width: calc(100% + 2px)
     top: 36px
@@ -152,31 +159,24 @@
     background: #fff
     border: 1px solid #e1e6eb
     border-top: 0
-    border-bottom: 0
+    border-bottom: 1px solid #e1e6eb
+
+  &__group
+    //
 
   &__group-title
     font-size: 14px
+    font-weight: 700
     color: #6c757d
-    padding: 10px 12px 5px
+    padding: 8px 15px
     
-  &__text
-    display: flex
-    align-items: center
-    height: 100%     
-    padding: 5px 15px
-    font-size: 13px
-
   &__option
-    background: #fff
     position: relative
     cursor: pointer
     width: 100%
+    font-size: 13px
+    background: #fff
     transition: $transition
-    color: #333
-    &:last-child
-      border-bottom: 1px solid #e1e6eb
-    &:hover
-      background: #f2f2f4
     >input
       position: absolute
       transform: scale(0)
@@ -184,10 +184,12 @@
         color: #fff
         background: $colorMain
 
-  &__checked
-    cursor: pointer
-    font-size: 13px
-    padding: 8px 16px
+  &__text
+    padding: 5px 15px
+    background: #fff
+    transition: $transition
+    &:hover
+      background: #f2f2f4
 
 .form-messages
   display: none

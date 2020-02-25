@@ -19,28 +19,33 @@
       padding: 20px
       margin: 0 -20px
 
-.prev-button
-  left: 0
-  transform: rotate(45deg) translateY(-50%)
-  +desktop(min)
-    left: -70px
-.next-button
-  right: 0
-  transform: rotate(-135deg) translateY(-50%)
-  +desktop(min)
-    right: -70px
+  .next-button,
+  .prev-button
+    cursor: pointer
+    height: 16px
+    width: 16px
+    z-index: 10
+    position: absolute
+    border-left: 1px solid #000
+    border-bottom: 1px solid #000
+    opacity: .2
+    top: 50%
+    border-radius: 0
+    background: transparent
+    box-shadow: none
+    transition: $transition
+    &::before
+      content: none
+    &:hover
+      opacity: 1
 
-.next-button,
-.prev-button
-  cursor: pointer
-  height: 16px
-  width: 16px
-  z-index: 10
-  position: absolute
-  border-left: 1px solid #000
-  border-bottom: 1px solid #000
-  opacity: .2
-  top: 50%
-  transition: $transition
-  &:hover
-    opacity: 1
+  .prev-button
+    left: 0
+    transform: rotate(45deg) translateY(-50%)
+    +desktop(min)
+      left: -70px
+  .next-button
+    right: 0
+    transform: rotate(-135deg) translateY(-50%)
+    +desktop(min)
+      right: -70px

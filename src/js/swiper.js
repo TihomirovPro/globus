@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.prev-button'
     },
     breakpoints: {
-      576: {
+      767: {
         slidesPerView: 2
       },
       992: {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     on: {
       slideChange: () => {
-        if (slider4View.el.classList.contains('slider-tabs')) {
+        if (slider4View.el && slider4View.el.classList.contains('slider-tabs')) {
           const sliderTabs = document.querySelectorAll('.slider-tab')
           const nextTab = slider4View.realIndex
 

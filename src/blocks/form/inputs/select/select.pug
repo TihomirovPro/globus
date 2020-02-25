@@ -1,0 +1,46 @@
+mixin select(data)
+  +b.DIV.select.select-js(class=attributes.class)
+    +e.P.checked!=data.first
+    +e.options
+      +option({
+        name: data.name,
+        text: data.first,
+        value: data.firstValue,
+        checked: true
+      })
+      if data.options
+        each option in data.options
+          +option({
+            name: data.name,
+            text: option.text,
+            value: option.value,
+            checked: false
+          })
+      if data.optionsGroups
+        each group in data.optionsGroups
+          +optionGroup({
+            name: data.name,
+            label: group.title,
+            options: group.options
+          })
+
+mixin option(data)
+  if data.checked
+    +e.LABEL.option
+      input(type="radio" value!=data.value name!=data.name checked)
+      +e.P.text!=data.text
+  else
+    +e.LABEL.option
+      input(type="radio" value!=data.value name!=data.name)
+      +e.P.text!=data.text
+
+mixin optionGroup(data)
+  +e.DIV.group
+    +e.P.group-title!=data.label
+    each option in data.options
+      +option({
+        text: option.text,
+        value: option.value,
+        name: data.name,
+        checked: false
+      })
