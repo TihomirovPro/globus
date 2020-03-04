@@ -13,8 +13,8 @@
 //-       +e.BUTTON.btn.btn(class=attributes.class type=data.type data-modal=data.modal)!= data.text
 
 
-mixin link()
-  +e.A.btn.btn(class=attributes.class href=data.href)!= data.text
+mixin link(text)
+  +e.A.btn.btn(class=attributes.class href=!href)!=text
   
 mixin btn(text)
   +e.BUTTON.btn.btn(class=attributes.class)!=text

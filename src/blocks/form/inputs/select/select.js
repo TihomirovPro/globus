@@ -4,8 +4,27 @@ export function select () {
   selects.forEach(select => {
     const checkedSelect = select.querySelector('.select__checked')
     const optionsWrap = select.querySelector('.select__options')
+    const input = select.querySelector('.select__input')
+    const options = select.querySelectorAll('.select__text')
+    const optGroupTitle = select.querySelectorAll('.select__group-title')
     const optionsWrapHeight = optionsWrap.offsetHeight
-    closeSelect(optionsWrap, select)
+    closeSelect(optionsWrap, select, false, false)
+
+    let hide = false
+    input.addEventListener('input', () => {
+      const value = input.value
+      if (!hide) {
+        hideElements(optGroupTitle)
+        hide = true
+      }
+      options.forEach(option => {
+        const text = option.textContent
+        option.parentElement.style.display = 'none'
+        if (text.indexOf(value) + 1 && value !== '') {
+          option.parentElement.style.display = 'block'
+        }
+      })
+    })
 
     select.addEventListener('click', (e) => {
       const target = e.target
@@ -15,20 +34,39 @@ export function select () {
         select.classList.add('open')
       } else if (target.classList.contains('select__text')) {
         checkedSelect.textContent = target.innerText
-        closeSelect(optionsWrap, select)
+        closeSelect(optionsWrap, select, optGroupTitle, options)
         selectRoom(select, target.innerText)
+        hide = false
       }
     })
     select.addEventListener('mouseleave', () => {
-      closeSelect(optionsWrap, select)
+      closeSelect(optionsWrap, select, optGroupTitle, options)
+      hide = false
     })
   })
 }
 
-function closeSelect (optionsWrap, select) {
+function hideElements (elements) {
+  elements.forEach(element => {
+    element.style.display = 'none'
+  })
+}
+
+function showElements (elements) {
+  if (elements) {
+    elements.forEach(element => {
+      element.style.display = ''
+      element.parentElement.style.display = ''
+    })
+  }
+}
+
+function closeSelect (optionsWrap, select, elements, elements2) {
   optionsWrap.style.height = '0'
   optionsWrap.style.zIndex = '-1'
   select.classList.remove('open')
+  showElements(elements)
+  showElements(elements2)
 }
 
 function selectRoom (select, value) {

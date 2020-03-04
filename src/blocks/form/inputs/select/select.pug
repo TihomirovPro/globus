@@ -2,6 +2,8 @@ mixin select(data)
   +b.DIV.select.select-js(class=attributes.class)
     +e.P.checked!=data.first
     +e.options
+      if data.search
+        +searchOptions
       +option({
         name: data.name,
         text: data.first,
@@ -44,3 +46,9 @@ mixin optionGroup(data)
         name: data.name,
         checked: false
       })
+
+mixin searchOptions
+  +e.search
+    | <svg class="select__search-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 11h-.8l-.3-.3c1-1.1 1.6-2.6 1.6-4.2a6.5 6.5 0 10-2.3 5l.3.2v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 110-9 4.5 4.5 0 010 9z" fill="#000" fill-opacity=".5"/></svg>
+    +e.INPUT.input(type=text)
+
