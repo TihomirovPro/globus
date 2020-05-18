@@ -3,7 +3,7 @@ mixin menu(menu)
     +e.UL.list
       each link1 in menu.links
         if !link1.submenu
-          +e.LI.item
+          +e.LI.item(class!=link1.class)
             if link1.disabled
               +e.SPAN.link!= link1.text
             else

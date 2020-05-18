@@ -17,4 +17,8 @@ mixin b-review-second(data)
       +e.desc
         +e.H5.name!=data.name
         +e.P.info!=data.info
-      
+
+mixin b-review-not-avatar(data)
+  +b.b-review.swiper-slide
+    +b.video-review.video-review_not-avatar
+      +img(data.video)

@@ -7,10 +7,10 @@ export function header () {
   }
 
   if (window.innerWidth > 767) {
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', (e) => {
       const scroll = window.scrollY
 
-      if (scroll !== 0) {
+      if (scroll > 500) {
         header.classList.add('header_fixed')
       } else {
         header.classList.remove('header_fixed')

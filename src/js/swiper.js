@@ -8,123 +8,6 @@ import {
 Swiper.use([Navigation, Pagination, Autoplay])
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const catalogSlider = new Swiper('.main__catalog-container', {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   observer: true,
-  //   observeParents: true,
-  //   breakpoints: {
-  //     576: {
-  //       slidesPerView: 2
-  //     },
-  //     992: {
-  //       slidesPerView: 3
-  //     },
-  //     1200: {
-  //       slidesPerView: 4
-  //     }
-  //   },
-  //   autoplay: {
-  //     delay: 5000
-  //   }
-  // })
-
-  // const reviewsSlider = new Swiper('.reviews__container', {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   centeredSlides: true,
-  //   observer: true,
-  //   observeParents: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   },
-  //   breakpoints: {
-  //     992: {
-  //       slidesPerView: 3,
-  //       loopAdditionalSlides: 3
-  //     }
-  //   }
-  // })
-
-  // const bloggersSlider = new Swiper('.bloggers__slider', {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   speed: 800,
-  //   observer: true,
-  //   observeParents: true,
-  //   autoplay: {
-  //     delay: 5000
-  //   },
-  //   breakpoints: {
-  //     768: {
-  //       slidesPerView: 2
-  //     }
-  //   }
-  // })
-
-  // const sliderReviews = new Swiper('.reviews-slider', {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   speed: 800,
-  //   observer: true,
-  //   observeParents: true,
-  //   // autoplay: {
-  //   //   // delay: 5000
-  //   // },
-  //   breakpoints: {
-  //     576: {
-  //       slidesPerView: 2
-  //     },
-  //     992: {
-  //       slidesPerView: 3
-  //     }
-  //   }
-  // })
-
-  // const articleSlider = new Swiper('.article-slider', {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   speed: 800,
-  //   observer: true,
-  //   observeParents: true,
-  //   autoplay: {
-  //     delay: 5000
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   }
-  // })
-
-  // const articleSlider2 = new Swiper('.article-slider2', {
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   spaceBetween: 30,
-  //   speed: 800,
-  //   observer: true,
-  //   observeParents: true,
-  //   autoplay: {
-  //     delay: 5000
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   },
-  //   breakpoints: {
-  //     768: {
-  //       slidesPerView: 2
-  //     }
-  //   }
-  // })
 
   // ====================__slider 1 view__==================== //
 
@@ -141,11 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     pagination: {
       el: '.swiper-pagination1',
-      type: 'bullets',
-      clickable: true
+      type: 'bullets'
     },
     autoplay: {
       delay: 20000
+    },
+    breakpoints: {
+      992: {
+        pagination: {
+          clickable: true
+        }
+      }
     }
   })
 
@@ -163,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     pagination: {
       el: '.swiper-pagination3',
-      type: 'bullets',
-      clickable: true
+      type: 'bullets'
     },
     navigation: {
       nextEl: '.next-button',
@@ -175,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 2
       },
       992: {
-        slidesPerView: 3
+        slidesPerView: 3,
+        pagination: {
+          clickable: true
+        }
       }
     }
   })
