@@ -1,15 +1,16 @@
 mixin slide(data)
-  +e.slide.wrapper.swiper-slide
-    +sliderImg(data.img)
+  +b.slide.swiper-slide
+    
     +e.desc
-      +e.H2.title=data.title
-      +e.P.text=data.text
-      +e.buttons
-        +e.A.btn.btn.btn_white.btn_lg(href="#") Подробнее
-        +e.A.btn.btn.btn_outline.btn_lg(href="#") Подать заявку
-
+      +e.text-wrap
+        +e.H2.title=data.title
+        +e.P.text=data.text
+        +e.buttons
+          +e.A.btn.btn.btn_white(href="#") Подробнее
+          +e.A.btn.btn.btn_outline.index-btn(href="#") Подать заявку
+    +sliderImg(data.img)
 mixin catalog-slide(data)
-  +e.LI.catalog-item.swiper-slide
+  +b.LI.catalog-item.swiper-slide
     +e.A.catalog-link(href='#')
       +e.H5.catalog-title(style='background-image: url(img/'+data.icon+'.svg)')=data.title
       +e.P.catalog-text=data.text
