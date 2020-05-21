@@ -4,99 +4,189 @@
 .s-about
   position: relative
   overflow: hidden
-  &__picture
-    position: relative
-    top: -100px
-    z-index: 0
-    +tabMd(min)
-      width: 540px
-
-  &__desc
-    position: relative
-    max-width: 730px
-    padding: 30px
-    margin-left: auto
-    background: #fff
-    box-shadow: 0px 4px 10px rgba(165, 177, 188, .3)
-    border-radius: 2px
-    z-index: 1
-    +tabMd(min)
-      display: flex
-      padding: 30px 36px
-
-  &__header
-    min-width: 250px
-    padding-right: 30px
-    +tabMd(max)
-      padding-right: 0
-      margin-bottom: 14px
-
-  &__title
-    font-weight: 700
+  padding-top: 160px
+  background: #F7F9FB
+  &__title 
+    font-weight: 800
     font-size: 40px
-    margin-bottom: 16px
-
-  &__subtitle
-    font-weight: 700
-    font-size: 24px
-    color: #6F6F6F
-
-  .b-tabs
-    position: relative
-    +before((url(../img/logo2.svg)),590px,360px)
-      top: -330px
-      right: 190px
-      opacity: .2
-      background-size: contain
-      background-position: center
-      background-repeat: no-repeat
-      transform: rotate(-9deg)
-      z-index: -1
-      +desktop
-        right: 0
-      +tablet(max)
-        right: -180px
-    &__content
-      padding-right: 0
-      padding-left: 0 
-    &__link
-      font-weight: 700
-      &.active
-        color: #000
-    &__nav
+    line-height: 126%
+    text-align: center
+    margin-bottom: 42px
+  &__cards
+    +tablet(max)
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+    +mobile 
       justify-content: space-between
-      +tablet(min)
-        padding: 0 200px
-      +desktop
-        padding: 0 140px
-      +tablet
-        padding: 0 30px
-      +tabMd(max)
-        flex-wrap: wrap
-        justify-content: space-around
-
-    &__nav-item
-      +tabMd(max)
-        width: 50%
-        &:not(:last-child)
-          margin-bottom: 16px
-          border-bottom: 1px solid #CBCBCB
-
-    &__text
-      // 
-    &__picture
-      display: block
-      margin: 0 auto 30px
+    
+  &__info-wrap
+    display: flex
+    align-items: center
+    margin-bottom: 82px
+    +tablet(max)
+      flex-direction: column
+  &__img
+    +desktop
+      max-width: 530px
+    +tablet(max)
+      margin-bottom: 42px
+    +mobile 
       width: 100%
-      +tabMd(min)
-        float: left
-        width: 350px
-        margin-right: 30px
-      +tablet
-        width: 290px
-      +tabMd(max)
-        max-width: 330px
+  &__text-wrap 
+    margin-left: 30px
+    
+  &__subtitle 
+    font-weight: 300
+    font-size: 24px
+    line-height: 29px
+    margin-bottom: 22px
+  &__text
+    font-size: 16px
+    line-height: 22px
+    color: #6F6F6F
+    margin-bottom: 20px
+  &__link 
+    font-size: 16px
+    line-height: 22px
+    color: #007BF1
+    position: relative
+    font-weight: 600
+    &::after
+      content: ''
+      width: 24px
+      height: 24px
+      
+      background: url(../img/ar-r.svg) no-repeat
+      background-size: cover
+      position: absolute
+      right: -24px
+      top: 0
+
+.about-card
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 66px
+  +tablet
+    flex-basis: 33.3%
+  +tabMd
+    flex-basis: 33.3%
+  +mobile 
+    flex-basis: 48%
+    display: block
+  &__title
+    font-weight: 600
+    font-size: 16px
+    line-height: 126%
+    color: $black
+    margin-bottom: 6px
+  &__text
+    font-size: 14px
+    line-height: 126%
+    text-align: center
+    color: #6F6F6F
+    +mobile 
+      text-align: left
+  &__icon 
+    +mobile
+      float: left
+      margin-right: 12px
+
+
+  // &__picture
+  //   position: relative
+  //   top: -100px
+  //   z-index: 0
+  //   +tabMd(min)
+  //     width: 540px
+
+  // &__desc
+  //   position: relative
+  //   max-width: 730px
+  //   padding: 30px
+  //   margin-left: auto
+  //   background: #fff
+  //   box-shadow: 0px 4px 10px rgba(165, 177, 188, .3)
+  //   border-radius: 2px
+  //   z-index: 1
+  //   +tabMd(min)
+  //     display: flex
+  //     padding: 30px 36px
+
+  // &__header
+  //   min-width: 250px
+  //   padding-right: 30px
+  //   +tabMd(max)
+  //     padding-right: 0
+  //     margin-bottom: 14px
+
+  // &__title
+  //   font-weight: 700
+  //   font-size: 40px
+  //   margin-bottom: 16px
+
+  // &__subtitle
+  //   font-weight: 700
+  //   font-size: 24px
+  //   color: #6F6F6F
+
+  // .b-tabs
+  //   position: relative
+  //   +before((url(../img/logo2.svg)),590px,360px)
+  //     top: -330px
+  //     right: 190px
+  //     opacity: .2
+  //     background-size: contain
+  //     background-position: center
+  //     background-repeat: no-repeat
+  //     transform: rotate(-9deg)
+  //     z-index: -1
+  //     +desktop
+  //       right: 0
+  //     +tablet(max)
+  //       right: -180px
+  //   &__content
+  //     padding-right: 0
+  //     padding-left: 0 
+  //   &__link
+  //     font-weight: 700
+  //     &.active
+  //       color: #000
+  //   &__nav
+  //     justify-content: space-between
+  //     +tablet(min)
+  //       padding: 0 200px
+  //     +desktop
+  //       padding: 0 140px
+  //     +tablet
+  //       padding: 0 30px
+  //     +tabMd(max)
+  //       flex-wrap: wrap
+  //       justify-content: space-around
+
+  //   &__nav-item
+  //     +tabMd(max)
+  //       width: 50%
+  //       &:not(:last-child)
+  //         margin-bottom: 16px
+  //         border-bottom: 1px solid #CBCBCB
+
+  //   &__text
+  //     // 
+  //   &__picture
+  //     display: block
+  //     margin: 0 auto 30px
+  //     width: 100%
+  //     +tabMd(min)
+  //       float: left
+  //       width: 350px
+  //       margin-right: 30px
+  //     +tablet
+  //       width: 290px
+  //     +tabMd(max)
+  //       max-width: 330px
        
-    &__btn
-      display: block
-      margin: 58px auto 0
+  //   &__btn
+  //     display: block
+  //     margin: 58px auto 0
