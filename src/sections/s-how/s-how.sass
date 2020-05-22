@@ -2,4 +2,70 @@
 @import "../../styles/mixins"
   
 .s-how
-  //
+  background: #F7F9FB
+  margin-top: 100px
+  padding-top: 61px
+  padding-bottom: 82px
+  &__wrap
+    position: relative
+  &__img 
+    position: absolute
+    right: 0
+    bottom: -82px
+  &__title
+    font-weight: 800
+    font-size: 40px
+    line-height: 126%
+    color: #000
+    margin-bottom: 22px
+  &__colored
+    color: #007BF1
+  &__slider
+    overflow: hidden
+    height: 246px
+    
+  &__slider-container
+    position: relative
+    width: 618px
+  &__swiper-pagination
+    position: absolute
+    top: -60px
+    right: 0
+    z-index: 1
+    color: #03529E
+    .swiper-pagination-current
+      font-weight: bold
+      font-size: 72px
+      line-height: 88px
+      text-align: right
+    .swiper-pagination-total
+      font-size: 24px
+
+.show-slide
+  &.swiper-slide-active
+    background: $white
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 2px
+    .show-slide__title 
+      font-size: 24px
+      color: #000
+      // padding-left: 48px
+      // padding-top: 30px
+      // padding-bottom: 33px
+      // padding-left: 33px
+    .show-slide__subtitle
+      display: block
+  &__subtitle 
+    display: none
+    
+
+// .how-slider
+//   // height: 248px
+//   
+
+//   &__slide
+//     background: $white
+//     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+//     border-radius: 2px
+//     height: 148px !important
+//     width: 618px
