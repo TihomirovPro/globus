@@ -8,7 +8,6 @@ import {
 Swiper.use([Navigation, Pagination, Autoplay])
 
 document.addEventListener('DOMContentLoaded', () => {
-
   // ====================__slider 1 view__==================== //
 
   const slider1View = new Swiper('.slider1', {
@@ -111,6 +110,31 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3
       },
       576: {
+        slidesPerView: 2
+      }
+    }
+  })
+
+  // ====================__index blog items slider__==================== //
+  const blog = new Swiper('.slider4', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    observer: true,
+    slideToClickedSlide: true,
+    observeParents: true,
+    navigation: {
+      nextEl: '.next-button',
+      prevEl: '.prev-button'
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 4
+      },
+      576: {
+        slidesPerView: 3
+      },
+      420: {
         slidesPerView: 2
       }
     }
