@@ -1,3 +1,28 @@
+mixin s-main-reviews()
+  +b.SECTION.new-reviews.section.wrapper
+    +b-s-header({
+      title: 'Отзывы',
+      subtitle: [
+        'Смотрите видео о мебели и отзывы клиентов на нашем <a href="#">Youtube канале</a>'
+      ]
+    })._white
+    .slider-wrap
+      .reviews-slider.slider3
+        .swiper-wrapper
+          +b-review-not-avatar({
+            video: 'blogger1-video'
+          })
+          +b-review-not-avatar({
+            video: 'blogger2-video'
+          })
+          +b-review-not-avatar({
+            video: 'blogger3-video'
+          })
+        button.prev-button
+        button.next-button
+    a.btn(href="#") Все отзывы
+    +picture-bg('servicesBg')
+
 mixin s-about-reviews()
   +b.SECTION.new-reviews.section
     +b-s-header({

@@ -1,8 +1,8 @@
 include logo/logo
 
 mixin header()
-  +b.HEADER.header.wrapper
-    +e.UL.contacts
+  +b.HEADER.header
+    +e.UL.contacts.wrapper
       +e.LI.contacts-item
         +e.A.contacts-link._phone(href="tel:8-800-775-9408") 8-800-775-9408 (Бесплатно по РФ)
       +e.LI.contacts-item
@@ -10,11 +10,11 @@ mixin header()
       +e.LI.contacts-item
         +e.A.contacts-link._phone(href="tel:+86-186-7576-2020") +86-186-7576-2020 (WhatsApp)
       +e.LI.contacts-item
-        +e.A.contacts-link._whatsapp(href="https://api.whatsapp.com/send?phone=8618675762020") +8618675762020
+        //- +e.A.contacts-link._whatsapp(href="https://api.whatsapp.com/send?phone=8618675762020") +8618675762020
       +e.LI.contacts-item
         +e.A.contacts-link._mail(href="mailto:info@globus.furniture") info@globus.furniture
 
-    +e.bottom
+    +e.bottom.wrapper
       +e.A.logo(href='/' aria-label="Home")
         +logo
       +menu({
