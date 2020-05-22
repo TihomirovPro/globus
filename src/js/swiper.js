@@ -132,7 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   const slider6View = new Swiper('.slider6', {
     loop: true,
-    slidesPerView: 3,
+    centeredSlides: true,
+    slidesPerView: "auto",
     spaceBetween: 11,
     direction: 'vertical',
     pagination: {
