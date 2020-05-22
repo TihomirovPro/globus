@@ -116,14 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   const slider5View = new Swiper('.slider5', {
     loop: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
   
     autoplay: {
       delay: 7000
     },
-  
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      }
+    }
 
   })
   const slider6View = new Swiper('.slider6', {
@@ -164,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.next-button',
       prevEl: '.prev-button'
     },
+    
     breakpoints: {
       992: {
         slidesPerView: 4

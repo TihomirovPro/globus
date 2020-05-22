@@ -19,23 +19,32 @@
   &__wrap
     display: flex
     overflow-x: scroll
-    padding-left: 30px
+    padding-bottom: 40px
+    &::-webkit-scrollbar-track 
+      background: #ECECEC
+      border-radius: 20px
+    &::-webkit-scrollbar-thumb
+      background: #007BF1
+      border-radius: 20px
+
+    &::-webkit-scrollbar-thumb:hover
+    &::-webkit-scrollbar
+      width: 1px
   &__slider
     overflow: hidden
-    // margin-left: 45px
-    // margin-right: 45px
     margin-top: 80px
 
 .price-comparison__wrap
-  &::-webkit-scrollbar-track 
-    background-color: #000 !important
+
 
 
 
 .price-card
-  margin-left: 15px
   margin-right: 15px
   position: relative
+  &:not(:first-child)
+    margin-left: 15px
+    
   &__ticket
     position: absolute
     top: 18px
@@ -97,20 +106,12 @@
     color: #000000
     margin-bottom: 22px
     // max-width: 445px
-  &__info
+  &__link 
     font-size: 16px
     line-height: 22px
     color: #007BF1
     position: relative
-    &::after
-      content: ''
-      width: 24px
-      height: 24px
-      background: url(../img/ar-r.svg) no-repeat
-      background-size: cover
-      position: absolute
-      right: -24px
-      top: 0
-    
+    display: flex
+    align-items: center
 
       
