@@ -1,3 +1,98 @@
+mixin price-card(data)
+  +b.price-card
+    +e.IMG.img(src!="img/"+data.img+".jpg" alt="")
+    +e.ticket
+      +e.SPAN.title=data.title 
+      +e.description 
+        +e.in-chine.country-count
+          +e.SPAN.count=data.countChine
+          +e.SPAN.country в Китае 
+        +e.SPAN.slash /
+        +e.in-russia.country-count
+          +e.SPAN.bigcount=data.bigCount
+          +e.SPAN.country в России
+      
+mixin videoReview(data)
+  +b.review.swiper-slide
+    +b.video-review
+      +sliderImg(data.video)
+    +b.person-card
+      +e.desc
+        +e.H5.name!=data.name
+        +e.A.info!=data.info
+
 mixin s-price-comparison()
   +b.SECTION.price-comparison
     .wrapper
+      +e.H3.title Сравните цены в Китае и в России
+    +e.wrap
+      
+      +price-card({
+        img: 'chear',
+        title: 'Кресло Lorem Ipsum',
+        countChine: '$ 10',
+        bigCount: '$ 100'
+      })
+      +price-card({
+        img: 'chear',
+        title: 'Кресло Lorem Ipsum',
+        countChine: '$ 10',
+        bigCount: '$ 100'
+      })
+      +price-card({
+        img: 'chear',
+        title: 'Кресло Lorem Ipsum',
+        countChine: '$ 10',
+        bigCount: '$ 100'
+      })
+      +price-card({
+        img: 'chear',
+        title: 'Кресло Lorem Ipsum',
+        countChine: '$ 10',
+        bigCount: '$ 100'
+      })
+      +price-card({
+        img: 'chear',
+        title: 'Кресло Lorem Ipsum',
+        countChine: '$ 10',
+        bigCount: '$ 100'
+      })
+      +price-card({
+        img: 'chear',
+        title: 'Кресло Lorem Ipsum',
+        countChine: '$ 10',
+        bigCount: '$ 100'
+      })
+    .wrapper
+      +e.slider.slider5.wrapper
+        .swiper-wrapper
+          +videoReview({
+            video: 'review2-video',
+            name: 'Просчеты реальных проектов реализованных в Китае',
+            info: 'Смотреть больше',
+          })
+          +videoReview({
+            video: 'review4-video',
+            name: 'Просчеты реальных проектов реализованных в Китае',
+            info: 'Смотреть больше',
+          })
+          +videoReview({
+            video: 'review2-video',
+            name: 'Просчеты реальных проектов реализованных в Китае',
+            info: 'Клиент из Якутска',
+          })
+          +videoReview({
+            video: 'review4-video',
+            name: 'Просчеты реальных проектов реализованных в Китае',
+            info: 'Клиент из Москвы',
+          })
+          +videoReview({
+            video: 'review2-video',
+            name: 'Просчеты реальных проектов реализованных в Китае',
+            info: 'Клиент из Якутска',
+          })
+          +videoReview({
+            video: 'review4-video',
+            name: 'Просчеты реальных проектов реализованных в Китае',
+            info: 'Клиент из Москвы',
+          })

@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const slider4View = new Swiper('.slider4', {
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 30,
     observer: true,
     slideToClickedSlide: true,
@@ -108,11 +108,50 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 4
       },
       992: {
-        slidesPerView: 3
+        slidesPerView: 4
       },
       576: {
         slidesPerView: 2
       }
     }
   })
+  const slider5View = new Swiper('.slider5', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    speed: 800,
+  
+    autoplay: {
+      delay: 7000
+    },
+  
+
+  })
+  const slider6View = new Swiper('.slider6', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 11,
+    direction: 'vertical',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    
+    
+    // centeredSlides: true,
+  
+    // breakpoints: {
+    //   767: {
+    //     slidesPerView: 2
+    //   },
+    //   992: {
+    //     slidesPerView: 3,
+    //     pagination: {
+    //       clickable: true
+    //     }
+    //   }
+    // }
+  })
 })
+
+
