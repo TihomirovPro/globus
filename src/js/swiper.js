@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.prev-button'
     },
     breakpoints: {
+
       767: {
         slidesPerView: 2
       },
@@ -74,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const slider4View = new Swiper('.slider4', {
     loop: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
     observer: true,
     slideToClickedSlide: true,

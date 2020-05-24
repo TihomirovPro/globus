@@ -6,6 +6,7 @@
   margin-top: 100px
   padding-top: 61px
   padding-bottom: 82px
+  position: relative
   // display: none
   &__wrap
     position: relative
@@ -15,6 +16,20 @@
     right: 0
     bottom: -82px
     background-blend-mode: darken
+    +desktop 
+      max-width: 380px
+    +tablet(max)
+      display: none
+  &__img-tablet
+    display: none
+    +tablet(max)
+      display: block
+      position: absolute
+      right: 0
+      bottom: 0
+    +mobile 
+      display: none
+    
     
   &__title
     font-weight: 800
@@ -23,22 +38,44 @@
     color: #000
     margin-bottom: 22px
     padding-left: 50px
+    +tabMd(max)
+      margin-bottom: 78px
+    +mobile(max)
+      padding-left: 30px
   &__colored
     color: #007BF1
   &__slider
     overflow: hidden
     height: 230px
+    +desktop(max)
+      height: 250px
     .swiper-wrapper
       margin-top: -30px
+      +desktop(max)
+        margin-top: -35px
   &__slider-container
     position: relative
     width: 618px
+    +desktop(max) 
+      width: 530px
+    +tabMd(max)
+      width: 450px
+      margin-left: 10px
+    +mobile
+      width: 98%
+      margin-left: 2%
+
   &__swiper-pagination
     position: absolute
     top: -60px
     right: 0
     z-index: 1
     color: #03529E
+    +tabMd(max)
+      left: 48px
+      top: -80px
+    +mobile(max)
+      left: 30px
     .swiper-pagination-current
       font-weight: bold
       font-size: 72px
@@ -74,9 +111,13 @@
   &.swiper-slide-prev
     max-height: 30px
     padding-left: 50px
+    +mobile 
+      padding-left: 30px      
   &.swiper-slide-next
     max-height: 30px
-    padding-left: 50px
+    padding-left: 50px 
+    +mobile 
+      padding-left: 30px           
   &.swiper-slide-active
 
     background: $white
@@ -86,6 +127,12 @@
     padding-left: 48px
     padding-right: 33px
     max-height: 148px
+    +desktop(max)
+      min-height: 167px
+    +mobileMin
+      padding-left: 30px
+      padding-top: 10px
+      padding-right: 10px
     .show-slide__title 
       font-size: 24px
       color: #000
