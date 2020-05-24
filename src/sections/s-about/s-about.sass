@@ -67,12 +67,20 @@
   +mobile 
     flex-basis: 48%
     display: block
+  &__description
+    display: flex
+    flex-direction: column
+    align-content: center
   &__title
     font-weight: 600
     font-size: 16px
     line-height: 126%
     color: $black
     margin-bottom: 6px
+    text-align: center
+    +mobile 
+      text-align: left
+    
   &__text
     font-size: 14px
     line-height: 126%
@@ -82,6 +90,6 @@
       text-align: left
   &__icon 
     +mobile
-      float: left
+      // float: left
       margin-right: 12px
 

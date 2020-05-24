@@ -1,8 +1,9 @@
 mixin about-card(card)
   +b.about-card
     +e.icon!=card.icon
-    +e.SPAN.title=card.title
-    +e.P.text=card.text
+    +e.description
+      +e.SPAN.title=card.title
+      +e.P.text=card.text
 mixin s-about()
   +b.SECTION.s-about.section.wrapper
     +e.H2.title Мебельный тур в Китай с компанией Глобус. Почему мы?!
