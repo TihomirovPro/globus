@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    spaceBetween: 11,
+    spaceBetween: 10,
     direction: 'vertical',
     pagination: {
       el: '.swiper-pagination',
