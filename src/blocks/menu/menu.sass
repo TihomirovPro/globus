@@ -23,10 +23,14 @@
     top: 64px
     height: calc(100vh - 64px)
     width: 100vw
+    overflow: auto
 
   &__list
     +tablet(min)
       display: flex
+    +mobile
+      overflow: auto
+      padding-bottom: 40px
 
   &__link
     display: block

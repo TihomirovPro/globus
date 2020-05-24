@@ -3,6 +3,7 @@
 
 .header
   background: #fff
+  box-shadow: 0 0 10px rgba(0,0,0,.2)
   &__logo
     path
       fill: $colorMain
@@ -10,10 +11,20 @@
     background: #F6F6F6
   &__contacts-link
     color: #000
+  &.header_fixed
+    background-color: #fff
 
 .menu
   &__link
     color: #000 !important
+
+.burger__icon
+  background: #000
+  &::before,
+  &::after
+    background: #000
+    
+
 
 .s-request
   display: grid

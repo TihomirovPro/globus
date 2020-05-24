@@ -10,7 +10,7 @@ export function header () {
     window.addEventListener('scroll', (e) => {
       const scroll = window.scrollY
 
-      if (scroll > 500) {
+      if (scroll > 200) {
         header.classList.add('header_fixed')
       } else {
         header.classList.remove('header_fixed')

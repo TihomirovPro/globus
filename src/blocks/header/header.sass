@@ -1,16 +1,15 @@
 .header
-  position: absolute
+  position: fixed
   width: 100%
-  z-index: 110
+  z-index: 999
   background-color: rgba(0,0,0,0)
   transition: $transition
   top: 0
+  left: 0
   +tabMd(max)
-    position: fixed
     background-color: rgba(0,0,0,.9)
   +tabMd(min)
     &.header_fixed
-      position: fixed
       top: -70px
       background-color: rgba(0,0,0,.9)
   +desktop(min)
@@ -64,10 +63,11 @@
         background: url(../img/whatsapp-icon.svg)
 
   &__bottom
-    position: relative
+    // position: relative
     +flex('between-center')
     +tablet(max)  
-      padding: 11px 0
+      padding-top: 11px
+      padding-bottom: 11px
 
   &__logo
     position: relative
