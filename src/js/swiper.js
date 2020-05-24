@@ -140,7 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.swiper-pagination',
       type: 'fraction',
     },
-    
+    navigation: {
+      nextEl: '.next-button',
+      prevEl: '.prev-button'
+    },
     
     // centeredSlides: true,
   

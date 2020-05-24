@@ -26,7 +26,7 @@
     color: #007BF1
   &__slider
     overflow: hidden
-    height: 246px
+    height: 230px
     .swiper-wrapper
       margin-top: -30px
   &__slider-container
@@ -45,11 +45,27 @@
       text-align: right
     .swiper-pagination-total
       font-size: 24px
+  .next-button
+    top: calc(50% + 10px)
+    box-shadow: none
+    background: $colorMain
+    transform: rotate(90deg)
+    &::before
+      border-left: 5px solid $white
+    left: -16px
+  .prev-button
+    top: calc(50% - 40px)
+    box-shadow: none
+    background: $colorMain
+    transform: rotate(90deg)
+    &::before
+      border-right: 5px solid $white
 
 .show-slide
-  // height:100%
+
   max-height: 50px
   overflow:auto
+
   &__title
     font-size: 20px
     line-height: 27px
@@ -59,6 +75,7 @@
   &.swiper-slide-next
     max-height: 30px
   &.swiper-slide-active
+
     background: $white
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
     border-radius: 2px
