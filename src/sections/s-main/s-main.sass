@@ -2,51 +2,35 @@
 @import "../../styles/mixins"
 
 .main
-  margin-top: 108px
+  padding-top: 66px + 42px
   position: relative
-  height: 446px
+  height: 550px
   background: #032D56
-  z-index: 10 
-  // +desktop(max)
-  //   height: 750px
-  // +tabMd(max)
-  //   height: 650px
-  +mobile 
-    height: 554px
-    height: auto
-
+  z-index: 10
+  +tablet(max)
+    padding-top: 66px
+  +tabMd(max)
+    padding-left: 0
+    height: 280px + 66px + 280px
 
   &__container
+    position: relative
     height: 100%
     overflow: hidden
 
-
     .swiper-pagination1
       position: absolute
-      left: 50px
       +flex('between')
       +size(19px,80px)
+      left: 0
       z-index: 1
-      +desktop
-        left: 30px
-      +tablet 
-        left: 30px
       +tabMd(min)
         +centerY
         flex-direction: column
-      +tabMd 
-        flex-direction: column
-        justify-content: space-between
-        +size(19px,80px)
-        left: 20px
-        
       +tabMd(max)
-        bottom: 200px
-      +mobile
-        bottom: 317px
+        bottom: 310px
         +size(80px,19px)
         +centerX
-        // display: none
     .swiper-pagination
       &-bullet
         cursor: pointer
@@ -68,7 +52,6 @@
           &::before
             background: #F2994A
 
-  
   &__pagination
     position: relative
     right: 0
@@ -91,16 +74,11 @@
       max-width: 930px
       margin: 0 auto
 
-
-  
-
 .slide
   position: relative
-  height: 100%
+  +size(100%)
   display: flex
-  width: 100%
-
-  +mobile
+  +tabMd(max)
     flex-direction: column
     justify-content: space-between
     height: 525px
@@ -109,64 +87,62 @@
       opacity: 1
 
   &__desc
-    position: relative
-    width: 50%
-    height: 100%
+    +size(45%, 100%)
     transition: .5s
     transition-delay: .5s
     opacity: 0
-    display: flex
-    background-color: #032D56
-    +tablet(max)
-      width: 70%
-    +mobile 
+    padding: 60px 40px 80px 65px
+    +tablet
+      width: 60%
+      padding: 80px 30px 90px
+    +tabMd(max)
       width: 100%
-      padding-bottom: 83px
-  &__text-wrap
-    max-width: 443px
-    margin: auto
-    margin-top: 80px
-    +desktop
-      padding-left: 50px
-    +tablet 
-      min-width: 360px
-      padding-left: 60px
-    +tabMd
-      padding-left: 50px
-    +mobile 
-      margin-top: 36px
+      min-height: 280px
+      padding: 40px 15px 80px
+
   &__title
     color: #fff
     font-size: 24px
     line-height: 126%
     margin-bottom: 20px
     font-weight: bold
-    +mobile 
+    +tabMd(max)
       text-align: center
+
   &__text
     color: #fff
     font-size: 14px
-    ine-height: 126%
+    line-height: 20px
     margin-bottom: 28px
-    +mobile 
+    max-width: 450px
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 7
+    overflow: hidden
+    +tabMd(max)
       text-align: center
       display: none
+
   &__buttons
     +tabMd(max)
       text-align: center
+
   &__btn
     margin-right: 15px
     font-size: 14px
     &.index-btn
       padding: 10px
       line-height: 100%
+
   &__picture
     display: block
-    width: 50%
-    +mobile 
+    width: 55%
+    +tablet
+      width: 40%
+    +tabMd(max)
       width: 100%
-      height: 280px
-
+      max-height: 280px
+      min-height: 280px
 
 .catalog-item
   background-color: #fff

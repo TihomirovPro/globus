@@ -14,6 +14,17 @@
     padding-right: $wrapperMob
     padding-left: $wrapperMob
 
+.wrapper-left
+  padding-left: $padding
+  +desktop(min)
+    padding-left: $wrapperLg
+  +desktop
+    padding-left: $wrapperMd
+  +tablet
+    padding-left: $wrapperTab
+  +tabMd
+    padding-left: $wrapperMob
+
 .img
   +size(100%)
   object-fit: cover

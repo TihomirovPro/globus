@@ -6,10 +6,11 @@
   position: relative
   transition: $transition
   padding: 20px
-  border-radius: 6px
-  border: 1px solid #fff
+  height: 214px
+  border-radius: 4px
+  border: 2px solid #CBCBCB
   background: #fff
-  box-shadow: 0 0 14px 0 rgba(0,0,0,.1)
+  box-shadow: 0px 4px 10px rgba(165, 177, 188, 0.25)
   &:after
     position: absolute
     content: ''
@@ -23,6 +24,7 @@
   &__picture
     border-radius: 4px
     overflow: hidden
+    height: 100%
     position: relative
     +before(rgba(0,0,0,.5), 100%)
     +after((url(../img/play-icon.svg)),35px)
@@ -34,6 +36,8 @@
   padding: 20px 20px 48px
   box-shadow: none
   border: none
+  min-height: 244px
+  height: 100%
   background-color: transparent
   background-image: url(../img/review-border.svg)
   background-size: 100%

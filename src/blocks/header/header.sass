@@ -6,6 +6,8 @@
   transition: $transition
   top: 0
   left: 0
+  +tablet(max)
+    height: 66px
   +tabMd(max)
     background-color: rgba(0,0,0,.9)
   +tabMd(min)
@@ -17,29 +19,22 @@
       top: -46px
 
   &__contacts
-    padding-top: 11px
-    padding-bottom: 11px
-    +desktop(min)
-      display: flex
-    +desktop(max)
-      columns: 3
-    +tabMd(max)
+    height: 42px
+    display: flex
+    align-items: center
+    +tablet(max)
       display: none
 
   &__contacts-item
     white-space: nowrap
-    +desktop(min)
-      &:nth-last-child(2)
-        margin-left: auto
-      &:not(:last-child)
-        margin-right: 15px
-    +desktop(max)
-      &:last-child
-        text-align: right
-    +tablet(max)
-      &:nth-last-child(2),
-      &:nth-last-child(3)
-        padding-left: 20px
+    &:not(:last-child)
+      margin-right: 15px
+    &:last-child
+      margin-left: auto
+    &>svg
+      display: none
+      &>path
+        fill: $colorMain
 
   &__contacts-link
     display: inline-block
@@ -63,9 +58,9 @@
         background: url(../img/whatsapp-icon.svg)
 
   &__bottom
-    // position: relative
     +flex('between-center')
-    +tablet(max)  
+    height: 66px
+    +tablet(max)
       padding-top: 11px
       padding-bottom: 11px
 

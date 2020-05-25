@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const slider1View = new Swiper('.slider1', {
     loop: true,
     slidesPerView: 1,
+    spaceBetween: 10,
     longSwipesRatio: 0.01,
     longSwipesMs: 100,
     observer: true,
@@ -161,6 +162,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // }
   })
 
+  // ====================__index catalog__==================== //
+  const indexCatalog = new Swiper('.main__catalog-container', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    observer: true,
+    slideToClickedSlide: true,
+    observeParents: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 4
+      },
+      576: {
+        slidesPerView: 3
+      },
+      420: {
+        slidesPerView: 2
+      }
+    }
+  })
   // ====================__index blog items slider__==================== //
   const blog = new Swiper('.slider4', {
     loop: true,
@@ -173,7 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.next-button',
       prevEl: '.prev-button'
     },
-    
     breakpoints: {
       992: {
         slidesPerView: 4

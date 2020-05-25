@@ -9,8 +9,18 @@
       fill: $colorMain
   &__contacts
     background: #F6F6F6
+  &__contacts-item
+    display: flex
+    align-items: center
+    &>svg
+      margin-right: 4px
+      display: block
+      
   &__contacts-link
     color: #000
+    padding-left: 0
+    &::before
+      display: none
   &.header_fixed
     background-color: #fff
 
