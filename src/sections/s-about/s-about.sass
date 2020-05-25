@@ -5,91 +5,88 @@
   position: relative
   overflow: hidden
   padding-top: 160px
+  padding-bottom: 80px
   background: #F7F9FB
-  &__title 
-    font-weight: 800
-    font-size: 40px
-    line-height: 126%
-    text-align: center
-    margin-bottom: 42px
-  &__cards
-    +tablet(max)
-      display: flex
-      justify-content: center
-      flex-wrap: wrap
-    +mobile 
-      justify-content: space-between
+
+  .b-s-header__title
+    padding-bottom: 42px
+    color: $colorHeaders
+    margin: 0
     
-  &__info-wrap
-    display: flex
-    align-items: center
+  &__info
     margin-bottom: 82px
-    +tablet(max)
-      flex-direction: column
-  &__img
-    +desktop
-      max-width: 530px
+    +tablet(min)
+      display: flex
+      align-items: center
+
+  &__picture
+    +tablet(min)
+      width: 55%
     +tablet(max)
       margin-bottom: 42px
-    +mobile 
-      width: 100%
-  &__text-wrap 
-    margin-left: 30px
+
+  &__desc
+    +tablet(min)
+      padding-left: 30px
+      width: 45%
     
   &__subtitle 
     font-weight: 300
     font-size: 24px
     line-height: 29px
     margin-bottom: 22px
+
   &__text
-    font-size: 16px
     line-height: 22px
-    color: #6F6F6F
     margin-bottom: 20px
+
   &__link 
-    font-size: 16px
-    line-height: 22px
-    color: #007BF1
-    position: relative
-    font-weight: 600
     display: flex
     align-items: center
+    line-height: 22px
+    color: $colorMain
+    position: relative
+    font-weight: 600
+
+  &__cards
+    row-gap: 48px
+    +tablet
+      grid-template-columns: repeat(6, 1fr)
+    +tabMd(max)
+      grid-template-columns: repeat(2, 1fr)
 
 .about-card
-  display: flex
-  flex-direction: column
-  align-items: center
-  margin-bottom: 66px
   +tablet
-    flex-basis: 33.3%
-  +tabMd
-    flex-basis: 33.3%
-  +mobile 
-    flex-basis: 48%
-    display: block
-  &__description
-    display: flex
-    flex-direction: column
-    align-content: center
+    &:nth-child(3n+1)
+      grid-column: 1 / 3
+    &:nth-child(3n+2)
+      grid-column: 3 / 5
+    &:nth-child(3n+3)
+      grid-column: 5 / 7
+    &:nth-last-child(2)
+      grid-column: 2 / 4
+    &:last-child
+      grid-column: 4 / 6
+
+  &__icon
+    +flex('center')
+    width: 74px
+    margin: 0 auto 18px
+    &>svg
+      width: 100%
+      &>path
+        fill: darken($colorMain, 15%)
+
   &__title
     font-weight: 600
     font-size: 16px
-    line-height: 126%
     color: $black
-    margin-bottom: 6px
     text-align: center
-    +mobile 
-      text-align: left
+    margin-bottom: 6px
     
   &__text
+    margin: 0 auto
     font-size: 14px
-    line-height: 126%
+    line-height: 18px
     text-align: center
-    color: #6F6F6F
-    +mobile 
-      text-align: left
-  &__icon 
-    +mobile
-      // float: left
-      margin-right: 12px
 

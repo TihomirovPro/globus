@@ -40,14 +40,23 @@
   display: grid
   grid-template-columns: 1fr 1fr
   column-gap: 30px
+  +tablet(max)
+    grid-template-columns: 1fr
+
   .picture-bg:before
     display: none
+
   .form
     width: 100%
     margin-top: 0
     padding: 30px
+    &__container
+      grid-template-columns: 1fr 1fr
+      +tabMd(max)
+        grid-template-columns: 1fr
     &__input
       font-size: 14px
+
   &__desc
     width: 100%
   &__title

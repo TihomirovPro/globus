@@ -54,6 +54,7 @@
       top: 4px
 
 .post-info
+  display: flex
   font-size: 13px
   font-weight: 500
   color: #707070
@@ -62,17 +63,18 @@
     +size(15px)
     vertical-align: middle
     margin-right: 4px
-    // >path
-    //   fill: $colorMain
+    &>path
+      // fill: $colorMain
+  &__item
+    display: flex
+    align-items: center
+    margin-right: 8px
 
 .post_small
   margin-bottom: 10px
   display: flex
   align-items: center
   .post
-    &-info
-      margin-bottom: 0
-      white-space: nowrap
     &__image
       margin-right: 15px
       min-width: 95px
@@ -105,13 +107,6 @@
     box-shadow: 0 5px 20px rgba(0,0,0,.05)
 
   .post
-    &-info
-      +flex('between')
-      max-width: 175px
-      width: 100%
-      &__item
-        display: flex
-        align-items: center
     &__title
       font-weight: bold
       font-size: 16px
@@ -127,7 +122,7 @@
     &__desc
       width: 100%
       padding: 20px
-      font-size: 12px
+      font-size: 14px
       border-radius: 0 0 4px 4px
       border: 1px solid #eee
       border-top: none

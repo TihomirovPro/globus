@@ -2,7 +2,7 @@ mixin review(data)
   +b.review.swiper-slide
     +e.P.text=data.text
     +b.person-card
-      +sliderImg(data.img)
+      +imageIframe(data.img)
       +e.desc
         +e.H5.name!=data.name
         +e.P.info!=data.info
@@ -10,9 +10,9 @@ mixin review(data)
 mixin videoReview(data)
   +b.review.swiper-slide
     +b.video-review
-      +sliderImg(data.video)
+      +imageIframe(data.video)
     +b.person-card
-      +sliderImg(data.img)
+      +imageIframe(data.img)
       +e.desc
         +e.H5.name!=data.name
         +e.P.info!=data.info

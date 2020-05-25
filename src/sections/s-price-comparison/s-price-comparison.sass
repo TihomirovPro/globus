@@ -4,21 +4,12 @@
 .price-comparison
   padding-top: 82px
   padding-bottom: 22px
-  .video-review
-    padding: 0
-    margin-bottom: 28px
-    &__picture
-      &::after
-        width: 75px
-        height: 75px
-  &__title
-    font-weight: 800
-    font-size: 40px
-    line-height: 126%
-    text-align: center
-    color: $black
-    margin-bottom: 42px
+
+  .b-s-header__title
+    padding-bottom: 42px
+
   &__wrap
+    position: relative
     display: flex
     overflow-x: scroll
     padding-bottom: 40px
@@ -28,20 +19,18 @@
     &::-webkit-scrollbar-thumb
       background: #007BF1
       border-radius: 20px
-    &::-webkit-scrollbar-thumb:hover
-      //
     &::-webkit-scrollbar
       width: 1px
+
   &__slider
     overflow: hidden
     margin-top: 80px
 
-.price-comparison__wrap
-  //
-
-.price-card
+.spc-card
   margin-right: 15px
   position: relative
+  +size(540px,280px)
+  min-width: 540px
   &:not(:first-child)
     margin-left: 15px
     
@@ -54,6 +43,7 @@
     background: #F2994A
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
     border-radius: 2px
+
   &__title 
     margin-top: 10px
     margin-bottom: 7px
@@ -62,22 +52,30 @@
     color: $white
     text-align: center
     display: block
+
+  &__picture
+    +size(100%)
+
   &__description 
     display: flex
-    justify-content: center   
+    justify-content: center  
+
   .country-count
     display: flex
     flex-direction: column
+
   &__count
     font-weight: bold
     font-size: 26px
     line-height: 126%
     color: #FFFFFF
+
   &__country
     font-weight: 600
     font-size: 14px
     line-height: 126%
     color: #FFFFFF
+
   &__slash
     color: $white
     font-size: 65px
@@ -85,29 +83,19 @@
     margin-top: -5px
     margin-left: 6px
     margin-right: 4px
+
   &__bigcount
     font-weight: bold
     font-size: 18px
     line-height: 126%
     color: #FFFFFF
+
   &__in-russia
     padding-top: 10px
 
-.person-card
-  padding: 0
-  &__name
-    font-weight: bold
+.video-info
+  &__title
     font-size: 24px
     line-height: 33px
-    color: #000000
-    margin-bottom: 22px
-    // max-width: 445px
-  &__link 
-    font-size: 16px
-    line-height: 22px
-    color: #007BF1
-    position: relative
-    display: flex
-    align-items: center
 
       

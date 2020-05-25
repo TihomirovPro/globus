@@ -1,24 +1,3 @@
-mixin img(img)
-  +e.PICTURE.picture.iframe-popup(class=attributes.class)
-    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
-    img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
-
-mixin sliderImg(img)
-  +e.PICTURE.picture.iframe-popup(class=attributes.class)
-    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
-    img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
-
-mixin picture(img)
-  picture.iframe-popup(class=attributes.class)
-    //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-    //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-    //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
-    img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
-
 //--------------------__Image__--------------------//
 
 mixin image(img)
@@ -34,12 +13,6 @@ mixin imageIframe(img)
     //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
     source.img(data-srcset='//img.youtube.com/vi/1zObaof8eIQ/mqdefault.jpg' type="image/webp")
     img.img.lazy(data-src='//img.youtube.com/vi/1zObaof8eIQ/mqdefault.jpg' alt="img" data-modal='1zObaof8eIQ')
-//- mixin imageIframe(img)
-//-   picture.article-video.iframe-popup(class=attributes.class)
-//-     //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
-//-     //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
-//-     //- source.img(data-srcset="img/"+ img +'.webp' type="image/webp")
-//-     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img" data-modal='1zObaof8eIQ')
 
 //--------------------__Image info__--------------------//
 
@@ -73,4 +46,10 @@ mixin videoInfo(data)
     +imageIframe(data.img)
     +e.desc
       +e.H4.title!=data.title
-      +e.time.time!=data.time
+      if data.time
+        +e.time.time!=data.time
+      if data.link
+        +e.A.link(href="#")
+          span Смотреть больше
+          svg(width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M9 18l6-6-6-6" stroke="#007BF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
