@@ -11,7 +11,7 @@ mixin b-review(data)
 mixin b-review-second(data)
   +b.b-review.swiper-slide
     +b.video-review.video-review_second
-      +image(data.video)
+      +imageIframe(data.video)
     +b.person-card
       +image(data.img)
       +e.desc
@@ -21,4 +21,4 @@ mixin b-review-second(data)
 mixin b-review-not-avatar(data)
   +b.b-review.swiper-slide
     +b.video-review.video-review_not-avatar
-      +image(data.video)
+      +imageIframe(data.video)

@@ -94,8 +94,26 @@
     padding-top: 10px
 
 .video-info
+  .article-video
+    height: 300px
+    +desktop
+      height: 250px
+    +tablet(max)
+      height: 180px
+    +mobile
+      min-height: 150px
+      height: auto
+
   &__title
     font-size: 24px
     line-height: 33px
+    +tablet(max)
+      font-size: 18px
+      line-height: 20px
+    +mobile
+      font-size: 16px
 
-      
+  &__link
+    display: flex
+    align-items: center
+    color: $colorMain

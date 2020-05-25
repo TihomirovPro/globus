@@ -8,7 +8,7 @@ mixin image(img)
     img.img.lazy(data-src="img/"+ img +'.jpg' alt="img")
 
 mixin imageIframe(img)
-  picture.article-video.iframe-popup(class=attributes.class)
+  +e.PICTURE.picture.article-video.iframe-popup(class=attributes.class)
     //- source.img(data-srcset="img/"+ img +'-mob.webp' media="(max-width: 576px)" type="image/webp")
     //- source.img(data-srcset="img/"+ img +'-mob.jpg' media="(max-width: 576px)" type="image/webp")
     source.img(data-srcset='//img.youtube.com/vi/1zObaof8eIQ/mqdefault.jpg' type="image/webp")
