@@ -63,16 +63,13 @@
     bottom: -100px
     left: 0
     width: 100%
-    +tabMd
-      bottom: -120px
-
-  &__catalog-container
-    overflow: hidden
-    padding-top: 20px
-    padding-bottom: 20px
-    +media(max,1201px)
-      max-width: 930px
-      margin: 0 auto
+    +tablet(max)
+      grid-template-columns: 1fr 1fr
+      row-gap: 20px
+      bottom: -220px
+    +mobile
+      bottom: -460px
+      grid-template-columns: 1fr
 
 .slide
   position: relative
@@ -177,11 +174,10 @@
     font-size: 14px
     line-height: 19px
     color: #6F6F6F
-    text-align: center
-    +tabMd(max)
-      font-size: 13px
-    +mobile 
-      text-align: left
+    +tablet(min)
+      text-align: center
+      
+
   &__title-wrap
     display: flex
     align-items: center

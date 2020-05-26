@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
-  
     autoplay: {
       delay: 7000
     },
@@ -145,21 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: '.next-button',
       prevEl: '.prev-button'
-    },
-    
-    // centeredSlides: true,
-  
-    // breakpoints: {
-    //   767: {
-    //     slidesPerView: 2
-    //   },
-    //   992: {
-    //     slidesPerView: 3,
-    //     pagination: {
-    //       clickable: true
-    //     }
-    //   }
-    // }
+    }
   })
 
   // ====================__index catalog__==================== //
@@ -198,10 +183,10 @@ document.addEventListener('DOMContentLoaded', () => {
       992: {
         slidesPerView: 4
       },
-      576: {
+      767: {
         slidesPerView: 3
       },
-      420: {
+      576: {
         slidesPerView: 2
       }
     }
