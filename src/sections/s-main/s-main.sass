@@ -6,7 +6,10 @@
   position: relative
   height: 550px
   background: #032D56
+
   z-index: 10
+  +media(max, 1601px)
+    padding-right: 0 
   +tablet(max)
     padding-top: 66px
   +tabMd(max)
@@ -162,12 +165,10 @@
     color: $black
     font-size: 16px
     font-weight: bold
-    // margin: 0 auto 10px
     margin-left: 12px
     background-size: contain
     background-repeat: no-repeat
     width: max-content
-    // padding-left: 40px
     text-align: center
 
   &__catalog-text
@@ -183,6 +184,8 @@
     align-items: center
     margin-bottom: 12px
     position: relative
+    &>svg>path
+      fill: darken($colorMain, 15%)
     &::after
       content: ''
       position:  absolute
@@ -191,4 +194,3 @@
       background: url(../img/ar-index.svg) no-repeat
       background-size: cover
       right: 0
-      

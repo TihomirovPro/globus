@@ -17,15 +17,18 @@
 
   .next-button,
   .prev-button
-    top: 27%
-    transform: none
-
-  .b-tabs__item:first-child
+    top: 50%
+    transform: translateY(-50%)
+  #bloggers
     .next-button,
     .prev-button
-      top: 50%
-      transform: translateY(-50%)
-
+      top: 122px
+      +desktop
+        top: 100px
+      +tablet
+        top: 117px - 15px
+      +tabMd(max)
+        top: calc(50% - 80px)
 
 .slider-wrap
   position: relative

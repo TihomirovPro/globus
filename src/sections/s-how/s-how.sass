@@ -3,34 +3,21 @@
   
 .s-how
   background: #F7F9FB
-  margin-top: 100px
-  padding-top: 61px
+  padding-top: 60px
   padding-bottom: 82px
   position: relative
-  // display: none
-  &__wrap
-    position: relative
-    background-blend-mode: darken
+ 
   &__img 
     position: absolute
-    right: 0
-    bottom: -82px
-    background-blend-mode: darken
-    +desktop 
-      max-width: 380px
-    +tablet(max)
+    left: 50%
+    bottom: 0
+    max-width: 380px
+    +tablet
+      left: auto
+      right: -60px
+    +tabMd(max)
       display: none
-  &__img-tablet
-    display: none
-    +tablet(max)
-      display: block
-      position: absolute
-      right: 0
-      bottom: 0
-    +mobile 
-      display: none
-    
-    
+
   &__title
     font-weight: 800
     font-size: 40px
@@ -38,21 +25,24 @@
     color: #000
     margin-bottom: 22px
     padding-left: 50px
+    max-width: 410px
+    span
+      color: $colorMain
     +tabMd(max)
       margin-bottom: 78px
     +mobile(max)
       padding-left: 30px
-  &__colored
-    color: #007BF1
+
   &__slider
     overflow: hidden
-    height: 230px
+    height: 250px
     +desktop(max)
       height: 250px
     .swiper-wrapper
-      margin-top: -30px
-      +desktop(max)
-        margin-top: -35px
+      margin-top: -50px
+      // +desktop(max)
+      //   margin-top: -35px
+
   &__slider-container
     position: relative
     width: 618px
@@ -83,6 +73,7 @@
       text-align: right
     .swiper-pagination-total
       font-size: 24px
+  
   .next-button
     top: calc(50% + 10px)
     box-shadow: none
@@ -91,6 +82,7 @@
     &::before
       border-left: 5px solid $white
     left: -16px
+
   .prev-button
     top: calc(50% - 40px)
     box-shadow: none
@@ -101,37 +93,29 @@
 
 .show-slide
   max-height: 50px
-  overflow: auto
-
+  overflow: hidden
+  padding: 0 48px
+  transition: 250ms
+  display: flex
+  align-items: center
   &__title
     font-size: 20px
     line-height: 27px
     color: #BDBDBD
-  &.swiper-slide-prev
-    max-height: 30px
-    padding-left: 50px
-    +mobile 
-      padding-left: 30px      
-  &.swiper-slide-next
-    max-height: 30px
-    padding-left: 50px 
-    +mobile 
-      padding-left: 30px           
-  &.swiper-slide-active
 
+  &.swiper-slide-prev
+    // max-height: 30px
+
+  &.swiper-slide-next
+    // max-height: 30px
+
+  &.swiper-slide-active
+    display: block
     background: $white
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
     border-radius: 2px
-    padding-top: 30px
-    padding-left: 48px
-    padding-right: 33px
-    max-height: 148px
-    +desktop(max)
-      min-height: 167px
-    +mobileMin
-      padding-left: 30px
-      padding-top: 10px
-      padding-right: 10px
+    padding: 30px 48px
+    max-height: 150px
     .show-slide__title 
       font-size: 24px
       color: #000

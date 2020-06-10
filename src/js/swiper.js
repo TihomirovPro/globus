@@ -131,15 +131,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   })
-  const slider6View = new Swiper('.slider6', {
+
+  // ====================__index catalog__==================== //
+
+  const sShowSlider = new Swiper('.s-how__slider', {
     loop: true,
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     spaceBetween: 10,
     direction: 'vertical',
     pagination: {
       el: '.swiper-pagination',
-      type: 'fraction',
+      type: 'fraction'
     },
     navigation: {
       nextEl: '.next-button',
@@ -192,5 +195,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 })
-
-

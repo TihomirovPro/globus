@@ -12,12 +12,12 @@ mixin catalog-slide(data)
   +b.LI.catalog-item
     +e.A.catalog-link(href='#')
       +e.title-wrap
-        +e.icon!=data.icon
+        !=data.icon
         +e.H5.catalog-title=data.title
       +e.P.catalog-text=data.text
 
 mixin s-main()
-  +b.SECTION.main.wrapper-left
+  +b.SECTION.main.wrapper
     +e.container.slider1
       +e.slider.swiper-wrapper
         +slide({

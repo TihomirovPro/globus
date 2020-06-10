@@ -299,6 +299,7 @@
 .prev-button
   cursor: pointer
   position: absolute
+  +flex('center')
   +centerY
   z-index: 10
   +size(32px)
@@ -306,7 +307,8 @@
   background: #fff
   box-shadow: 0px 3px 8px
   +triangle('left',5px,9px,$colorMain)
-    +center
+    margin-left: -2px
+    
 
 .prev-button
   left: -16px
@@ -316,3 +318,4 @@
   &:before
     border-right: none
     border-left: 5px solid $colorMain
+    margin-left: 2px

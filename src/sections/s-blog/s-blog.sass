@@ -21,21 +21,15 @@
 
   .next-button,
   .prev-button
-    +flex('center')
-    position: absolute
-    cursor: pointer
-    background: #007BF1
-    +size(32px)
+    background: $colorMain
+    transform: translateY(-50%)
     top: 160px
-    border-radius: 50%
-    transition: $transition
-    z-index: 10
-    box-shadow: 0px 3px 8px rgba(165, 177, 188, 0.3)
-    transform: matrix(-1, 0, 0, 1, 0, 0)
     &::before
-      content: none
-
-  .prev-button
-    left: -16px
+      border-right: 5px solid #fff
+      border-top: 4.5px solid transparent
+      border-bottom: 4.5px solid transparent
   .next-button
     right: -16px
+    &:before
+      border-right: none
+      border-left: 5px solid #fff
