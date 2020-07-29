@@ -37,10 +37,19 @@
 .spc-card
   margin-right: 15px
   position: relative
-  +size(540px,280px)
+  +size(540px,340px)
   min-width: 540px
+
   &:not(:first-child)
     margin-left: 15px
+
+  +desktop
+    height: 280px
+    min-width: 450px
+
+  +tablet(max)
+    height: 260px
+    min-width: 420px
     
   &__ticket
     position: absolute
