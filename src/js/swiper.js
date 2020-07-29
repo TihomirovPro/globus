@@ -8,12 +8,12 @@ import {
 Swiper.use([Navigation, Pagination, Autoplay])
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ====================__slider 1 view__==================== //
+// ====================__slider 1 view__==================== //
 
   const slider1View = new Swiper('.slider1', {
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 10,
+    // spaceBetween: 10,
     longSwipesRatio: 0.01,
     longSwipesMs: 100,
     observer: true,
@@ -132,9 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   })
 
-  // ====================__index catalog__==================== //
+  // ====================__s-how__slider__==================== //
 
-  const sShowSlider = new Swiper('.s-how__slider', {
+  const sShowSlider = new Swiper('.s-how__slider1', {
     loop: true,
     centeredSlides: true,
     slidesPerView: 'auto',
@@ -145,8 +145,24 @@ document.addEventListener('DOMContentLoaded', () => {
       type: 'fraction'
     },
     navigation: {
-      nextEl: '.next-button',
-      prevEl: '.prev-button'
+      nextEl: '.next-button1',
+      prevEl: '.prev-button1'
+    }
+  })
+
+  const sShowSlider2 = new Swiper('.s-how__slider2', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    direction: 'vertical',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction'
+    },
+    navigation: {
+      nextEl: '.next-button2',
+      prevEl: '.prev-button2'
     }
   })
 

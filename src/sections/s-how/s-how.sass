@@ -3,9 +3,6 @@
   
 .s-how
   background: #F7F9FB
-  padding-top: 60px
-  padding-bottom: 82px
-  position: relative
  
   &__img 
     position: absolute
@@ -92,6 +89,20 @@
     transform: rotate(90deg)
     &::before
       border-right: 5px solid $white
+
+.tour
+  z-index: 10
+  position: relative
+  padding-top: 60px
+  padding-bottom: 82px
+
+.online-tour
+  display: grid
+  grid-template-columns: 1fr 1fr
+  column-gap: 40px
+  padding-top: 80px
+  padding-bottom: 80px
+  background: #fff
 
 .show-slide
   max-height: 50px

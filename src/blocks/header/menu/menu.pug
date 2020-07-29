@@ -1,16 +1,16 @@
 mixin menu(menu)
   +b.NAV.menu
     +e.UL.list
-      each link1 in menu.links
+      each link1 in menu
         if !link1.submenu
           +e.LI.item(class!=link1.class)
             if link1.disabled
-              +e.SPAN.link!= link1.text
+              +e.SPAN.link!=link1.text
             else
-              +e.A.link(href=link1.href)!= link1.text
+              +e.A.link(href!=link1.href)!=link1.text
         else
           +e.LI.item.dropdown
-            +e.SPAN.link!= link1.text
+            +e.SPAN.link!=link1.text
             +b.UL.sub-menu
               each link2 in link1.submenu
                 if !link2.submenu
@@ -18,26 +18,26 @@ mixin menu(menu)
                     if link2.disabled
                       +e.SPAN.link!= link2.text
                     else
-                      +e.A.link(href=link2.href)!= link2.text
+                      +e.A.link(href!=link2.href)!= link2.text
                 else
                   +e.LI.item.dropdown
-                    +e.SPAN.link!= link2.text
+                    +e.SPAN.link!=link2.text
                     +b.UL.sub-menu
                       each link3 in link2.submenu
                         if !link3.submenu
                           +e.LI.item
                             if link3.disabled
-                              +e.SPAN.link!= link3.text
+                              +e.SPAN.link!=link3.text
                             else
-                              +e.A.link(href=link3.href)!= link3.text
+                              +e.A.link(href!=link3.href)!=link3.text
                         else
                           +e.LI.item.dropdown
-                            +e.SPAN.link!= link3.text
+                            +e.SPAN.link!=link3.text
                             +b.UL.sub-menu
                               each link4 in link3.submenu
                                 if !link4.submenu
                                   +e.LI.item
                                     if link4.disabled
-                                      +e.SPAN.link!= link4.text
+                                      +e.SPAN.link!=link4.text
                                     else
-                                      +e.A.link(href=link4.href)!= link4.text
+                                      +e.A.link(href!=link4.href)!=link4.text

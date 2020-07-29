@@ -2,19 +2,12 @@
 @import "../../styles/mixins"
 
 .main
-  padding-top: 66px + 42px
   position: relative
   height: 550px
-  background: #032D56
-
   z-index: 10
-  +media(max, 1601px)
-    padding-right: 0 
-  +tablet(max)
-    padding-top: 66px
+
   +tabMd(max)
-    padding-left: 0
-    height: 280px + 66px + 280px
+    height: 576px
 
   &__container
     position: relative
@@ -25,15 +18,20 @@
       position: absolute
       +flex('between')
       +size(19px,80px)
-      left: 0
+      left: $wrapperLg
       z-index: 1
+      +desktop
+        left: $wrapperMd
+      +tablet
+        left: $wrapperTab
       +tabMd(min)
         +centerY
         flex-direction: column
       +tabMd(max)
-        bottom: 310px
+        bottom: 210px
         +size(80px,19px)
         +centerX
+  
     .swiper-pagination
       &-bullet
         cursor: pointer
@@ -71,34 +69,40 @@
       row-gap: 20px
       bottom: -220px
     +mobile
-      bottom: -460px
+      bottom: -380px
       grid-template-columns: 1fr
 
 .slide
   position: relative
-  +size(100%)
   display: flex
+  +size(100%)
   +tabMd(max)
     flex-direction: column
     justify-content: space-between
-    height: 525px
   &.swiper-slide-active
     .slide__desc
       opacity: 1
 
   &__desc
-    +size(45%, 100%)
+    position: relative
+    max-width: 475px + 65px
+    width: 100%
+    z-index: 1
     transition: .5s
     transition-delay: .5s
     opacity: 0
-    padding: 60px 40px 80px 65px
+    padding: 110px 0 80px 65px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
     +tablet
       width: 60%
       padding: 80px 30px 90px
+
     +tabMd(max)
-      width: 100%
       min-height: 280px
-      padding: 40px 15px 80px
+      padding: 110px 0 80px
 
   &__title
     color: #fff
@@ -106,6 +110,7 @@
     line-height: 126%
     margin-bottom: 20px
     font-weight: bold
+
     +tabMd(max)
       text-align: center
 
@@ -114,11 +119,11 @@
     font-size: 14px
     line-height: 20px
     margin-bottom: 28px
-    max-width: 450px
     display: -webkit-box
     -webkit-box-orient: vertical
     -webkit-line-clamp: 7
     overflow: hidden
+  
     +tabMd(max)
       text-align: center
       display: none
@@ -135,14 +140,11 @@
       line-height: 100%
 
   &__picture
+    position: absolute
+    left: 0
+    top: 0
     display: block
-    width: 55%
-    +tablet
-      width: 40%
-    +tabMd(max)
-      width: 100%
-      max-height: 280px
-      min-height: 280px
+    +size(100%)
 
 .catalog-item
   background-color: #fff

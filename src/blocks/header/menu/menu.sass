@@ -1,42 +1,23 @@
 .menu
-  transition: $transition
-  +tablet(min)
-    margin-left: auto
-    margin-right: 10px
-  +tablet(max)
-    position: absolute
-    background: #fff
-    left: 50%
-    transform: translateX(-50%)
-    top: 100%
-    max-width: 720px
-    width: 100%
-    opacity: 0
-    visibility: hidden
-    z-index: -1
-    min-height: 80vh
-    &.open
-      opacity: 1
-      z-index: 100
-      visibility: visible
-  +mobile
-    top: 64px
-    height: calc(100vh - 64px)
-    width: 100vw
-    overflow: auto
 
   &__list
     +tablet(min)
-      display: flex
+      display: grid
+      grid-auto-flow: column
+      column-gap: 30px
+      padding-right: 30px
+
+    +desktop
+      column-gap: 16px
+      
     +mobile
       overflow: auto
-      padding-bottom: 40px
 
   &__link
     display: block
     font-weight: 600
     color: $white
-    padding: 20px 12px
+    padding: 20px 0
     font-size: 15px
     transition: $transition
     cursor: default

@@ -2,12 +2,15 @@
 @import "../../styles/mixins"
   
 .price-comparison
+  z-index: 1
+  position: relative
   padding-top: 82px
   padding-bottom: 120px
   +mobile
     padding-bottom: 20px
 
   .b-s-header__title
+    color: #fff
     padding-bottom: 42px
 
   .columns2
@@ -122,6 +125,7 @@
       height: auto
 
   &__title
+    color: #fff
     font-size: 24px
     line-height: 33px
     +tablet(max)
@@ -133,4 +137,14 @@
   &__link
     display: flex
     align-items: center
-    color: $colorMain
+    color: #F7F9FB
+    transition: $transition
+
+    &:hover
+      color: $colorMain
+      svg path
+        stroke: $colorMain
+
+    svg path
+      transition: $transition
+      stroke: #F7F9FB

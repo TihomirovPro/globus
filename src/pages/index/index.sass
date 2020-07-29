@@ -1,41 +1,6 @@
 @import "../../styles/vars"
 @import "../../styles/mixins"
 
-.header
-  background: #fff
-  box-shadow: 0 0 10px rgba(0,0,0,.2)
-  &__logo
-    path
-      fill: $colorMain
-  &__contacts
-    background: #F6F6F6
-  &__contacts-item
-    display: flex
-    align-items: center
-    &>svg
-      margin-right: 4px
-      display: block
-      
-  &__contacts-link
-    color: #000
-    padding-left: 0
-    &::before
-      display: none
-  &.header_fixed
-    background-color: #fff
-
-.menu
-  &__link
-    color: #000 !important
-    &:hover
-      color: $colorMain !important
-
-.burger__icon
-  background: #000
-  &::before,
-  &::after
-    background: #000
-
 .s-request
   display: grid
   grid-template-columns: 1fr 1fr

@@ -1,65 +1,69 @@
 .header
+  padding-top: 42px
   position: fixed
+  +flex('between-center')
+  height: 66px + 42px
   width: 100%
   z-index: 999
-  background-color: rgba(0,0,0,0)
+  background: rgba(0,0,0,0)
   transition: $transition
   top: 0
   left: 0
+
   +tablet(max)
     height: 66px
-  +tabMd(max)
-    background-color: rgba(0,0,0,.9)
+    padding-top: 11px
+    padding-bottom: 11px
+    background: rgba(0,0,0,.9)
+
   +tablet(min)
     &.header_fixed
       top: -42px
-      background-color: rgba(0,0,0,.9)
+      background: rgba(0,0,0,.9)
 
   &__contacts
+    position: absolute
+    top: 0
+    left: 0
     height: 42px
+    width: 100%
     display: flex
+    background: #000
     align-items: center
+  
     +tablet(max)
-      display: none
+      position: static
+      display: block
+      height: auto
+      background: #F6F6F6
+      padding-top: 20px
+      padding-bottom: 20px
 
   &__contacts-item
+    display: flex
+    align-items: center
     white-space: nowrap
     &:not(:last-child)
       margin-right: 15px
+      +tablet(max)
+        margin-bottom: 28px
+    &:first-child
+      +tablet(min)
+        margin-left: 130px
     &:last-child
       margin-left: auto
     &>svg
-      display: none
+      height: 19px
+      margin-right: 4px
       &>path
         fill: $colorMain
 
   &__contacts-link
     display: inline-block
-    position: relative
     color: #fff
-    opacity: .7
-    font-size: 13px
-    padding-left: 24px
-    +before(transparent,18px)
-      left: 0
-      top: 50%
-      transform: translateY(-50%)
-    &_phone
-      &:before
-        background: url(../img/phone-icon.svg)
-    &_mail
-      &:before
-        background: url(../img/mail-icon.svg)
-    &_whatsapp
-      &:before
-        background: url(../img/whatsapp-icon.svg)
-
-  &__bottom
-    +flex('between-center')
-    height: 66px
+    font-size: 12px
     +tablet(max)
-      padding-top: 11px
-      padding-bottom: 11px
+      color: #000
 
   &__logo
     position: relative
@@ -76,6 +80,33 @@
       width: 60px
       svg
         height: 40px
+
+  &__menu
+    transition: $transition
+    margin-left: auto
+  
+    +tablet(max)
+      position: absolute
+      background: #fff
+      left: 50%
+      transform: translateX(-50%)
+      top: 100%
+      max-width: 720px
+      width: 100%
+      opacity: 0
+      visibility: hidden
+      z-index: -1
+      min-height: 80vh
+      &.open
+        opacity: 1
+        z-index: 100
+        visibility: visible
+
+    +mobile
+      top: 64px
+      height: calc(100vh - 64px)
+      width: 100vw
+      overflow: auto
       
   &__btn
     +tablet(max)
