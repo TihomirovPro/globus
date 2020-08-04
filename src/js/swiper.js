@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     observer: true,
-    slideToClickedSlide: true,
     observeParents: true,
+    slideToClickedSlide: true,
     navigation: {
       nextEl: '.next-button',
       prevEl: '.prev-button'
@@ -140,6 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 'auto',
     spaceBetween: 10,
     direction: 'vertical',
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction'
@@ -155,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
     centeredSlides: true,
     slidesPerView: 'auto',
     spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     direction: 'vertical',
     pagination: {
       el: '.swiper-pagination',

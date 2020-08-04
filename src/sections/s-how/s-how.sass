@@ -28,7 +28,7 @@
     +mobile(max)
       padding-left: 30px
       font-size: 30px
-      margin-bottom: 18px
+      margin-bottom: 80px
     span
       color: $colorMain
 
@@ -39,8 +39,6 @@
       height: 250px
     .swiper-wrapper
       margin-top: -50px
-      // +desktop(max)
-      //   margin-top: -35px
 
   &__slider-container
     position: relative
@@ -54,17 +52,18 @@
       width: 98%
       margin-left: 2%
 
-  &__swiper-pagination
+  .swiper-pagination
     position: absolute
     top: -60px
     right: 0
     z-index: 1
     color: #03529E
-    +tabMd(max)
+    +tabMd
       left: 48px
       top: -80px
     +mobile(max)
       left: 30px
+      top: -90px
     .swiper-pagination-current
       font-weight: bold
       font-size: 72px
@@ -97,12 +96,21 @@
   padding-bottom: 82px
 
 .online-tour
-  display: grid
-  grid-template-columns: 1fr 1fr
   column-gap: 40px
   padding-top: 80px
   padding-bottom: 80px
   background: #fff
+  +tablet(min)
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+  +tablet(max)
+  .s-how
+    &__title
+      max-width: 100%
+
+    &__slider-container
+      width: 100%
 
 .show-slide
   max-height: 50px
@@ -120,12 +128,6 @@
     color: #BDBDBD
     +mobile(max)
       font-size: 16px
-
-  &.swiper-slide-prev
-    // max-height: 30px
-
-  &.swiper-slide-next
-    // max-height: 30px
 
   &.swiper-slide-active
     display: block

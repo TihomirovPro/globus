@@ -49,9 +49,10 @@
         margin-bottom: 28px
     &:first-child
       +tablet(min)
-        margin-left: 130px
+        margin-left: auto
     &:last-child
-      margin-left: auto
+      +desktop(min)
+        margin-left: 70px
     &>svg
       height: 19px
       margin-right: 4px
@@ -69,13 +70,15 @@
     position: relative
     bottom: -3px
     transition: $transition
-    width: 140px
+    width: 130px
     path
       transition: $transition
       fill: #fff
     &:hover
       path
         fill: $colorMain
+    +desktop(min)
+      width: 160px
     +media(max,355px)
       width: 60px
       svg
