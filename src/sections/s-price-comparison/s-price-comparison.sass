@@ -10,7 +10,7 @@
     padding-bottom: 20px
 
   .b-s-header__title
-    color: #fff
+    // color: #fff
     padding-bottom: 42px
 
   .columns2
@@ -18,11 +18,12 @@
       grid-template-columns: 1fr
 
   &__wrap
+    overflow-x: scroll
     position: relative
     display: flex
-    overflow-x: scroll
     padding-bottom: 40px
     margin-bottom: 80px
+
     &::-webkit-scrollbar-track 
       background: transparent
       border-radius: 20px
@@ -58,20 +59,18 @@
     position: absolute
     top: 18px
     left: -10px
-    width: 206px
-    height: 98px
+    width: max-content
+    padding: 10px 26px
     background: #F2994A
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
     border-radius: 2px
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
 
-  &__title 
-    margin-top: 10px
-    margin-bottom: 7px
-    font-size: 14px
-    line-height: 126%
-    color: $white
-    text-align: center
+  &__title
     display: block
+    margin-bottom: 7px
+    color: $white
+    font-size: 14px
+    text-align: center
 
   &__picture
     +size(100%)
@@ -88,13 +87,13 @@
     font-weight: bold
     font-size: 26px
     line-height: 126%
-    color: #FFFFFF
+    color: #fff
 
   &__country
     font-weight: 600
     font-size: 14px
     line-height: 126%
-    color: #FFFFFF
+    color: #fff
 
   &__slash
     color: $white
@@ -108,7 +107,7 @@
     font-weight: bold
     font-size: 18px
     line-height: 126%
-    color: #FFFFFF
+    color: #fff
 
   &__in-russia
     padding-top: 10px
@@ -125,7 +124,6 @@
       height: auto
 
   &__title
-    color: #fff
     font-size: 24px
     line-height: 33px
     +tablet(max)
@@ -137,14 +135,9 @@
   &__link
     display: flex
     align-items: center
-    color: #F7F9FB
+    color: $colorMain
     transition: $transition
-
-    &:hover
-      color: $colorMain
-      svg path
-        stroke: $colorMain
 
     svg path
       transition: $transition
-      stroke: #F7F9FB
+      stroke: $colorMain
