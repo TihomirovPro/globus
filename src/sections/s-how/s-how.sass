@@ -9,10 +9,13 @@
     left: 50%
     bottom: 0
     max-width: 380px
+    transform: translateX(20%)
+    +tablet(max)
+      transform: translateX(0)
     +tablet
       left: auto
       right: -60px
-    +tabMd(max)
+    +mobile
       display: none
 
   &__title
@@ -35,8 +38,6 @@
   &__slider
     overflow: hidden
     height: 250px
-    +desktop(max)
-      height: 250px
     .swiper-wrapper
       margin-top: -50px
 
