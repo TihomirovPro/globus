@@ -1,9 +1,4 @@
-import {
-  Swiper,
-  Navigation,
-  Pagination,
-  Autoplay
-} from 'swiper/js/swiper.esm.js'
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper'
 
 Swiper.use([Navigation, Pagination, Autoplay])
 
@@ -92,16 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     on: {
       slideChange: () => {
-        if (slider4View.el && slider4View.el.classList.contains('slider-tabs')) {
-          const sliderTabs = document.querySelectorAll('.slider-tab')
-          const nextTab = slider4View.realIndex
+        // if (slider4View.el && slider4View.el.classList.contains('slider-tabs')) {
+        //   const sliderTabs = document.querySelectorAll('.slider-tab')
+        //   const nextTab = slider4View.realIndex
 
-          for (let i = 0; i < sliderTabs.length; i++) {
-            sliderTabs[i].style.display = 'none'
-          }
+        //   for (let i = 0; i < sliderTabs.length; i++) {
+        //     sliderTabs[i].style.display = 'none'
+        //   }
 
-          sliderTabs[nextTab].style.display = 'grid'
-        }
+        //   sliderTabs[nextTab].style.display = 'grid'
+        // }
       }
     },
     breakpoints: {
@@ -173,10 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // ====================__index catalog__==================== //
-  const indexCatalog = new Swiper('.main__catalog-container', {
-    loop: true,
+  const indexCatalog = new Swiper('.main__catalog', {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000
+    },
     observer: true,
     slideToClickedSlide: true,
     observeParents: true,
